@@ -377,8 +377,64 @@
   .footer-col a:hover{color:var(--rust);}
   .footer-bottom{border-top:1px solid var(--paper-20);padding-top:24px;font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;color:var(--paper-55);}
 
+  /* ---------- proof / case study ---------- */
+  .proof-stats{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+    border:1.5px solid var(--ink-15);border-radius:8px;overflow:hidden;
+    background:var(--paper-card);margin-bottom:44px;
+  }
+  .proof-stat{padding:30px 26px;border-right:1.5px solid var(--ink-15);}
+  .proof-stat:last-child{border-right:none;}
+  .proof-stat .n{font-family:var(--font-display);font-weight:800;font-size:56px;color:var(--rust);line-height:1;}
+  .proof-stat .l{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-60);margin-top:12px;line-height:1.45;}
+
+  .proof-headline{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:0;
+    border-radius:10px;overflow:hidden;margin-bottom:24px;
+  }
+  .proof-headline .lead-side{background:var(--ink);color:var(--paper);padding:48px 44px;display:flex;flex-direction:column;justify-content:center;}
+  .proof-headline .case-file{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.14em;color:var(--paper-55);text-transform:uppercase;margin-bottom:18px;}
+  .proof-headline .big-num{font-family:var(--font-display);font-weight:800;font-size:96px;color:var(--rust);line-height:.95;}
+  .proof-headline .big-lbl{font-size:20px;font-weight:600;margin-top:10px;}
+  .proof-headline .big-desc{color:var(--paper-80);margin-top:14px;max-width:360px;font-size:15.5px;}
+  .proof-timeline{background:var(--ink-soft);color:var(--paper);padding:40px 40px;display:flex;flex-direction:column;justify-content:center;}
+  .proof-step{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:11px 0;border-top:1px dashed var(--paper-20);font-size:14.5px;}
+  .proof-step:first-child{border-top:none;}
+  .proof-step .when{font-family:var(--font-mono);font-size:12px;letter-spacing:.04em;color:var(--rust);text-transform:uppercase;white-space:nowrap;padding-top:2px;}
+  .proof-step .what{color:var(--paper-80);}
+  .proof-caption{font-style:italic;color:var(--ink-60);font-size:15px;max-width:640px;margin-bottom:44px;}
+
+  .wins-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:52px;}
+  .win-card{background:var(--paper-card);border:1.5px solid var(--ink-15);border-radius:8px;padding:30px 32px;}
+  .win-card .win-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:12px;}
+  .win-card .win-name{font-family:var(--font-display);font-weight:800;font-size:22px;text-transform:uppercase;color:var(--ink);}
+  .win-card .win-amt{font-family:var(--font-display);font-weight:800;font-size:26px;color:var(--rust);white-space:nowrap;}
+  .win-card .win-desc{color:var(--ink-60);font-size:15px;}
+
+  .quotes-head{font-family:var(--font-mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust-deep);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+  .quotes-head::before{content:'';width:22px;height:1.5px;background:var(--rust-deep);}
+  .quotes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:26px;}
+  .quote-card{background:var(--ink);color:var(--paper);border-radius:8px;padding:32px 30px;display:flex;flex-direction:column;}
+  .quote-card .mark{font-family:var(--font-display);font-size:52px;line-height:.6;color:var(--rust);height:26px;}
+  .quote-card p{font-size:17px;line-height:1.5;color:var(--paper);margin:8px 0 auto;font-weight:400;}
+  .quote-card .who{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--paper-55);margin-top:22px;}
+  .quote-attr{font-family:var(--font-mono);font-size:13px;letter-spacing:.06em;color:var(--ink-60);text-transform:uppercase;}
+
+  .trustedby{display:flex;align-items:center;gap:22px;margin-top:54px;padding-top:34px;border-top:1.5px solid var(--ink-15);}
+  .trustedby .tb-label{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-40);}
+  .trustedby img{height:56px;width:auto;opacity:.9;}
+
   /* ---------- responsive ---------- */
   @media (max-width:860px){
+    .proof-stats{grid-template-columns:1fr 1fr;}
+    .proof-stat:nth-child(2){border-right:none;}
+    .proof-stat:nth-child(1),.proof-stat:nth-child(2){border-bottom:1.5px solid var(--ink-15);}
+    .proof-stat .n{font-size:46px;}
+    .proof-headline{grid-template-columns:1fr;}
+    .proof-headline .big-num{font-size:76px;}
+    .wins-grid{grid-template-columns:1fr;}
+    .quotes-grid{grid-template-columns:1fr;}
+    .trustedby{flex-direction:column;align-items:flex-start;gap:14px;}
     section{padding:64px 0;}
     .hero{padding-top:56px;}
     .hero-grid{grid-template-columns:1fr;padding-bottom:40px;}
@@ -640,30 +696,70 @@
 
 <section id="results">
   <div class="wrap">
-    <div class="kicker reveal">The System</div>
-    <h2 class="section-title reveal">What the system handles for you</h2>
-    <p class="section-lede reveal">Every lead, every follow-up, without you lifting a finger.</p>
+    <div class="kicker reveal">The Proof</div>
+    <h2 class="section-title reveal">Husky Roofing's first month on the system</h2>
+    <p class="section-lede reveal">August 22 – September 17, 2026. Straight from the pipeline: every missed call caught, texted back within a minute, and held until it turned into real work.</p>
 
-    <div class="results-layout reveal">
-      <div class="result-hero">
-        <div class="num">30 sec</div>
-        <div class="lbl">Missed-Call Response</div>
-        <p class="desc">Every missed call gets a text back within 30 seconds, before the homeowner dials the next company on Google.</p>
+    <div class="proof-stats reveal">
+      <div class="proof-stat"><div class="n">37</div><div class="l">Missed calls texted back automatically</div></div>
+      <div class="proof-stat"><div class="n">32</div><div class="l">Inspections booked</div></div>
+      <div class="proof-stat"><div class="n">15</div><div class="l">Booked jobs that started as a missed call</div></div>
+      <div class="proof-stat"><div class="n">4</div><div class="l">Homeowners who booked themselves, no one on the phone</div></div>
+    </div>
+
+    <div class="proof-headline reveal">
+      <div class="lead-side">
+        <div class="case-file">Case File / 01 — Headline Result</div>
+        <div class="big-num">$26,000</div>
+        <div class="big-lbl">One caught call. One closed roof.</div>
+        <p class="big-desc">Tiep D. went the full cycle — from a missed call the office never saw, to a self-booked inspection, to a signed roof replacement.</p>
       </div>
-      <div class="result-side">
-        <div class="result-mini">
-          <div class="num">2x</div>
-          <div class="lbl">Appointment Reminders</div>
-          <p class="desc">Reminders at 24 hours and 2 hours before every appointment, so fewer no-shows eat your schedule.</p>
-        </div>
-        <div class="result-mini">
-          <div class="num">14 days</div>
-          <div class="lbl">Automated Follow-Up</div>
-          <p class="desc">A 7-touch text and email sequence works every lead and quote, so nothing quietly goes cold.</p>
-        </div>
+      <div class="proof-timeline">
+        <div class="proof-step"><span class="when">Office closed</span><span class="what">Tiep D. calls Husky. Nobody there to pick up.</span></div>
+        <div class="proof-step"><span class="when">+1 min</span><span class="what">The system texts him back with a booking link and creates the lead in the pipeline.</span></div>
+        <div class="proof-step"><span class="when">Minutes later</span><span class="what">He books his own inspection through the link — no one on the phone.</span></div>
+        <div class="proof-step"><span class="when">Won</span><span class="what">Inspection to estimate to a $26,000 roof replacement.</span></div>
       </div>
     </div>
-    <p class="results-note reveal">Built on the same automation platform used by thousands of home-service businesses.</p>
+    <p class="proof-caption reveal">Take that one minute away and there's no Tiep for anyone to work.</p>
+
+    <div class="wins-grid reveal">
+      <div class="win-card">
+        <div class="win-top"><span class="win-name">Way L.</span><span class="win-amt">$7,500</span></div>
+        <p class="win-desc">Rescheduled himself through the link instead of dropping off. Anna followed up — won.</p>
+      </div>
+      <div class="win-card">
+        <div class="win-top"><span class="win-name">James B.</span><span class="win-amt">Full roof</span></div>
+        <p class="win-desc">Saturday of a holiday weekend, office closed. Missed call at 10:31, booked his own inspection by 10:39 — 8 minutes, nobody working.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="quotes-head">In the receptionist's words</div>
+      <div class="quotes-grid">
+        <div class="quote-card">
+          <div class="mark">&ldquo;</div>
+          <p>Thank you for making our life easier.</p>
+          <div class="who">Anna · Front desk, Husky Roofing</div>
+        </div>
+        <div class="quote-card">
+          <div class="mark">&ldquo;</div>
+          <p>So what you're telling me, pretty soon I'm not going to have to do anything.</p>
+          <div class="who">Anna · Front desk, Husky Roofing</div>
+        </div>
+        <div class="quote-card">
+          <div class="mark">&ldquo;</div>
+          <p>Nobody can remember everything, and I am no exception.</p>
+          <div class="who">Anna · Front desk, Husky Roofing</div>
+        </div>
+      </div>
+      <p class="quote-attr">Unprompted feedback from Anna, who runs the front desk at Husky Roofing &amp; Construction.</p>
+    </div>
+
+    <div class="trustedby reveal">
+      <span class="tb-label">The system in production at</span>
+      <img src="assets/husky-logo.webp" alt="Husky Roofing &amp; Construction">
+    </div>
   </div>
 </section>
 
@@ -779,7 +875,7 @@
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <a href="mailto:sid@summitsoltuionscrm.com">sid@summitsolutionscrm.com</a>
+        <a href="mailto:sid@summitsolutionscrm.com">sid@summitsolutionscrm.com</a>
         <a href="tel:+14243877320">(424) 387-7320</a>
         <p>Los Angeles, CA</p>
       </div>
