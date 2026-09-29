@@ -424,8 +424,23 @@
   .trustedby .tb-label{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-40);}
   .trustedby img{height:56px;width:auto;opacity:.9;}
 
+  /* ---------- proof screenshots ---------- */
+  .proof-shots-head{font-family:var(--font-mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust-deep);margin:52px 0 20px;display:flex;align-items:center;gap:10px;}
+  .proof-shots-head::before{content:'';width:22px;height:1.5px;background:var(--rust-deep);}
+  .shot{background:var(--paper-card);border:1.5px solid var(--ink-15);border-radius:10px;padding:14px;}
+  .shot img{display:block;width:100%;height:auto;border-radius:6px;border:1px solid var(--ink-15);}
+  .shot .cap{font-family:var(--font-mono);font-size:12.5px;letter-spacing:.02em;color:var(--ink-60);margin-top:12px;line-height:1.5;}
+  .shot .cap b{color:var(--ink);font-weight:700;}
+  .shot-wide{margin-bottom:24px;}
+  .shot-wide img{max-width:440px;margin:0 auto;border:1px solid var(--ink-15);}
+  .shots-two{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .anna-shot{background:var(--paper-card);border:1.5px solid var(--ink-15);border-radius:10px;padding:14px;max-width:380px;margin:24px auto 0;}
+  .anna-shot img{display:block;width:100%;height:auto;border-radius:6px;}
+  .anna-shot .cap{font-family:var(--font-mono);font-size:12px;letter-spacing:.03em;color:var(--ink-60);margin-top:10px;text-align:center;}
+
   /* ---------- responsive ---------- */
   @media (max-width:860px){
+    .shots-two{grid-template-columns:1fr;}
     .proof-stats{grid-template-columns:1fr 1fr;}
     .proof-stat:nth-child(2){border-right:none;}
     .proof-stat:nth-child(1),.proof-stat:nth-child(2){border-bottom:1.5px solid var(--ink-15);}
@@ -735,6 +750,24 @@
     </div>
 
     <div class="reveal">
+      <div class="proof-shots-head">Straight from the CRM</div>
+      <div class="shot shot-wide">
+        <img src="assets/husky-won-26k.png" alt="Husky Roofing pipeline showing Tiep's roofing job marked Won at $26,000">
+        <div class="cap"><b>The closed deal.</b> Tiep's opportunity in Husky's pipeline — marked Won at $26,000.</div>
+      </div>
+      <div class="shots-two">
+        <div class="shot">
+          <img src="assets/husky-selfbook-tiep.png" alt="Missed-call auto text-back and self-booking activity log for Tiep">
+          <div class="cap"><b>Tiep, before the office opened.</b> Missed call → automatic text-back → booked his own inspection. Page visited 8:25 AM, appointment booked 8:29 AM.</div>
+        </div>
+        <div class="shot">
+          <img src="assets/husky-selfbook-james.png" alt="Missed-call on a closed Saturday with auto text-back and self-booking for James">
+          <div class="cap"><b>James, on a closed Saturday.</b> Missed call at 10:31 → automatic text-back → booked by 10:39. Eight minutes, nobody working.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
       <div class="quotes-head">In the receptionist's words</div>
       <div class="quotes-grid">
         <div class="quote-card">
@@ -754,6 +787,10 @@
         </div>
       </div>
       <p class="quote-attr">Unprompted feedback from Anna, who runs the front desk at Husky Roofing &amp; Construction.</p>
+      <div class="anna-shot">
+        <img src="assets/anna-texts.png" alt="Text messages from Anna at Husky Roofing praising the automated system">
+        <div class="cap">Anna's texts, unedited.</div>
+      </div>
     </div>
 
     <div class="trustedby reveal">
