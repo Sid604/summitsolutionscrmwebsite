@@ -5,5 +5,12 @@
   "compatibility_date": "2026-10-02",
   "assets": {
     "directory": "."
-  }
+  },
+  // Attach both hostnames as Worker custom domains. Cloudflare creates the
+  // DNS records and certificates for these on deploy, so www no longer
+  // returns NXDOMAIN.
+  "routes": [
+    { "pattern": "summitsolutionscrm.com", "custom_domain": true },
+    { "pattern": "www.summitsolutionscrm.com", "custom_domain": true }
+  ]
 }
