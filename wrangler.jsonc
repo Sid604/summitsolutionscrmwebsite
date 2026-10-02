@@ -1,0 +1,9 @@
+{
+  // Static-assets-only Worker for the Summit Solutions marketing site.
+  // No server-side Worker script — Cloudflare serves the files in this repo directly.
+  "name": "summitsolutionscrmwebsite",
+  "compatibility_date": "2026-10-02",
+  "assets": {
+    "directory": "."
+  }
+}
