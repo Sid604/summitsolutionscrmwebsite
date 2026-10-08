@@ -4,68 +4,72 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terms of Service — Summit Solutions</title>
-<meta name="description" content="Terms of Service for Summit Solutions, automated lead management for roofing contractors and high-ticket home service businesses.">
+<meta name="description" content="Terms of Service for Summit Solutions, automated lead management for home service businesses.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f3358'/%3E%3Cpath d='M6 22L16 8l10 14z' fill='none' stroke='%23f5f1e8' stroke-width='2.4' stroke-linejoin='round'/%3E%3Cpath d='M12 22l4-6 4 6' fill='none' stroke='%23f5f1e8' stroke-width='2.4' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1c1815;
-    --ink-soft:#28221d;
-    --paper:#f1ead9;
-    --paper-alt:#e7dcc3;
-    --paper-card:#fbf7ee;
-    --rust:#b8501c;
-    --rust-deep:#8a3b13;
-    --pine:#2f5c4c;
-    --pine-soft:#6a9683;
-    --ink-80:rgba(28,24,21,.8);
-    --ink-60:rgba(28,24,21,.62);
-    --ink-40:rgba(28,24,21,.4);
-    --ink-15:rgba(28,24,21,.14);
-    --paper-80:rgba(241,234,217,.85);
-    --paper-55:rgba(241,234,217,.55);
-    --paper-20:rgba(241,234,217,.18);
-    --font-display:'Big Shoulders Display', sans-serif;
-    --font-body:'Libre Franklin', sans-serif;
-    --font-mono:'IBM Plex Mono', monospace;
+    --paper:#faf8f3;
+    --paper-2:#f2ede3;
+    --card:#ffffff;
+    --ink:#1a1712;
+    --muted:#655e52;
+    --muted-2:#8b8474;
+    --line:rgba(26,23,18,.10);
+    --line-2:rgba(26,23,18,.06);
+    --accent:#1f3358;
+    --accent-2:#2b477a;
+    --accent-ink:#16233d;
+    --gold:#b07d3c;
+    --r-md:14px;
+    --r-sm:10px;
+    --shadow-sm:0 1px 2px rgba(26,23,18,.05), 0 4px 12px -4px rgba(26,23,18,.10);
+    --f-display:'Plus Jakarta Sans', sans-serif;
+    --f-body:'Inter', sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:var(--font-body);background:var(--paper);color:var(--ink);line-height:1.6;font-size:17px;}
-  .wrap{max-width:900px;margin:0 auto;padding:0 28px;}
-  a{color:var(--rust-deep);}
-  a:hover{color:var(--rust);}
-  h1,h2,h3{font-family:var(--font-display);font-weight:800;text-transform:uppercase;letter-spacing:.01em;line-height:1.05;}
+  body{font-family:var(--f-body);background:var(--paper);color:var(--ink);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:900px;margin:0 auto;padding:0 26px;}
+  a{color:var(--accent-2);text-decoration:none;}
+  a:hover{color:var(--accent-ink);}
+  h1,h2,h3{font-family:var(--f-display);font-weight:800;letter-spacing:-.02em;line-height:1.1;color:var(--ink);}
 
-  .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:16px 26px;border-radius:3px;border:1.5px solid transparent;}
-  .btn-rust{background:var(--rust);color:var(--paper-card);box-shadow:3px 3px 0 var(--rust-deep);}
-  .btn-rust:hover{background:var(--rust-deep);color:var(--paper-card);}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--f-display);font-weight:700;font-size:15px;padding:13px 22px;border-radius:var(--r-sm);border:1.5px solid transparent;cursor:pointer;transition:transform .2s ease, background .2s ease, box-shadow .2s ease;}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:var(--shadow-sm);}
+  .btn-primary:hover{background:var(--accent-ink);transform:translateY(-2px);}
 
-  nav{position:sticky;top:0;z-index:500;background:var(--paper-80);backdrop-filter:blur(8px);border-bottom:1.5px solid var(--ink-15);}
-  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px;}
-  .brand{display:flex;flex-direction:column;line-height:1;}
-  .brand-name{font-family:var(--font-display);font-weight:800;font-size:26px;text-transform:uppercase;letter-spacing:.01em;}
-  .brand-sub{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.2em;color:var(--ink-60);margin-top:3px;}
+  nav{position:sticky;top:0;z-index:500;background:rgba(250,248,243,.8);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-2);}
+  nav .wrap{max-width:1140px;display:flex;align-items:center;justify-content:space-between;height:70px;}
+  .brand{display:flex;align-items:center;gap:11px;}
+  .brand-mark{width:34px;height:34px;border-radius:9px;background:var(--accent);display:grid;place-items:center;flex:none;}
+  .brand-mark svg{width:20px;height:20px;}
+  .brand-txt{display:flex;flex-direction:column;line-height:1.05;}
+  .brand-name{font-family:var(--f-display);font-weight:800;font-size:19px;letter-spacing:-.02em;}
+  .brand-sub{font-family:var(--f-body);font-weight:500;font-size:10px;letter-spacing:.18em;color:var(--muted-2);text-transform:uppercase;margin-top:2px;}
 
   main{padding:72px 0 96px;}
-  .legal-updated{font-family:var(--font-mono);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--rust-deep);margin-bottom:8px;}
-  main h1{font-size:clamp(32px,4vw,48px);margin-bottom:36px;}
-  main h2{font-size:20px;color:var(--rust-deep);margin:38px 0 12px;text-transform:none;letter-spacing:0;}
-  main p, main li{color:var(--ink-80);font-size:16px;margin-bottom:12px;}
+  .legal-updated{font-family:var(--f-display);font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2);margin-bottom:10px;}
+  main h1{font-size:clamp(2.2rem,5vw,3.2rem);margin-bottom:30px;}
+  main h2{font-size:1.3rem;color:var(--accent);margin:36px 0 12px;letter-spacing:-.015em;}
+  main p, main li{color:var(--muted);font-size:16px;margin-bottom:12px;}
   main ul{padding-left:20px;margin-bottom:12px;}
-  main strong{color:var(--ink);}
-  .legal-contact{margin-top:20px;padding:24px 28px;background:var(--paper-card);border:1.5px solid var(--ink-15);border-radius:8px;}
+  main strong{color:var(--ink);font-weight:600;}
+  .legal-contact{margin-top:20px;padding:24px 28px;background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow-sm);}
   .legal-contact p{margin-bottom:4px;}
 
-  footer{background:var(--ink);color:var(--paper-55);padding:60px 0 30px;border-top:3px solid var(--rust);}
-  .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:44px;margin-bottom:44px;}
-  .footer-col h4{font-family:var(--font-mono);color:var(--paper);font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px;}
-  .footer-col p,.footer-col a{color:var(--paper-55);text-decoration:none;display:block;margin-bottom:10px;font-size:15px;}
-  .footer-col a:hover{color:var(--rust);}
-  .footer-bottom{border-top:1px solid var(--paper-20);padding-top:24px;font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;color:var(--paper-55);}
+  footer{background:var(--paper-2);border-top:1px solid var(--line);padding:60px 0 34px;}
+  .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px;max-width:1140px;margin:0 auto;padding:0 26px;}
+  .footer-col h4{font-family:var(--f-display);font-weight:800;font-size:16px;margin-bottom:14px;}
+  .footer-col p{font-size:14.5px;color:var(--muted);max-width:320px;}
+  .footer-col a{display:block;font-size:14.5px;color:var(--muted);margin-bottom:9px;}
+  .footer-col a:hover{color:var(--accent-2);}
+  .footer-bottom{max-width:1140px;margin:44px auto 0;padding:22px 26px 0;border-top:1px solid var(--line);font-family:var(--f-display);font-weight:600;font-size:12px;letter-spacing:.12em;color:var(--muted-2);}
 
   @media (max-width:640px){
     .footer-grid{grid-template-columns:1fr;}
+    nav .wrap{height:64px;}
   }
 </style>
 </head>
@@ -73,13 +77,14 @@
 
 <nav>
   <div class="wrap">
-    <div class="brand">
-      <a href="/index.html" style="text-decoration:none;color:inherit;">
+    <a href="/index.html" class="brand">
+      <span class="brand-mark"><svg viewBox="0 0 24 24"><path d="M3 18L12 5l9 13z" fill="none" stroke="#f5f1e8" stroke-width="2" stroke-linejoin="round"/><path d="M8 18l4-6 4 6" fill="none" stroke="#f5f1e8" stroke-width="2" stroke-linejoin="round"/></svg></span>
+      <span class="brand-txt">
         <span class="brand-name">Summit Solutions</span>
-        <span class="brand-sub">AUTOMATED LEAD OPS</span>
-      </a>
-    </div>
-    <a href="/index.html#demo" class="btn btn-rust">Book a Demo</a>
+        <span class="brand-sub">Lead Automation</span>
+      </span>
+    </a>
+    <a href="/index.html#demo" class="btn btn-primary">Get your free audit</a>
   </div>
 </nav>
 
@@ -91,7 +96,7 @@
     <p>Welcome to Summit Solutions. By using our website or engaging our services, you agree to the following terms.</p>
 
     <h2>1. Our Services</h2>
-    <p>Summit Solutions provides automated lead management and follow-up systems, including missed-call text-back, appointment reminders, and automated follow-up sequences, for roofing contractors and other high-ticket home service businesses. Services are provided under individual agreements, including a one-time setup fee and a monthly service fee as outlined at the time of purchase.</p>
+    <p>Summit Solutions provides automated lead management and follow-up systems, including missed-call text-back, appointment reminders, and automated follow-up sequences, for home service businesses. Services are provided under individual agreements, including a one-time setup fee and a monthly service fee as outlined at the time of purchase.</p>
 
     <h2>2. Booking a Demo</h2>
     <p>Submitting a demo request through our website or providing your contact information to us does not create a binding service agreement. It authorizes Summit Solutions to contact you by phone, text, or email to discuss our services.</p>
@@ -128,26 +133,24 @@
 </main>
 
 <footer>
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Summit Solutions</h4>
-        <p>Automated lead management for roofing contractors and high-ticket home service businesses.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <a href="mailto:sid@summitsolutionscrm.com">sid@summitsolutionscrm.com</a>
-        <a href="tel:+14243877320">(424) 387-7320</a>
-        <p>Los Angeles, CA</p>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <a href="/privacy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms of Service</a>
-      </div>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Summit Solutions</h4>
+      <p>A done-for-you lead system for home service businesses.</p>
     </div>
-    <div class="footer-bottom">© 2026 SUMMIT SOLUTIONS</div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:sid@summitsolutionscrm.com">sid@summitsolutionscrm.com</a>
+      <a href="tel:+14243877320">(424) 387-7320</a>
+      <p>Los Angeles, CA</p>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+    </div>
   </div>
+  <div class="footer-bottom">© 2026 SUMMIT SOLUTIONS</div>
 </footer>
 
 </body>

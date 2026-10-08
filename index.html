@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Summit Solutions — Never lose another roofing lead</title>
-<meta name="description" content="A boutique, done-for-you lead system for roofing & high-ticket home services. Missed calls texted back in 30 seconds, relentless follow-up, estimate nurturing, and booking that runs while you're on the roof. Built and managed for you.">
-<meta property="og:title" content="Summit Solutions — Never lose another roofing lead">
+<title>Summit Solutions — Never lose another service lead</title>
+<meta name="description" content="A done-for-you lead system for home service businesses. Missed calls texted back in 30 seconds, relentless follow-up, estimate nurturing, and booking that runs while you're on the job. Built and managed for you.">
+<meta property="og:title" content="Summit Solutions — Never lose another service lead">
 <meta property="og:description" content="Missed calls texted back in 30 seconds. Follow-up, estimate nurturing, and booking on autopilot — built and run for you. See how Husky Roofing closed $43K in jobs from missed calls.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/hero-texture.jpg">
@@ -105,6 +105,9 @@
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,64px);align-items:center;}
   .hero h1{margin:20px 0 22px;}
   .hero h1 .hl{color:var(--accent-2);}
+  .slot{display:inline-block;overflow:hidden;vertical-align:top;color:var(--accent-2);}
+  .slot .reel{display:flex;flex-direction:column;will-change:transform;}
+  .slot .reel span{display:block;white-space:nowrap;line-height:1.05;padding-bottom:.22em;}
   .hero-lede{font-size:1.2rem;color:var(--muted);max-width:520px;}
   .hero-cta{display:flex;align-items:center;gap:18px;margin-top:34px;flex-wrap:wrap;}
   .hero-trust{display:flex;align-items:center;gap:13px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line);}
@@ -115,8 +118,25 @@
   /* animated phone */
   .hero-visual{position:relative;display:flex;justify-content:center;}
   .phone{position:relative;width:330px;max-width:100%;background:#0e1116;border-radius:44px;padding:13px;box-shadow:var(--shadow-lg), inset 0 0 0 2px rgba(255,255,255,.05);}
-  .phone-screen{background:#f4f5f7;border-radius:32px;overflow:hidden;height:600px;display:flex;flex-direction:column;position:relative;}
+  .phone-screen{background:#f4f5f7;border-radius:32px;overflow:hidden;height:600px;position:relative;}
   .phone-notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:130px;height:26px;background:#0e1116;border-radius:0 0 16px 16px;z-index:5;}
+  .phone-views{position:absolute;inset:0;display:flex;width:200%;transition:transform .6s cubic-bezier(.76,0,.24,1);}
+  .phone-views.show-inbox{transform:translateX(-50%);}
+  .pv{width:50%;flex:none;display:flex;flex-direction:column;min-height:0;background:#f4f5f7;}
+  .inbox-head{background:#fff;border-bottom:1px solid #e6e8ec;padding:30px 18px 13px;flex:none;display:flex;align-items:baseline;justify-content:space-between;}
+  .inbox-head .ib-title{font-family:var(--f-display);font-weight:800;font-size:19px;color:#111;}
+  .inbox-head .ib-sub{font-size:11.5px;color:var(--accent-2);font-weight:700;letter-spacing:.04em;text-transform:uppercase;}
+  .inbox-body{flex:1;min-height:0;overflow:hidden;padding:14px;background:#f4f5f7;display:flex;flex-direction:column;gap:10px;}
+  .mail{background:#fff;border:1px solid #e6e8ec;border-radius:14px;padding:13px 14px;box-shadow:0 8px 20px -14px rgba(0,0,0,.4);opacity:0;transform:translateY(10px) scale(.97);animation:pop .45s cubic-bezier(.2,.8,.3,1) forwards;}
+  .mail .m-top{display:flex;align-items:center;gap:9px;margin-bottom:9px;}
+  .mail .m-ava{width:30px;height:30px;border-radius:8px;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:800;font-size:11px;font-family:var(--f-display);flex:none;}
+  .mail .m-from{font-family:var(--f-display);font-weight:700;font-size:12.5px;color:#111;line-height:1.25;}
+  .mail .m-from span{display:block;font-weight:500;font-size:10.5px;color:#9aa0a8;}
+  .mail .m-time{font-size:10.5px;color:#9aa0a8;margin-left:auto;align-self:flex-start;}
+  .mail .m-subj{font-family:var(--f-display);font-weight:700;font-size:13.5px;color:#111;margin-bottom:9px;}
+  .mail .m-rows{display:flex;flex-direction:column;gap:6px;}
+  .mail .m-row{display:flex;gap:8px;font-size:12px;color:#444;}
+  .mail .m-row b{color:#111;font-weight:600;min-width:58px;flex:none;}
   .sms-head{background:#fff;border-bottom:1px solid #e6e8ec;padding:32px 16px 12px;text-align:center;flex:none;}
   .sms-head .av{width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:15px;margin:0 auto 6px;}
   .sms-head .nm{font-family:var(--f-display);font-weight:700;font-size:15px;color:#111;}
@@ -125,32 +145,54 @@
   .sms{max-width:80%;padding:10px 13px;border-radius:17px;font-size:13.5px;line-height:1.4;opacity:0;transform:translateY(10px) scale(.96);animation:pop .4s cubic-bezier(.2,.8,.3,1) forwards;}
   .sms.in{background:#e7e9ee;color:#1a1d22;align-self:flex-start;border-bottom-left-radius:5px;}
   .sms.out{background:var(--accent);color:#fff;align-self:flex-end;border-bottom-right-radius:5px;}
-  .sms.sys{align-self:center;background:rgba(47,125,91,.12);color:#1f6b4a;font-weight:600;font-size:12px;border-radius:20px;padding:7px 14px;max-width:92%;text-align:center;}
   .sms .lnk{color:#8fb0ff;text-decoration:underline;word-break:break-all;}
   .sms.out .meta,.sms.in .meta{display:block;font-size:10px;opacity:.6;margin-top:3px;}
-  .sms .call{display:flex;align-items:center;gap:8px;font-weight:600;}
-  .sms .call svg{width:15px;height:15px;}
+  /* missed call */
+  .sms.miss{background:#fdecea;color:#c0392b;align-self:flex-start;border-bottom-left-radius:5px;display:flex;align-items:center;gap:9px;}
+  .sms.miss svg{width:15px;height:15px;flex:none;}
+  .sms.miss .mc-h{font-weight:700;font-size:13px;}
+  .sms.miss .mc-sub{display:block;font-weight:500;font-size:10.5px;opacity:.75;margin-top:1px;}
+  /* voicemail */
+  .sms.vm{background:#e7e9ee;color:#1a1d22;align-self:flex-start;border-bottom-left-radius:5px;max-width:88%;}
+  .vm-top{display:flex;align-items:center;gap:9px;}
+  .vm-play{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;flex:none;}
+  .vm-play svg{width:11px;height:11px;margin-left:1px;}
+  .vm-wave{display:flex;align-items:center;gap:2px;height:22px;flex:1;}
+  .vm-wave i{width:2.5px;background:#9aa0a8;border-radius:2px;display:block;}
+  .vm-dur{font-size:11px;color:#6b7280;flex:none;}
+  .vm-tx{margin-top:8px;font-size:12px;line-height:1.45;color:#3a3f47;}
+  .vm-tx b{font-weight:600;color:#1a1d22;}
+  /* booking card */
+  .sms.book{align-self:stretch;max-width:100%;background:#e8f6ee;border:1px solid rgba(47,125,91,.32);border-radius:14px;padding:12px 14px;}
+  .book-h{display:flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:800;font-size:13.5px;color:#1f6b4a;}
+  .book-h svg{width:16px;height:16px;flex:none;}
+  .book-rows{margin-top:9px;display:flex;flex-direction:column;gap:5px;}
+  .book-row{display:flex;gap:8px;font-size:12px;color:#2f4f3f;}
+  .book-row b{color:#14532d;font-weight:600;min-width:52px;flex:none;}
   @keyframes pop{to{opacity:1;transform:none;}}
   .typing{align-self:flex-start;background:#e7e9ee;border-radius:17px;border-bottom-left-radius:5px;padding:12px 15px;display:none;gap:4px;}
   .typing.show{display:flex;}
   .typing span{width:7px;height:7px;border-radius:50%;background:#9aa0a8;animation:blink 1.2s infinite;}
   .typing span:nth-child(2){animation-delay:.2s;} .typing span:nth-child(3){animation-delay:.4s;}
   @keyframes blink{0%,60%,100%{opacity:.3;transform:translateY(0);}30%{opacity:1;transform:translateY(-3px);}}
-  .phone-tag{position:absolute;left:-22px;bottom:70px;background:#fff;border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow-md);padding:11px 15px;z-index:6;}
+  .phone-tag{position:absolute;left:50%;transform:translateX(-50%);bottom:-26px;background:#fff;border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow-md);padding:11px 18px;z-index:6;display:flex;align-items:baseline;gap:8px;white-space:nowrap;}
   .phone-tag .big{font-family:var(--f-display);font-weight:800;font-size:19px;color:var(--ok);letter-spacing:-.02em;}
   .phone-tag .sm{font-size:11.5px;color:var(--muted);margin-top:1px;}
   .phone-live{position:absolute;top:-12px;right:16px;background:var(--ok);color:#fff;font-family:var(--f-display);font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:20px;box-shadow:var(--shadow-sm);display:flex;align-items:center;gap:6px;z-index:6;}
   .phone-live .dot{width:7px;height:7px;border-radius:50%;background:#fff;animation:pulse 1.6s infinite;}
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.7);}70%{box-shadow:0 0 0 7px rgba(255,255,255,0);}100%{box-shadow:0 0 0 0 rgba(255,255,255,0);}}
 
-  /* trust strip */
-  .trust{background:var(--ink);color:var(--paper);padding:26px 0;}
-  .trust .wrap{display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap;text-align:center;}
-  .trust img{height:40px;width:auto;border-radius:8px;background:#fff;padding:5px 8px;}
-  .trust .label{font-family:var(--f-display);font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,241,232,.55);}
-  .trust .stat{font-family:var(--f-display);font-weight:700;font-size:clamp(1rem,2vw,1.25rem);color:#fff;letter-spacing:-.01em;}
-  .trust .stat b{color:var(--gold-soft);}
-  .trust .divider{width:1px;height:34px;background:rgba(245,241,232,.16);}
+  /* trust strip — scrolling marquee */
+  .trust{background:var(--ink);color:var(--paper);padding:20px 0;overflow:hidden;}
+  .marquee{display:flex;width:max-content;}
+  .marquee:hover .marquee-track{animation-play-state:paused;}
+  .marquee-track{display:flex;align-items:center;gap:38px;padding-right:38px;flex:none;animation:trust-scroll 34s linear infinite;}
+  .trust .m-item{font-family:var(--f-display);font-weight:800;font-size:clamp(1.25rem,2.6vw,1.9rem);letter-spacing:-.015em;color:#fff;white-space:nowrap;}
+  .trust .m-item b{color:var(--gold-soft);}
+  .trust .m-dot{flex:none;color:var(--gold-soft);opacity:.85;}
+  .trust .m-dot svg{width:15px;height:15px;display:block;}
+  @keyframes trust-scroll{to{transform:translateX(-100%);}}
+  @media (prefers-reduced-motion:reduce){.marquee-track{animation:none;}}
 
   /* stats */
   .stats{background:var(--paper-2);}
@@ -262,7 +304,7 @@
   .step h3{margin:14px 0 10px;}
   .step p{font-size:15px;}
 
-  /* pricing (single boutique tier) */
+  /* pricing (single tier) */
   .pricing .tier{max-width:560px;margin:0 auto;background:var(--card);border:1px solid var(--accent);border-radius:var(--r-lg);padding:clamp(34px,4vw,48px);box-shadow:var(--shadow-md);position:relative;text-align:center;}
   .tier-badge{display:inline-block;background:var(--accent);color:#fff;font-family:var(--f-display);font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:18px;}
   .tier h3{font-size:1.9rem;}
@@ -339,8 +381,7 @@
     .steps{grid-template-columns:1fr;}
     .proof-gallery{grid-template-columns:1fr;}
     .cycle-track{grid-template-columns:1fr;}
-    .trust .divider{display:none;}
-    .phone-tag{left:6px;}
+    .phone-tag{font-size:.9em;}
   }
 </style>
 </head>
@@ -379,16 +420,16 @@
   <div class="wrap">
     <div class="hero-grid">
       <div class="reveal is-visible">
-        <span class="eyebrow">Boutique lead systems for roofers</span>
-        <h1>Never lose another <span class="hl">roofing lead.</span></h1>
-        <p class="hero-lede">Missed calls texted back in 30 seconds. Follow-up, estimate nurturing, and booking that run while you're up on the roof — a complete system we build and manage, so the leads you already paid for actually turn into jobs.</p>
+        <span class="eyebrow">Lead systems for home service businesses</span>
+        <h1>Never lose another <span class="slot" id="slot"><span class="reel"><span>roofing</span><span>plumbing</span><span>HVAC</span><span>electrical</span><span>landscaping</span><span>remodeling</span><span>garage door</span><span>painting</span><span>flooring</span><span>solar</span></span></span> lead.</h1>
+        <p class="hero-lede">Missed calls texted back in 30 seconds. Follow-up, estimate nurturing, and booking that run while you're out on the job — a complete system we build and manage, so the leads you already paid for actually turn into jobs.</p>
         <div class="hero-cta">
           <a href="#demo" class="btn btn-primary btn-lg">Get your free audit <svg><use href="#i-arrow"/></svg></a>
           <a href="#how" class="textlink">See it in action <svg><use href="#i-arrow"/></svg></a>
         </div>
         <div class="hero-trust">
           <img src="assets/husky-logo.webp" alt="Husky Roofing logo">
-          <span class="t-txt"><b>Trusted by Husky Roofing</b><br>$43K in jobs closed from missed calls — first month live.</span>
+          <span class="t-txt"><b>Trusted by Husky Roofing</b><br>$43K in jobs closed from missed calls — first 6 weeks live.</span>
         </div>
       </div>
       <div class="hero-visual reveal is-visible">
@@ -396,12 +437,23 @@
           <span class="phone-live"><span class="dot"></span>Live</span>
           <div class="phone-notch"></div>
           <div class="phone-screen">
-            <div class="sms-head">
-              <div class="av">HR</div>
-              <div class="nm">Husky Roofing</div>
-              <div class="st">Automated · replies in seconds</div>
+            <div class="phone-views" id="phoneViews">
+              <div class="pv">
+                <div class="sms-head">
+                  <div class="av">JD</div>
+                  <div class="nm">Jane Doe</div>
+                  <div class="st">Mobile · (650) •••-4513</div>
+                </div>
+                <div class="sms-body" id="smsBody"></div>
+              </div>
+              <div class="pv">
+                <div class="inbox-head">
+                  <span class="ib-title">Inbox</span>
+                  <span class="ib-sub">1 new</span>
+                </div>
+                <div class="inbox-body" id="inboxBody"></div>
+              </div>
             </div>
-            <div class="sms-body" id="smsBody"></div>
           </div>
           <div class="phone-tag">
             <div class="big">$26,000 won</div>
@@ -414,12 +466,32 @@
 </header>
 
 <!-- TRUST STRIP -->
-<section class="trust" style="padding-top:24px;padding-bottom:24px;">
-  <div class="wrap">
-    <span class="label">Proven with</span>
-    <img src="assets/husky-logo.webp" alt="Husky Roofing">
-    <span class="divider"></span>
-    <span class="stat"><b>37</b> missed calls saved &nbsp;·&nbsp; <b>32</b> inspections booked &nbsp;·&nbsp; <b>$43K</b> in jobs won</span>
+<section class="trust">
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="m-item">Proven with Husky Roofing</span>
+      <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
+      <span class="m-item"><b>37</b> missed calls saved</span>
+      <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
+      <span class="m-item"><b>32</b> inspections booked</span>
+      <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
+      <span class="m-item"><b>15</b> recovered from missed calls</span>
+      <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
+      <span class="m-item"><b>$43K</b> in jobs won</span>
+      <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
+    </div>
+    <div class="marquee-track" aria-hidden="true">
+      <span class="m-item">Proven with Husky Roofing</span>
+      <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
+      <span class="m-item"><b>37</b> missed calls saved</span>
+      <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
+      <span class="m-item"><b>32</b> inspections booked</span>
+      <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
+      <span class="m-item"><b>15</b> recovered from missed calls</span>
+      <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
+      <span class="m-item"><b>$43K</b> in jobs won</span>
+      <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
+    </div>
   </div>
 </section>
 
@@ -429,7 +501,7 @@
     <div class="section-head center">
       <span class="eyebrow">The problem — and the receipts</span>
       <h2>Every missed call is a job walking to your competitor</h2>
-      <p>When a homeowner hits voicemail, they call the next roofer on the list. Here's what stopped happening in Husky Roofing's first month on the system.</p>
+      <p>When a homeowner hits voicemail, they call the next business on the list. Here's what stopped happening in Husky Roofing's first 6 weeks on the system.</p>
     </div>
     <div class="stats-grid">
       <div class="stat-card reveal"><div class="n">37</div><div class="l">Missed calls automatically texted back within 30 seconds</div></div>
@@ -442,7 +514,7 @@
         <h4>Before Summit</h4>
         <ul>
           <li><svg class="ic" style="color:var(--muted-2)"><use href="#i-x"/></svg> Missed calls sit in voicemail for hours</li>
-          <li><svg class="ic" style="color:var(--muted-2)"><use href="#i-x"/></svg> Homeowner calls three other roofers</li>
+          <li><svg class="ic" style="color:var(--muted-2)"><use href="#i-x"/></svg> Homeowner calls three other businesses</li>
           <li><svg class="ic" style="color:var(--muted-2)"><use href="#i-x"/></svg> Estimates go cold with no follow-up</li>
           <li><svg class="ic" style="color:var(--muted-2)"><use href="#i-x"/></svg> Real jobs quietly leak out every week</li>
         </ul>
@@ -457,7 +529,7 @@
         </ul>
       </div>
     </div>
-    <p class="stats-note">Real numbers from one client's first month. Screenshots throughout are straight from the CRM (customer details redacted for privacy).</p>
+    <p class="stats-note">Real numbers from one client's first 6 weeks. Screenshots throughout are straight from the CRM (customer details redacted for privacy).</p>
   </div>
 </section>
 
@@ -578,7 +650,7 @@
     <div class="section-head center">
       <span class="eyebrow">White-glove &amp; done for you</span>
       <h2>We build it. We run it. You never touch the backend.</h2>
-      <p>Summit is a boutique shop — we take on a limited number of roofing and high-ticket home-service clients so every system gets built and managed properly. You get a partner, not a login.</p>
+      <p>Summit takes on a limited number of home service clients so every system gets built and managed properly. You get a partner, not a login.</p>
     </div>
     <div class="inc-grid">
       <div class="inc-card reveal">
@@ -763,7 +835,7 @@
     <div class="footer-grid">
       <div class="footer-col">
         <h4>Summit Solutions</h4>
-        <p>A boutique, done-for-you lead system for roofing contractors and high-ticket home service businesses.</p>
+        <p>A done-for-you lead system for home service businesses.</p>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
@@ -782,43 +854,97 @@
 </footer>
 
 <script>
-  // ---- animated live SMS ----
+  // ---- animated phone: missed call → text-back → booking → inbox brief → confirm ----
   (function(){
     var body = document.getElementById('smsBody');
-    if(!body) return;
+    var inbox = document.getElementById('inboxBody');
+    var views = document.getElementById('phoneViews');
+    if(!body || !inbox || !views) return;
+
+    var vmWave = [6,11,15,9,17,12,19,8,14,21,10,16,7,18,11,15,9,13,6,12];
+    var vmBars = vmWave.map(function(h){ return '<i style="height:'+h+'px"></i>'; }).join('');
+
     var script = [
-      {t:'call', side:'in', text:'Missed call · (650) •••-4513', wait:900},
+      {t:'miss', wait:1200},
+      {t:'vm', wait:2200},
+      {t:'out', text:'Hi, this is Husky Roofing — sorry we missed your call! Book your free inspection here: <span class="lnk">husky-roofing.com/book</span>', meta:'11:54 AM', wait:1800},
+      {t:'book', wait:1900},
+      {t:'switch', wait:900},
+      {t:'mail', wait:2600},
+      {t:'switchback', wait:900},
+      {t:'out', text:'You’re all set, Jane ✅ Thursday at 2:00 PM. We’ll send a reminder the day before — just reply here if anything changes.', meta:'11:55 AM', wait:1600},
       {t:'type', wait:1100},
-      {t:'msg', side:'in', text:'Hi, this is Husky Roofing. Sorry we missed your call! Book a free roof inspection here: <span class="lnk">husky-free-roof-inspection</span>', meta:'11:54 AM', wait:1400},
-      {t:'msg', side:'out', text:'Oh perfect — can you come take a look this week?', meta:'11:55 AM', wait:1300},
-      {t:'type', wait:1000},
-      {t:'msg', side:'in', text:'Absolutely. Thursday 2–4 PM work?', meta:'11:55 AM', wait:1200},
-      {t:'msg', side:'out', text:'Yes please 🙌', meta:'11:56 AM', wait:1100},
-      {t:'sys', text:'✓ Inspection booked — Thu 2:00 PM', wait:1600},
-      {t:'sys', text:'✓ Estimate sent → Won · $26,000', wait:2600}
+      {t:'in', text:'Thank you! 🙌', meta:'11:56 AM', wait:2800}
     ];
+
     var typing = null;
     function clearTyping(){ if(typing){ typing.remove(); typing=null; } }
     function addTyping(){ clearTyping(); typing=document.createElement('div'); typing.className='typing show'; typing.innerHTML='<span></span><span></span><span></span>'; body.appendChild(typing); }
-    function addMsg(step){
-      var d=document.createElement('div');
-      if(step.t==='sys'){ d.className='sms sys'; d.textContent=step.text; }
-      else if(step.t==='call'){ d.className='sms in'; d.innerHTML='<span class="call"><svg><use href="#i-phone"/></svg>'+step.text+'</span>'; }
-      else { d.className='sms '+step.side; d.innerHTML=step.text+(step.meta?'<span class="meta">'+step.meta+'</span>':''); }
-      body.appendChild(d);
+
+    function add(cls, html){ var d=document.createElement('div'); d.className=cls; d.innerHTML=html; body.appendChild(d); return d; }
+
+    function render(step){
+      clearTyping();
+      switch(step.t){
+        case 'miss':
+          add('sms miss', '<svg><use href="#i-phone"/></svg><div><span class="mc-h">Missed call</span><span class="mc-sub">Jane Doe · (650) •••-4513</span></div>');
+          break;
+        case 'vm':
+          add('sms vm', '<div class="vm-top"><span class="vm-play"><svg viewBox="0 0 20 20"><path d="M6 4l10 6-10 6z" fill="currentColor"/></svg></span><div class="vm-wave">'+vmBars+'</div><span class="vm-dur">0:14</span></div><div class="vm-tx"><b>Transcript:</b> “Hi, it’s Jane — I’ve got a leak over my garage after last night’s storm. Could someone come take a look this week? Thanks!”</div>');
+          break;
+        case 'out':
+        case 'in':
+          add('sms '+step.t, step.text+(step.meta?'<span class="meta">'+step.meta+'</span>':''));
+          break;
+        case 'book':
+          add('sms book', '<div class="book-h"><svg><use href="#i-check"/></svg> Inspection booked</div><div class="book-rows"><div class="book-row"><b>When</b> Thu, 2:00 PM</div><div class="book-row"><b>Service</b> Free roof inspection</div><div class="book-row"><b>Where</b> 1420 Maple Ave</div><div class="book-row"><b>Lead</b> Jane Doe</div></div>');
+          break;
+        case 'type':
+          addTyping();
+          break;
+        case 'switch':
+          views.classList.add('show-inbox');
+          break;
+        case 'switchback':
+          views.classList.remove('show-inbox');
+          break;
+        case 'mail':
+          inbox.innerHTML = '<div class="mail"><div class="m-top"><span class="m-ava">S</span><div class="m-from">Summit Automations<span>bookings@summithq.com</span></div><span class="m-time">now</span></div><div class="m-subj">New inspection booked — Jane Doe</div><div class="m-rows"><div class="m-row"><b>Name</b> Jane Doe</div><div class="m-row"><b>Phone</b> (650) •••-4513</div><div class="m-row"><b>When</b> Thu, 2:00 PM</div><div class="m-row"><b>Service</b> Free roof inspection</div><div class="m-row"><b>Address</b> 1420 Maple Ave</div><div class="m-row"><b>Source</b> Missed call → text-back</div></div></div>';
+          break;
+      }
     }
+
     var i=0;
     function run(){
       if(i>=script.length){
-        setTimeout(function(){ body.innerHTML=''; i=0; run(); }, 2600);
+        setTimeout(function(){ clearTyping(); body.innerHTML=''; inbox.innerHTML=''; views.classList.remove('show-inbox'); i=0; run(); }, 3200);
         return;
       }
       var step=script[i++];
-      if(step.t==='type'){ addTyping(); }
-      else { clearTyping(); addMsg(step); }
+      render(step);
       setTimeout(run, step.wait);
     }
     run();
+  })();
+
+  // ---- hero slot machine ----
+  (function(){
+    var slot = document.getElementById('slot');
+    if(!slot) return;
+    var reel = slot.querySelector('.reel');
+    reel.appendChild(reel.firstElementChild.cloneNode(true)); // seamless clone of first word
+    var items = reel.children, n = items.length - 1;
+    var h = items[0].offsetHeight, w = 0;
+    for(var k=0;k<items.length;k++){ w = Math.max(w, items[k].offsetWidth); }
+    slot.style.height = h + 'px';
+    slot.style.width = w + 'px';
+    var idx = 0;
+    setInterval(function(){
+      idx++;
+      reel.style.transition = 'transform .55s cubic-bezier(.16,1,.3,1)';
+      reel.style.transform = 'translateY(' + (-idx * h) + 'px)';
+      if(idx === n){ setTimeout(function(){ reel.style.transition='none'; idx=0; reel.style.transform='translateY(0)'; }, 580); }
+    }, 2100);
   })();
 
   // ---- reveal on scroll ----
