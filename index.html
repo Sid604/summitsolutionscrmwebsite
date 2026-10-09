@@ -98,6 +98,8 @@
   /* nav */
   nav{position:sticky;top:0;z-index:500;background:rgba(250,248,243,.8);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-2);}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;}
+  nav .wrap{gap:16px;}
+  .nav-cta .cta-short{display:none;}
   .brand{display:flex;align-items:center;gap:11px;}
   .brand-mark{width:34px;height:34px;border-radius:9px;background:var(--accent);display:grid;place-items:center;flex:none;}
   .brand-mark svg{width:20px;height:20px;}
@@ -479,6 +481,9 @@
   @media (max-width:720px){
     body{font-size:16px;}
     .nav-links .navlink{display:none;}
+    .nav-cta{padding:12px 18px;font-size:14.5px;}
+    .nav-cta .cta-long{display:none;}
+    .nav-cta .cta-short{display:inline;}
     .stats-grid{grid-template-columns:1fr 1fr;}
     .ba-grid{grid-template-columns:1fr;}
     .feature{grid-template-columns:1fr;gap:28px;}
@@ -607,7 +612,7 @@
       <a href="#results" class="navlink">Results</a>
       <a href="#included" class="navlink">What's included</a>
       <a href="#packages" class="navlink">Packages</a>
-      <a href="#audit" class="btn btn-primary">Book a Free Revenue Audit</a>
+      <a href="#audit" class="btn btn-primary nav-cta"><span class="cta-long">Book a Free Revenue Audit</span><span class="cta-short">Free Audit</span></a>
     </div>
   </div>
 </nav>
@@ -1088,15 +1093,15 @@
         data-activation-value=""
         data-deactivation-type="neverDeactivate"
         data-deactivation-value=""
-        data-form-name="Internal Manual Lead Entry"
+        data-form-name="Revenue Audit Call Pre-Booking Form"
         data-height="894"
         data-layout-iframe-id="inline-MkIJlsObzuhTmu6LBPUQ"
         data-form-id="MkIJlsObzuhTmu6LBPUQ"
         data-cookie-consent="true"
         data-cookie-consent-provider="auto"
-        title="Book a free revenue audit"></iframe>
+        title="Revenue Audit Call Pre-Booking Form"></iframe>
     </div>
-    <p class="audit-alt reveal">Prefer to grab a time directly? <a href="https://app.summitsolutionscrm.com/widget/booking/UczsWKllFskIHxNZhy23" target="_blank" rel="noopener">Open the scheduler →</a></p>
+    <p class="audit-alt reveal">Prefer to grab a time directly? <a href="https://api.leadconnectorhq.com/widget/booking/UczsWKllFskIHxNZhy23" target="_blank" rel="noopener">Open the scheduler →</a></p>
   </div>
 </section>
 <script src="https://app.summitsolutionscrm.com/js/form_embed.js"></script>
