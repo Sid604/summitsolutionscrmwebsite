@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Summit Solutions — Never lose another service lead</title>
-<meta name="description" content="A done-for-you lead system for home service businesses. Missed calls texted back in 30 seconds, automated follow-up, estimate nurturing, and booking that runs while you're on the job. Built and managed for you.">
+<title>Summit Solutions | Recover missed calls. Win more jobs.</title>
+<meta name="description" content="Recover missed calls and unsigned estimates while you work. Summit helps contractors book more inspections and win more jobs from the leads they already paid for.">
 <link rel="canonical" href="https://summitsolutionscrm.com/">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Summit Solutions">
-<meta property="og:title" content="Summit Solutions — Never lose another service lead">
-<meta property="og:description" content="Missed calls texted back in 30 seconds. Follow-up, estimate nurturing, and booking on autopilot — built and run for you. See how Husky Roofing booked $43K in jobs from missed calls.">
+<meta property="og:title" content="Summit Solutions | Recover missed calls. Win more jobs.">
+<meta property="og:description" content="Husky Roofing won $43K in roof jobs from two missed calls. See the records, then recover more of the leads and estimates your business already paid for.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://summitsolutionscrm.com/">
 <meta property="og:site_name" content="Summit Solutions">
 <meta property="og:image" content="https://summitsolutionscrm.com/assets/hero-texture.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Summit Solutions — Never lose another service lead">
-<meta name="twitter:description" content="Missed-call text-back, follow-up, and booking for home service businesses — built and managed for you. See how Husky Roofing booked $43K from missed calls.">
+<meta name="twitter:title" content="Summit Solutions | Recover missed calls. Win more jobs.">
+<meta name="twitter:description" content="Win more jobs from missed calls and unsigned estimates. See how Husky Roofing won $43K from two homeowners who booked through a text-back link.">
 <meta name="twitter:image" content="https://summitsolutionscrm.com/assets/hero-texture.jpg">
 <link rel="alternate" type="text/plain" href="/llms.txt">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f3358'/%3E%3Cpath d='M6 22L16 8l10 14z' fill='none' stroke='%23f5f1e8' stroke-width='2.4' stroke-linejoin='round'/%3E%3Cpath d='M12 22l4-6 4 6' fill='none' stroke='%23f5f1e8' stroke-width='2.4' stroke-linejoin='round'/%3E%3C/svg%3E">
@@ -62,7 +62,7 @@
   .wrap{max-width:1140px;margin:0 auto;padding:0 26px;}
 
   h1,h2,h3,h4{font-family:var(--f-display);font-weight:800;line-height:1.05;letter-spacing:-.02em;color:var(--ink);}
-  h1{font-size:clamp(2.6rem,6vw,4.5rem);}
+  h1{font-size:clamp(2.6rem,5vw,3.5rem);}
   h2{font-size:clamp(2rem,4.2vw,3.05rem);}
   h3{font-size:clamp(1.35rem,2.2vw,1.75rem);letter-spacing:-.015em;}
   p{color:var(--muted);}
@@ -116,7 +116,7 @@
   .hero h1{margin:20px 0 22px;}
   .hero h1 .hl{color:var(--accent-2);}
   .slot{display:inline-block;overflow:hidden;vertical-align:top;color:var(--accent-2);}
-  .slot .reel{display:flex;flex-direction:column;will-change:transform;}
+  .slot .reel{display:flex;flex-direction:column;align-items:flex-start;will-change:transform;}
   .slot .reel span{display:block;white-space:nowrap;line-height:1.05;padding-bottom:.22em;}
   .hero-lede{font-size:1.2rem;color:var(--muted);max-width:520px;}
   .hero-cta{display:flex;align-items:center;gap:18px;margin-top:34px;flex-wrap:wrap;}
@@ -189,7 +189,7 @@
   .phone-tag .big{font-family:var(--f-display);font-weight:800;font-size:19px;color:var(--ok);letter-spacing:-.02em;}
   .phone-tag .sm{font-size:11.5px;color:var(--muted);margin-top:1px;}
 
-  /* trust strip — scrolling marquee */
+  /* trust strip. scrolling marquee */
   .trust{background:var(--ink);color:var(--paper);padding:20px 0;overflow:hidden;}
   .marquee{display:flex;width:max-content;}
   .marquee:hover .marquee-track{animation-play-state:paused;}
@@ -200,6 +200,82 @@
   .trust .m-dot svg{width:15px;height:15px;display:block;}
   @keyframes trust-scroll{to{transform:translateX(-100%);}}
   @media (prefers-reduced-motion:reduce){.marquee-track{animation:none;}}
+
+  /* ===== how-it-works module animations ===== */
+  .fx{min-height:430px;background:#f7f8fc;display:flex;flex-direction:column;padding:16px;overflow:hidden;position:relative;}
+  .fx.playing [data-step]:not(.show){visibility:hidden;}
+  .fx [data-step].show{animation:fxpop .42s cubic-bezier(.2,.8,.3,1) both;}
+  @keyframes fxpop{from{opacity:0;transform:translateY(10px) scale(.985);}to{opacity:1;transform:none;}}
+  .fx-thread{display:flex;flex-direction:column;gap:9px;flex:1;min-height:0;justify-content:flex-start;}
+  .fx-msg{display:block;max-width:82%;padding:10px 13px;border-radius:16px;font-size:13.5px;line-height:1.42;}
+  .fx-in{align-self:flex-start;background:#e7e9ee;color:#1a1d22;border-bottom-left-radius:5px;}
+  .fx-out{align-self:flex-end;background:var(--accent);color:#fff;border-bottom-right-radius:5px;}
+  .fx-msg .lnk{color:#8fb0ff;text-decoration:underline;word-break:break-all;}
+  .fx-msg .meta{display:block;font-size:10px;opacity:.6;margin-top:3px;}
+  .fx-miss{display:flex;align-self:flex-start;align-items:center;gap:9px;background:#fdecea;color:#c0392b;border-radius:16px;border-bottom-left-radius:5px;padding:9px 13px;max-width:88%;}
+  .fx-miss svg{width:15px;height:15px;flex:none;}
+  .fx-miss .mc-h{font-weight:700;font-size:13px;}
+  .fx-miss .mc-sub{display:block;font-weight:500;font-size:10.5px;opacity:.75;margin-top:1px;}
+  .fx-day{display:inline-block;align-self:center;font-family:var(--f-display);font-weight:700;font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted-2);background:#fff;border:1px solid var(--line);border-radius:20px;padding:4px 12px;}
+  .fx-card{display:block;align-self:stretch;background:#e8f6ee;border:1px solid rgba(47,125,91,.32);border-radius:14px;padding:12px 14px;margin-top:4px;}
+  .fx-card .h{display:flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:800;font-size:13.5px;color:#1f6b4a;}
+  .fx-card .h svg{width:16px;height:16px;flex:none;}
+  .fx-card .rows{margin-top:9px;display:flex;flex-direction:column;gap:5px;}
+  .fx-card .row{display:flex;gap:8px;font-size:12px;color:#2f4f3f;}
+  .fx-card .row b{color:#14532d;font-weight:600;min-width:58px;flex:none;}
+  .fx-mail{display:block;align-self:flex-start;max-width:88%;background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 13px;box-shadow:var(--shadow-sm);}
+  .fx-mail .mh{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--muted-2);margin-bottom:6px;}
+  .fx-mail .mh b{color:var(--ink);font-family:var(--f-display);font-weight:700;font-size:12px;}
+  .fx-mail .subj{font-weight:600;font-size:12.5px;color:var(--ink);margin-bottom:3px;}
+  .fx-mail p{font-size:12px;color:var(--muted);line-height:1.4;}
+  /* estimate pipeline + won */
+  .fx-pipe{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:4px;}
+  .fx-pipe{display:flex;}
+  .fx-stage{font-family:var(--f-display);font-weight:700;font-size:10px;letter-spacing:.02em;padding:5px 9px;border-radius:20px;background:#fff;border:1px solid var(--line);color:var(--muted-2);transition:all .4s ease;}
+  .fx-stage.on{background:var(--accent-wash);border-color:transparent;color:var(--accent-2);}
+  .fx-stage.won{background:#e8f6ee;color:#1f6b4a;border-color:rgba(47,125,91,.3);}
+  .fx-pipe .arw{color:var(--muted-2);font-size:11px;}
+  .fx-won{display:flex;align-self:stretch;margin-top:auto;background:linear-gradient(135deg,#1f6b4a,#2f7d5b);color:#fff;border-radius:14px;padding:15px 16px;align-items:center;justify-content:space-between;box-shadow:var(--shadow-md);}
+  .fx-won .wl{font-family:var(--f-display);font-weight:700;font-size:12.5px;opacity:.88;}
+  .fx-won .wt{font-size:11px;opacity:.82;margin-top:3px;}
+  .fx-won .wn{font-family:var(--f-display);font-weight:800;font-size:27px;letter-spacing:-.02em;}
+  .fx.done .fx-pipe .fx-stage:first-child{background:#fff;border-color:var(--line);color:var(--muted-2);}
+  .fx.done .fx-pipe .fx-stage:last-child{background:#e8f6ee;color:#1f6b4a;border-color:rgba(47,125,91,.3);}
+  /* calendar module */
+  .fx-cal{display:flex;flex-direction:column;gap:12px;flex:1;}
+  .cal-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;flex:1;min-height:0;}
+  .cal-col{display:flex;flex-direction:column;gap:5px;}
+  .cal-h{font-family:var(--f-display);font-weight:700;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted-2);text-align:center;padding-bottom:5px;border-bottom:1px solid var(--line-2);}
+  .cal-ev{display:block;background:var(--accent-wash);border-left:3px solid var(--accent-2);border-radius:6px;padding:5px 6px;font-size:9px;line-height:1.3;color:var(--accent-ink);overflow-wrap:anywhere;}
+  .cal-ev .t{font-weight:800;display:block;font-size:9.5px;}
+  .fx-notes{display:grid;grid-template-columns:1fr;gap:8px;}
+  .note{display:flex;flex:1;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 10px;box-shadow:var(--shadow-sm);}
+  .note .ic{width:26px;height:26px;border-radius:7px;display:grid;place-items:center;flex:none;}
+  .note .ic svg{width:14px;height:14px;}
+  .note.ok .ic{background:#e8f6ee;color:#1f6b4a;}
+  .note.rm .ic{background:var(--accent-wash);color:var(--accent-2);}
+  .note.br .ic{background:#fdf2e3;color:var(--gold);}
+  .note .nt{font-family:var(--f-display);font-weight:700;font-size:11.5px;color:var(--ink);line-height:1.2;}
+  .note .ns{font-size:10.5px;color:var(--muted);margin-top:1px;}
+
+  /* ===== getting-started step icons ===== */
+  .step-ic{width:46px;height:46px;border-radius:12px;background:var(--accent-wash);display:grid;place-items:center;margin-bottom:18px;color:var(--accent-2);}
+  .step-ic svg{width:26px;height:26px;}
+  .ic-node .n{animation:nodePulse 2.6s ease-in-out infinite;transform-origin:center;transform-box:fill-box;}
+  .ic-node .n2{animation-delay:.35s;}.ic-node .n3{animation-delay:.7s;}.ic-node .n4{animation-delay:1.05s;}
+  @keyframes nodePulse{0%,100%{opacity:.35;}50%{opacity:1;}}
+  .ic-node .edge{stroke:currentColor;stroke-width:1.4;stroke-dasharray:22;stroke-dashoffset:22;animation:edgeDraw 2.6s ease-in-out infinite;}
+  @keyframes edgeDraw{0%{stroke-dashoffset:22;}45%,100%{stroke-dashoffset:0;}}
+  .ic-toggle .knob{animation:toggleKnob 2.8s ease-in-out infinite;}
+  @keyframes toggleKnob{0%,35%{transform:translateX(0);}55%,100%{transform:translateX(9px);}}
+  .ic-toggle .track{animation:toggleTrack 2.8s ease-in-out infinite;}
+  @keyframes toggleTrack{0%,35%{fill:var(--line);}55%,100%{fill:var(--ok);}}
+  .ic-loop .ring{transform-origin:center;transform-box:fill-box;animation:ringPulse 2.7s ease-out infinite;}
+  .ic-loop .ring2{animation-delay:.9s;}.ic-loop .ring3{animation-delay:1.8s;}
+  @keyframes ringPulse{0%{opacity:.85;transform:scale(.25);}70%{opacity:0;}100%{opacity:0;transform:scale(1);}}
+  .ic-loop .arrow{transform-origin:center;transform-box:fill-box;animation:spin 3.4s linear infinite;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+  @media (prefers-reduced-motion:reduce){.step-ic *{animation:none!important;}.ic-toggle .knob{transform:translateX(9px);}.ic-toggle .track{fill:var(--ok);}}
 
   /* stats */
   .stats{background:var(--paper-2);}
@@ -252,16 +328,16 @@
   .cycle .eyebrow{color:var(--gold-soft);}
   .cycle .eyebrow::before{background:var(--gold-soft);}
   .cycle .section-head p{color:rgba(245,241,232,.72);}
-  .cycle-track{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
+  .cycle-track{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;}
   .cy-step{background:rgba(255,255,255,.04);border:1px solid rgba(245,241,232,.12);border-radius:var(--r-md);overflow:hidden;display:flex;flex-direction:column;}
-  .cy-head{padding:16px 15px 12px;}
+  .cy-head{padding:22px 24px 20px;}
   .cy-num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--gold-soft);color:var(--ink);font-family:var(--f-display);font-weight:800;font-size:13px;}
-  .cy-title{font-family:var(--f-display);font-weight:700;font-size:14.5px;color:#fff;margin-top:11px;letter-spacing:-.01em;line-height:1.2;}
-  .cy-sub{font-size:12px;color:rgba(245,241,232,.6);margin-top:5px;line-height:1.4;}
-  .cy-shot{margin-top:auto;background:#f7f8fc;height:180px;overflow:hidden;position:relative;}
+  .cy-title{font-family:var(--f-display);font-weight:700;font-size:19px;color:#fff;margin-top:11px;letter-spacing:-.01em;line-height:1.2;}
+  .cy-sub{font-size:14px;color:rgba(245,241,232,.6);margin-top:5px;line-height:1.4;}
+  .cy-shot{display:block;margin-top:auto;background:#f7f8fc;height:360px;overflow:hidden;position:relative;}.cy-shot:focus-visible{outline:3px solid var(--gold-soft);outline-offset:-3px;}
   .cy-shot::after{content:'';position:absolute;left:0;right:0;bottom:0;height:44px;background:linear-gradient(transparent,#f7f8fc);}
   .cy-shot img{width:100%;height:auto;}
-  .cy-shot.won{display:flex;align-items:center;justify-content:center;background:#e8f3ec;height:180px;}
+  .cy-shot.won{display:flex;align-items:center;justify-content:center;background:#1d1d1d;height:360px;padding:20px;}
   .cy-shot.won::after{display:none;}
   .cy-shot.won img{width:100%;height:auto;}
   .cycle-outcome{margin-top:34px;text-align:center;}
@@ -322,6 +398,15 @@
   .pkg .btn{margin-top:auto;}
   .price-note{text-align:center;margin-top:28px;font-size:14px;color:var(--muted-2);max-width:620px;margin-left:auto;margin-right:auto;}
 
+  .cycle-evidence{max-width:700px;margin:18px auto 0;font-size:13px;color:rgba(245,241,232,.72);}
+  .testimonial-context{color:rgba(255,255,255,.78);font-size:14px;margin-top:16px;}
+  .demo-toggle{margin-top:18px;background:none;border:1px solid var(--line);border-radius:8px;padding:8px 14px;font:600 13px var(--f-body);color:var(--accent-2);cursor:pointer;}
+  :focus-visible{outline:3px solid var(--gold);outline-offset:4px;}
+  @media(max-width:380px){nav .btn{font-size:12px;padding:11px 12px;}nav .brand-name{font-size:16px;}nav .wrap{padding:0 16px;}.cycle-outcome .tagpill{border-radius:var(--r-md);}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*,*::before,*::after{animation:none!important;transition:none!important;}.sms,.mail{opacity:1;transform:none;}.ic-node .edge{stroke-dashoffset:0;}.reveal{opacity:1;transform:none;}}
+
+  .animations-paused *, .animations-paused *::before, .animations-paused *::after{animation:none!important;transition:none!important;}.animations-paused .sms,.animations-paused .mail{opacity:1;transform:none;}
+
   /* faq */
   .faq-list{max-width:820px;margin:0 auto;border-top:1px solid var(--line);}
   .faq-item{border-bottom:1px solid var(--line);}
@@ -376,7 +461,7 @@
     .final .wrap{grid-template-columns:1fr;}
     .testi{grid-template-columns:1fr;}
     .proof-gallery{grid-template-columns:1fr 1fr;}
-    .cycle-track{grid-template-columns:repeat(3,1fr);}
+    .cycle-track{grid-template-columns:repeat(2,minmax(0,1fr));}
     .inc-grid{grid-template-columns:1fr;}
     .pkg-grid{grid-template-columns:1fr;max-width:460px;margin:0 auto;}
   }
@@ -402,7 +487,7 @@
       "@type": "ProfessionalService",
       "@id": "https://summitsolutionscrm.com/#business",
       "name": "Summit Solutions",
-      "description": "Done-for-you lead management for home service businesses: missed-call text-back, automated follow-up, self-booking, and estimate nurturing, built and managed for you.",
+      "description": "Revenue recovery for home service businesses: turn missed calls into booked inspections, follow up on unsigned estimates, and track the jobs you win.",
       "url": "https://summitsolutionscrm.com/",
       "email": "sid@summitsolutionscrm.com",
       "telephone": "+1-424-387-7320",
@@ -421,10 +506,10 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "How long does setup take?", "acceptedAnswer": { "@type": "Answer", "text": "About a week from signing to go-live. We build everything, test every workflow end to end, customize it to your business, and train whoever answers your leads." } },
-        { "@type": "Question", "name": "Do I need a website?", "acceptedAnswer": { "@type": "Answer", "text": "No. The system works with phone calls, referrals, and any lead source. We can build you a simple booking page if needed." } },
-        { "@type": "Question", "name": "Do I have to manage any of this?", "acceptedAnswer": { "@type": "Answer", "text": "No. We own the backend and run it for you: monitoring, monthly reporting, reactivation campaigns, and ongoing optimization. You just take the booked jobs." } },
-        { "@type": "Question", "name": "How do the packages work?", "acceptedAnswer": { "@type": "Answer", "text": "Three tiers — Starter, Growth, and Partner — each a flat monthly plus a one-time build. Which one fits depends on how much of the pipeline you want us running. We scope it with you on a short call." } },
+        { "@type": "Question", "name": "How long does setup take?", "acceptedAnswer": { "@type": "Answer", "text": "About two weeks from signing to go-live. We build everything, test every workflow end to end, customize it to your business, and train whoever answers your leads." } },
+        { "@type": "Question", "name": "Can you work with my existing website?", "acceptedAnswer": { "@type": "Answer", "text": "Most contractors we work with have a website. We connect your existing site to booking and follow-up. If needed, we can build a simple landing page where homeowners can request or book a visit." } },
+        { "@type": "Question", "name": "Do I have to manage any of this?", "acceptedAnswer": { "@type": "Answer", "text": "We handle setup and checks. Partner adds monthly reporting, older-lead follow-up, and ongoing improvements. Your team handles the visits and the work." } },
+        { "@type": "Question", "name": "How do the packages work?", "acceptedAnswer": { "@type": "Answer", "text": "Starter recovers missed calls. Growth adds lead and estimate follow-up. Partner adds monthly management and older-lead recovery. Each has a flat monthly fee plus a one-time setup fee. We scope it with you on a short call." } },
         { "@type": "Question", "name": "Can I customize the messages?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We dial in the exact wording during setup so it is your voice, and we adjust it anytime your hours, team, or offers change." } },
         { "@type": "Question", "name": "What if it doesn't work for my business?", "acceptedAnswer": { "@type": "Answer", "text": "Monthly management comes with a 30-day money-back guarantee. If it is not working in the first month, that month is refunded. The setup fee covers real build work and is non-refundable." } }
       ]
@@ -441,6 +526,8 @@
   <symbol id="i-plus" viewBox="0 0 20 20"><path d="M10 3v14M3 10h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
   <symbol id="i-x" viewBox="0 0 20 20"><path d="M5 5l10 10M15 5L5 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
   <symbol id="i-phone" viewBox="0 0 20 20"><path d="M4 3h3l1.5 4-2 1.5a11 11 0 005 5l1.5-2 4 1.5v3a1 1 0 01-1 1A15 15 0 013 4a1 1 0 011-1z" fill="currentColor"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2.5h7l5 5v14H6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13 2.5V8h5M9.5 13h5M9.5 16.5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
 </svg>
 
 <nav>
@@ -449,7 +536,7 @@
       <span class="brand-mark"><svg viewBox="0 0 24 24"><path d="M3 18L12 5l9 13z" fill="none" stroke="#f5f1e8" stroke-width="2" stroke-linejoin="round"/><path d="M8 18l4-6 4 6" fill="none" stroke="#f5f1e8" stroke-width="2" stroke-linejoin="round"/></svg></span>
       <span class="brand-txt">
         <span class="brand-name">Summit Solutions</span>
-        <span class="brand-sub">Lead Automation</span>
+        <span class="brand-sub">Revenue Recovery</span>
       </span>
     </a>
     <div class="nav-links">
@@ -468,16 +555,16 @@
   <div class="wrap">
     <div class="hero-grid">
       <div class="reveal is-visible">
-        <span class="eyebrow">Lead systems for home service businesses</span>
-        <h1>Never lose another <span class="slot" id="slot"><span class="reel"><span>roofing</span><span>plumbing</span><span>HVAC</span><span>electrical</span><span>landscaping</span><span>remodeling</span><span>garage door</span><span>painting</span><span>flooring</span><span>solar</span></span></span> lead.</h1>
-        <p class="hero-lede">Missed calls texted back in 30 seconds. Follow-up, estimate nurturing, and booking that run while you're out on the job — a complete system we build and manage, so the leads you already paid for actually turn into jobs.</p>
+        <span class="eyebrow">Revenue recovery for contractors</span>
+        <h1 aria-label="Win more home service jobs.">Win more<br><span class="slot" id="slot" aria-hidden="true"><span class="reel"><span>roofing</span><span>plumbing</span><span>HVAC</span><span>electrical</span><span>landscaping</span><span>remodeling</span><span>garage door</span><span>painting</span><span>flooring</span><span>solar</span></span></span> jobs.</h1>
+        <p class="hero-lede">Recover missed calls and unsigned estimates. Book more work from the leads you already paid for, while you finish the job.</p>
         <div class="hero-cta">
           <a href="#resource" class="btn btn-primary btn-lg">Get the free guide <svg><use href="#i-arrow"/></svg></a>
           <a href="#how" class="textlink">See it in action <svg><use href="#i-arrow"/></svg></a>
         </div>
         <div class="hero-trust">
           <img src="assets/husky-logo.webp" alt="Husky Roofing logo">
-          <span class="t-txt"><b>Case study: Husky Roofing</b><br>$43K in new jobs from missed calls in their first 6 weeks.</span>
+          <span class="t-txt"><b>Case study: Husky Roofing</b><br>$43K in won jobs from two missed calls.</span>
         </div>
       </div>
       <div class="hero-visual reveal is-visible">
@@ -487,8 +574,8 @@
             <div class="phone-views" id="phoneViews">
               <div class="pv">
                 <div class="sms-head">
-                  <div class="av">JD</div>
-                  <div class="nm">Jane Doe</div>
+                  <div class="av">AR</div>
+                  <div class="nm">Alex R.</div>
                   <div class="st">Mobile · (650) •••-4513</div>
                 </div>
                 <div class="sms-body" id="smsBody"></div>
@@ -503,8 +590,8 @@
             </div>
           </div>
           <div class="phone-tag">
-            <div class="big">$26,000 won</div>
-            <div class="sm">from a single missed call</div>
+            <div class="big">Inspection booked</div>
+            <div class="sm">Example text-back</div>
           </div>
         </div>
       </div>
@@ -546,37 +633,37 @@
 <section class="stats" id="results">
   <div class="wrap">
     <div class="section-head center">
-      <span class="eyebrow">Case study — Husky Roofing</span>
-      <h2>Every missed call is a job walking to your competitor</h2>
-      <p>When a homeowner hits voicemail, they call the next business on the list. Here's what changed in Husky Roofing's first 6 weeks on the system.</p>
+      <span class="eyebrow">Case study · Husky Roofing</span>
+      <h2>Recover the work hiding in your missed calls</h2>
+      <p>Husky Roofing brought missed callers back into the conversation. Two homeowners booked their own inspections and later signed $43,000 in roof jobs.</p>
     </div>
     <div class="stats-grid">
-      <div class="stat-card reveal"><div class="n">37</div><div class="l">Missed calls automatically texted back within 30 seconds</div></div>
-      <div class="stat-card reveal"><div class="n">32</div><div class="l">Roof inspections booked from those conversations</div></div>
-      <div class="stat-card reveal"><div class="n">15</div><div class="l">Inspections recovered directly from missed calls</div></div>
-      <div class="stat-card reveal"><div class="n">$43K</div><div class="l">In jobs won so far — Tiep D. $26K &amp; James B. $17K</div></div>
+      <div class="stat-card reveal"><div class="n">37</div><div class="l">Missed callers texted back within a minute</div></div>
+      <div class="stat-card reveal"><div class="n">32</div><div class="l">Inspections booked across the tracked lead pipeline</div></div>
+      <div class="stat-card reveal"><div class="n">15</div><div class="l">Inspections booked from missed calls</div></div>
+      <div class="stat-card reveal"><div class="n">$43K</div><div class="l">Won contract value: Tiep D. $26K + James B. $17K</div></div>
     </div>
     <div class="ba-grid reveal">
       <div class="ba-card before">
         <h4>Before Summit</h4>
         <ul>
           <li><svg class="ic" style="color:var(--muted-2)"><use href="#i-x"/></svg> Missed calls sit in voicemail for hours</li>
-          <li><svg class="ic" style="color:var(--muted-2)"><use href="#i-x"/></svg> Homeowner calls three other businesses</li>
+          <li><svg class="ic" style="color:var(--muted-2)"><use href="#i-x"/></svg> Homeowners shop around before you call back</li>
           <li><svg class="ic" style="color:var(--muted-2)"><use href="#i-x"/></svg> Estimates go cold with no follow-up</li>
-          <li><svg class="ic" style="color:var(--muted-2)"><use href="#i-x"/></svg> Real jobs quietly leak out every week</li>
+          <li><svg class="ic" style="color:var(--muted-2)"><use href="#i-x"/></svg> Paid-for leads go without a response</li>
         </ul>
       </div>
       <div class="ba-card after">
         <h4>With Summit</h4>
         <ul>
-          <li><svg class="ic" style="color:var(--gold-soft)"><use href="#i-check"/></svg> Every missed call texted back in 30 seconds</li>
-          <li><svg class="ic" style="color:var(--gold-soft)"><use href="#i-check"/></svg> The conversation starts before they call anyone else</li>
-          <li><svg class="ic" style="color:var(--gold-soft)"><use href="#i-check"/></svg> Estimates nurtured by text &amp; email until they sign</li>
+          <li><svg class="ic" style="color:var(--gold-soft)"><use href="#i-check"/></svg> Missed callers get a text and a booking link</li>
+          <li><svg class="ic" style="color:var(--gold-soft)"><use href="#i-check"/></svg> Homeowners can book before the office opens</li>
+          <li><svg class="ic" style="color:var(--gold-soft)"><use href="#i-check"/></svg> Unsigned estimates get a scheduled follow-up</li>
           <li><svg class="ic" style="color:var(--gold-soft)"><use href="#i-check"/></svg> Inspections land on the calendar while you work</li>
         </ul>
       </div>
     </div>
-    <p class="stats-note">Real numbers from one client's first 6 weeks. Screenshots throughout are straight from the CRM (customer details redacted for privacy).</p>
+    <p class="stats-note">Husky Roofing case study, August–September 2026. Activity counts cover the first four weeks; $43K is the recorded contract value of Tiep D. and James B. Contact details are omitted from screenshot crops.</p>
   </div>
 </section>
 
@@ -585,15 +672,16 @@
   <div class="wrap">
     <div class="section-head center">
       <span class="eyebrow">How it works</span>
-      <h2>A system that answers, follows up, and closes for you</h2>
-      <p>The automations that catch every lead the moment it comes in. Every screenshot below is from Husky Roofing's live account.</p>
+      <h2>More booked visits. More chances to win the job.</h2>
+      <p>Respond to missed callers, keep appointments on track, and follow up on estimates. These animated examples show the sequences we configure for your business.</p>
+      <button type="button" class="demo-toggle" id="demoToggle" aria-pressed="false" hidden>Pause animations</button>
     </div>
 
     <div class="feature">
       <div class="f-text">
-        <span class="eyebrow">30-second response</span>
-        <h3>Missed calls texted back instantly</h3>
-        <p class="f-desc">The second a call goes unanswered — day or after hours — the lead gets a friendly text and a booking link, so you're first in the conversation, not fourth.</p>
+        <span class="eyebrow">Recover missed callers</span>
+        <h3>Keep the job when you miss the call</h3>
+        <p class="f-desc">A missed caller gets a text with a booking link. They can schedule an inspection while you stay on the job, including after hours.</p>
         <ul>
           <li><svg class="ic"><use href="#i-check"/></svg> Separate business-hours &amp; after-hours workflows</li>
           <li><svg class="ic"><use href="#i-check"/></svg> Opens a two-way text thread in one inbox</li>
@@ -601,15 +689,23 @@
         </ul>
       </div>
       <div class="f-visual">
-        <div class="shot"><div class="shot-bar"><i></i><i></i><i></i><span class="t">Conversations · missed call auto-text</span></div><div class="shot-body"><div class="shot-clip"><img src="assets/cycle-1-missedcall.png" alt="CRM showing an automatic missed-call text-back"></div></div></div>
+        <div class="shot"><div class="shot-bar"><i></i><i></i><i></i><span class="t">Conversations · missed call auto-text</span></div><div class="shot-body"><div class="fx" data-fx data-hold="2600" role="img" aria-label="Animation: a missed call is auto-texted back and turns into a booked appointment">
+          <div class="fx-thread">
+            <div class="fx-miss" data-step="500"><svg><use href="#i-phone"/></svg><div><span class="mc-h">Missed call</span><span class="mc-sub">(650) •••-4513 · 11:54 AM</span></div></div>
+            <div class="fx-msg fx-out" data-step="1100">Hi, this is Husky Roofing. Sorry we missed your call! Book a free inspection here: <span class="lnk">husky-roofing.com/book</span><span class="meta">Auto-text · 11:54 AM</span></div>
+            <div class="fx-msg fx-in" data-step="1300">I used the link to book Thursday at 2. Thank you!</div>
+            <div class="fx-msg fx-out" data-step="1100">You're booked for Thursday at 2 PM.</div>
+            <div class="fx-card" data-step="1400"><div class="h"><svg><use href="#i-check"/></svg> Appointment created</div><div class="rows"><div class="row"><b>When</b> Thu, 2:00 PM</div><div class="row"><b>Service</b> Free roof inspection</div><div class="row"><b>Pipeline</b> New opportunity added</div></div></div>
+          </div>
+        </div></div></div>
       </div>
     </div>
 
     <div class="feature flip">
       <div class="f-text">
-        <span class="eyebrow">Automated follow-up</span>
-        <h3>Follow-up that actually happens</h3>
-        <p class="f-desc">A sequence of texts and calls keeps working the lead for days — the follow-up your team rarely has time to do by hand.</p>
+        <span class="eyebrow">Recover quiet leads</span>
+        <h3>Book the leads you already paid for</h3>
+        <p class="f-desc">Reach homeowners who were busy when you first replied. Follow-up texts and calls give them another chance to book, without adding a callback list to your day.</p>
         <ul>
           <li><svg class="ic"><use href="#i-check"/></svg> Multi-touch sequence over a 14-day window</li>
           <li><svg class="ic"><use href="#i-check"/></svg> Stops the moment they reply or book</li>
@@ -617,15 +713,24 @@
         </ul>
       </div>
       <div class="f-visual">
-        <div class="shot"><div class="shot-bar"><i></i><i></i><i></i><span class="t">Conversations · automated follow-up</span></div><div class="shot-body"><div class="shot-clip"><img src="assets/feat-followup.png" alt="CRM showing an automated follow-up message"></div></div></div>
+        <div class="shot"><div class="shot-bar"><i></i><i></i><i></i><span class="t">Conversations · automated follow-up</span></div><div class="shot-body"><div class="fx" data-fx data-hold="2600" role="img" aria-label="Animation: a multi-day follow-up sequence runs until the lead replies and books">
+          <div class="fx-thread">
+            <div class="fx-day" data-step="500">Day 1</div>
+            <div class="fx-msg fx-out" data-step="700">Hi, it's Husky Roofing. Still want that free roof inspection? Grab a time here: <span class="lnk">husky-roofing.com/book</span><span class="meta">Auto · 9:02 AM</span></div>
+            <div class="fx-day" data-step="1300">Day 4</div>
+            <div class="fx-msg fx-out" data-step="700">You can choose an open inspection time here: <span class="lnk">husky-roofing.com/book</span><span class="meta">Auto · 10:15 AM</span></div>
+            <div class="fx-msg fx-in" data-step="1400">I've booked Thursday at 2. Thanks for checking in!</div>
+            <div class="fx-card" data-step="1200"><div class="h"><svg><use href="#i-check"/></svg> Inspection booked</div><div class="rows"><div class="row"><b>When</b> Thu, 2:00 PM</div><div class="row"><b>Status</b> Follow-up sequence stopped</div></div></div>
+          </div>
+        </div></div></div>
       </div>
     </div>
 
     <div class="feature">
       <div class="f-text">
-        <span class="eyebrow">Booking on autopilot</span>
-        <h3>Inspections book &amp; remind themselves</h3>
-        <p class="f-desc">Leads pick a slot from a live calendar and get automatic confirmations, 24-hour and 2-hour reminders, plus self-service reschedule — fewer no-shows, zero phone tag.</p>
+        <span class="eyebrow">Protect your crew's time</span>
+        <h3>Spend less time booking and chasing visits</h3>
+        <p class="f-desc">Homeowners choose an open slot, get confirmations and reminders, and can reschedule. Your crew gets the job details before the visit, saving office calls and wasted trips.</p>
         <ul>
           <li><svg class="ic"><use href="#i-check"/></svg> Real-time calendar the lead books directly</li>
           <li><svg class="ic"><use href="#i-check"/></svg> Confirmations, reminders &amp; self-reschedule</li>
@@ -633,15 +738,30 @@
         </ul>
       </div>
       <div class="f-visual">
-        <div class="shot shot-wide"><div class="shot-bar"><i></i><i></i><i></i><span class="t">Calendar · Free Roof Inspection</span></div><div class="shot-body"><div class="shot-clip"><img src="assets/feat-calendar.png" alt="A week of booked roof inspections in the calendar"></div></div></div>
+        <div class="shot shot-wide"><div class="shot-bar"><i></i><i></i><i></i><span class="t">Calendar · Free Roof Inspection</span></div><div class="shot-body"><div class="fx" data-fx data-hold="2800" role="img" aria-label="Animation: the week's calendar fills with booked inspections while confirmations, reminders, and a staff brief fire">
+          <div class="fx-cal">
+            <div class="cal-grid">
+              <div class="cal-col"><div class="cal-h">Mon</div><div class="cal-ev" data-step="450"><span class="t">9:00</span>Inspection</div></div>
+              <div class="cal-col"><div class="cal-h">Tue</div><div class="cal-ev" data-step="300"><span class="t">11:00</span>Inspection</div><div class="cal-ev" data-step="300"><span class="t">3:00</span>Inspection</div></div>
+              <div class="cal-col"><div class="cal-h">Wed</div><div class="cal-ev" data-step="300"><span class="t">10:00</span>Inspection</div></div>
+              <div class="cal-col"><div class="cal-h">Thu</div><div class="cal-ev" data-step="300"><span class="t">2:00</span>Alex R.</div><div class="cal-ev" data-step="300"><span class="t">4:00</span>Inspection</div></div>
+              <div class="cal-col"><div class="cal-h">Fri</div><div class="cal-ev" data-step="300"><span class="t">1:00</span>Inspection</div></div>
+            </div>
+            <div class="fx-notes">
+              <div class="note ok" data-step="650"><span class="ic"><svg><use href="#i-check"/></svg></span><div><div class="nt">Confirmation sent</div><div class="ns">to the lead</div></div></div>
+              <div class="note rm" data-step="600"><span class="ic"><svg><use href="#i-clock"/></svg></span><div><div class="nt">Reminders set</div><div class="ns">24-hour &amp; 2-hour</div></div></div>
+              <div class="note br" data-step="600"><span class="ic"><svg><use href="#i-doc"/></svg></span><div><div class="nt">Brief to office</div><div class="ns">name · time · address</div></div></div>
+            </div>
+          </div>
+        </div></div></div>
       </div>
     </div>
 
     <div class="feature flip">
       <div class="f-text">
-        <span class="eyebrow">Estimate nurturing</span>
-        <h3>Estimates chased until they're a yes</h3>
-        <p class="f-desc">After the inspection, a branded estimate auto-sends and the deal moves to <em>Estimate Sent</em>. Then a 3-touch text-and-email sequence over 10 days keeps nudging until it signs — so quotes don't die in an inbox.</p>
+        <span class="eyebrow">Recover unsigned quotes</span>
+        <h3>Get a decision on the estimate you sent</h3>
+        <p class="f-desc">You already spent time on the visit and quote. A three-touch text-and-email sequence over 10 days brings the estimate back to the homeowner and makes approval easy.</p>
         <ul>
           <li><svg class="ic"><use href="#i-check"/></svg> Estimate auto-sends from the post-inspection form</li>
           <li><svg class="ic"><use href="#i-check"/></svg> 3 follow-ups over 10 days by text &amp; email</li>
@@ -649,44 +769,51 @@
         </ul>
       </div>
       <div class="f-visual">
-        <div class="shot"><div class="shot-bar"><i></i><i></i><i></i><span class="t">Conversations · estimate follow-up</span></div><div class="shot-body"><div class="shot-clip"><img src="assets/cycle-estimate.png" alt="CRM showing an automated estimate follow-up email"></div></div></div>
+        <div class="shot"><div class="shot-bar"><i></i><i></i><i></i><span class="t">Conversations · estimate follow-up</span></div><div class="shot-body"><div class="fx" data-fx data-hold="3000" role="img" aria-label="Animation: an estimate is nurtured by text and email until the homeowner replies and the job is marked won for 8,000 dollars">
+          <div class="fx-thread">
+            <div class="fx-pipe" data-step="400"><span class="fx-stage on">Estimate sent</span><span class="arw">→</span><span class="fx-stage">Follow-up</span><span class="arw">→</span><span class="fx-stage">Won</span></div>
+            <div class="fx-card" data-step="500"><div class="h"><svg><use href="#i-doc"/></svg> Estimate sent · $8,000</div><div class="rows"><div class="row"><b>Project</b> Full roof replacement</div></div></div>
+            <div class="fx-day" data-step="1000">Day 1 · text</div>
+            <div class="fx-msg fx-out" data-step="700">Hi! Your roof estimate is ready. Any questions about the scope or timing?<span class="meta">Auto · 9:00 AM</span></div>
+            <div class="fx-mail" data-step="1200"><div class="mh"><b>Husky Roofing</b> · Day 4 · email</div><div class="subj">Your estimate is ready to approve</div><p>One tap to approve and we'll get you on the schedule.</p></div>
+            <div class="fx-msg fx-in" data-step="1300">I've approved the estimate. Let's book the work!</div>
+            <div class="fx-won" data-step="1200"><div><div class="wl">Marked WON</div><div class="wt">Full roof replacement</div></div><div class="wn">$8,000</div></div>
+          </div>
+        </div></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CENTERPIECE: full cycle -->
+<!-- TIEP D. CASE STUDY -->
 <section class="cycle">
   <div class="wrap">
     <div class="section-head center">
-      <span class="eyebrow">One lead, start to finish</span>
-      <h2>One missed call. One paid job.</h2>
-      <p>Every stage of the system, working together — from a voicemail nobody answered to a job marked Won. Tiep D. started as a missed call and closed at $26,000. No one on the team had to chase it.</p>
+      <span class="eyebrow">One homeowner, start to finish</span>
+      <h2>One missed call. One $26,000 job won.</h2>
+      <p>Tiep D. called Husky Roofing before the office opened on September 9. He booked his own inspection through the text-back link 14 minutes later. Husky later recorded his roof job as Won for $26,000.</p>
     </div>
     <div class="cycle-track">
       <div class="cy-step reveal">
-        <div class="cy-head"><span class="cy-num">1</span><div class="cy-title">Missed call, auto-text</div><div class="cy-sub">Texts back in seconds and opens the thread.</div></div>
-        <div class="cy-shot"><img src="assets/cycle-1-missedcall.png" alt="Step 1 — automatic missed call text-back"></div>
+        <div class="cy-head"><span class="cy-num">1</span><div class="cy-title">8:15 AM: missed call</div><div class="cy-sub">Husky's text and booking link reached Tiep at 8:16 AM.</div></div>
+        <a class="cy-shot" href="assets/tiep-missed-call.png" target="_blank" rel="noopener" aria-label="Open Tiep's missed-call and text-back screenshot"><img src="assets/tiep-missed-call.png" width="1026" height="1160" loading="lazy" alt="Tiep's voicemail at 8:15 AM followed by Husky Roofing's text and booking link at 8:16 AM"></a>
       </div>
       <div class="cy-step reveal">
-        <div class="cy-head"><span class="cy-num">2</span><div class="cy-title">Follow-up kicks in</div><div class="cy-sub">Texts &amp; calls work the lead until they reply.</div></div>
-        <div class="cy-shot"><img src="assets/cycle-2-followup.png" alt="Step 2 — automated follow-up"></div>
+        <div class="cy-head"><span class="cy-num">2</span><div class="cy-title">8:29 AM: inspection booked</div><div class="cy-sub">Tiep submitted the booking form himself. Anna didn't need to schedule him.</div></div>
+        <a class="cy-shot" href="assets/tiep-self-booked.png" target="_blank" rel="noopener" aria-label="Open Tiep's self-booking activity screenshot"><img src="assets/tiep-self-booked.png" width="1472" height="1418" loading="lazy" alt="Tiep's conversation and activity panel showing an appointment form submitted and inspection booked on September 9 at 8:29 AM"></a>
       </div>
       <div class="cy-step reveal">
-        <div class="cy-head"><span class="cy-num">3</span><div class="cy-title">Inspection booked</div><div class="cy-sub">Confirmed and dropped on the calendar.</div></div>
-        <div class="cy-shot"><img src="assets/cycle-3-booked.png" alt="Step 3 — inspection booked and confirmed"></div>
+        <div class="cy-head"><span class="cy-num">3</span><div class="cy-title">Visit confirmed by text and email</div><div class="cy-sub">Tiep received his appointment details at 8:29 AM, without another booking call.</div></div>
+        <a class="cy-shot" href="assets/tiep-confirmation.png" target="_blank" rel="noopener" aria-label="Open Tiep's appointment confirmation screenshot"><img src="assets/tiep-confirmation.png" width="1026" height="700" loading="lazy" alt="Tiep's September 10 inspection confirmed by text and email at 8:29 AM"></a>
       </div>
       <div class="cy-step reveal">
-        <div class="cy-head"><span class="cy-num">4</span><div class="cy-title">Estimate sent &amp; nurtured</div><div class="cy-sub">Auto-sent, then chased by text &amp; email.</div></div>
-        <div class="cy-shot"><img src="assets/cycle-estimate.png" alt="Step 4 — estimate sent and nurtured by text and email"></div>
-      </div>
-      <div class="cy-step reveal">
-        <div class="cy-head"><span class="cy-num">5</span><div class="cy-title">Job won — $26K</div><div class="cy-sub">Moved to Won in the pipeline.</div></div>
-        <div class="cy-shot won"><img src="assets/cycle-won-tiep.png" alt="Step 5 — opportunity marked Won for $26,000"></div>
+        <div class="cy-head"><span class="cy-num">4</span><div class="cy-title">Roof job won: $26,000</div><div class="cy-sub">Anna confirmed the sale by text: “sold $26k Tiep Dang.”</div></div>
+        <a class="cy-shot won" href="assets/tiep-sale-confirmed.png" target="_blank" rel="noopener" aria-label="Open Anna's text confirming Tiep's 26,000 dollar sale"><img src="assets/tiep-sale-confirmed.png" width="1398" height="220" loading="lazy" alt="Text from Anna at Husky Roofing confirming sold $26k Tiep Dang"></a>
       </div>
     </div>
     <div class="cycle-outcome">
-      <span class="tagpill"><svg style="width:18px;height:18px"><use href="#i-check"/></svg> Missed call → $26,000 won — handled entirely by the system</span>
+      <span class="tagpill"><svg aria-hidden="true" style="width:18px;height:18px"><use href="#i-check"/></svg> A missed caller booked himself. Husky won a $26,000 roof job.</span>
+      <p class="cycle-evidence">All four crops come from Tiep's records in the Husky Roofing case study. Select a screenshot to read it at full size. Won value is contract value, not a payment receipt.</p>
     </div>
   </div>
 </section>
@@ -696,38 +823,38 @@
   <div class="wrap">
     <div class="section-head center">
       <span class="eyebrow">Done for you</span>
-      <h2>We build it. We run it. You never touch the backend.</h2>
-      <p>Summit takes on a limited number of home service clients so every system gets built and managed properly. You get a partner, not a login.</p>
+      <h2>Win more work without adding office hours</h2>
+      <p>We handle the follow-up and booking setup. You get scheduled visits, a clear view of won jobs, and fewer leads to chase between projects.</p>
     </div>
     <div class="inc-grid">
       <div class="inc-card reveal">
         <div class="k">The build</div>
-        <h3>A complete lead-to-revenue system</h3>
+        <h3>Recover calls and turn quotes into jobs</h3>
         <ul>
-          <li><svg class="ic"><use href="#i-check"/></svg> Dedicated CRM sub-account &amp; local number provisioned</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> Missed-call text-back — business-hours &amp; after-hours</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Your business number and lead conversations in one place</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Missed-call text-back during and after business hours</li>
           <li><svg class="ic"><use href="#i-check"/></svg> Self-booking calendar, confirmations &amp; reminder sequence</li>
           <li><svg class="ic"><use href="#i-check"/></svg> Self-service reschedule &amp; instant office notifications</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> Custom pipeline built around how you actually sell</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> See which leads need a visit, quote, or decision</li>
           <li><svg class="ic"><use href="#i-check"/></svg> Post-inspection form → branded estimate auto-sent</li>
           <li><svg class="ic"><use href="#i-check"/></svg> Estimate nurture, won/lost automation &amp; revenue logging</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> Review requests &amp; referral triggers (more below)</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Ask completed-job customers for reviews and referrals</li>
           <li><svg class="ic"><use href="#i-check"/></svg> End-to-end testing &amp; training before go-live</li>
         </ul>
       </div>
       <div class="inc-card reveal">
         <div class="k">The partnership</div>
-        <h3>Ongoing management, every month</h3>
+        <h3>Keep recovering revenue each month</h3>
         <ul>
-          <li><svg class="ic"><use href="#i-check"/></svg> We own the backend — you never log in</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> System monitoring — if a workflow breaks, we catch &amp; fix it</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> We manage the follow-up so your team can focus on jobs</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> We check that texts, reminders, and booking links work</li>
           <li><svg class="ic"><use href="#i-check"/></svg> Monthly performance report on the 1st: leads, bookings, estimates, revenue</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> Quarterly database reactivation of old leads &amp; cold estimates</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> Win/loss analysis on lost-reason data</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> Lead-source reporting — which channels produce won revenue</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Reconnect with old leads and unsigned estimates each quarter</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Review lost jobs to find where you can win more work</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> See which lead sources produce won contract value</li>
           <li><svg class="ic"><use href="#i-check"/></svg> SMS &amp; email deliverability monitoring</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> Ongoing optimization as your hours, team &amp; wording change</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> Reviews &amp; referrals: job completed → review request → 5★ triggers an automatic referral ask</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Adjust follow-up as your hours, crew, and offers change</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Request reviews and referrals after completed jobs</li>
         </ul>
       </div>
     </div>
@@ -739,34 +866,34 @@
   <div class="wrap">
     <div class="section-head center">
       <span class="eyebrow">Straight from the CRM</span>
-      <h2>What it looks like in the account</h2>
-      <p>Real opportunities, real bookings, and a note from the person who answers their phones.</p>
+      <h2>Won jobs, booked visits, and time back</h2>
+      <p>Husky Roofing's job records and texts from Anna, the receptionist who handles their incoming calls.</p>
     </div>
 
     <div class="proof-gallery">
       <div class="proof-card reveal">
-        <div class="pc-img"><img src="assets/won-cards.png" alt="Two opportunities marked Won — $17,000 and $26,000"></div>
-        <div class="pc-cap"><div class="h">$43,000 in jobs won</div><div class="s">Two deals — James B. $17K &amp; Tiep D. $26K — both from missed calls.</div></div>
+        <div class="pc-img"><img src="assets/won-cards.png" alt="Two opportunities marked Won. $17,000 and $26,000"></div>
+        <div class="pc-cap"><div class="h">$43,000 in jobs won</div><div class="s">James B. $17K and Tiep D. $26K. Both booked through missed-call text links.</div></div>
       </div>
       <div class="proof-card reveal">
-        <div class="pc-img tall"><img src="assets/husky-selfbook-tiep.png" alt="Lead who booked their own inspection"></div>
-        <div class="pc-cap"><div class="h">Self-booked inspection</div><div class="s">Lead scheduled themselves from the text link.</div></div>
+        <div class="pc-img tall"><a href="assets/tiep-confirmation.png" target="_blank" rel="noopener"><img src="assets/tiep-confirmation.png" width="1026" height="700" loading="lazy" alt="Tiep's inspection confirmation sent by text and email at 8:29 AM"></a></div>
+        <div class="pc-cap"><div class="h">Self-booked inspection</div><div class="s">Tiep booked from the text link at 8:29 AM and received a confirmation.</div></div>
       </div>
       <div class="proof-card reveal">
         <div class="pc-img tall"><img src="assets/husky-selfbook-james.png" alt="After-hours lead booked automatically"></div>
-        <div class="pc-cap"><div class="h">Booked after hours</div><div class="s">Came in while the office was closed — still captured.</div></div>
+        <div class="pc-cap"><div class="h">Booked after hours</div><div class="s">James booked while the office was closed. His roof job was later marked Won for $17K.</div></div>
       </div>
     </div>
 
     <div class="testi reveal">
       <div>
-        <div class="quote">“So what you're telling me is pretty soon <span class="em">I'm not going to have to do anything.</span>” … <span class="em">“That's the goal.”</span> Thank you for making our life easier.</div>
+        <div class="quote">“2 hours before arrival. <span class="em">I love that.</span>”</div><p class="testimonial-context">Anna on the inspection reminder texts her team no longer has to remember to send.</p>
         <div class="who">
           <span class="av">A</span>
           <div><div class="nm">Anna</div><div class="rl">Receptionist, Husky Roofing</div></div>
         </div>
       </div>
-      <div class="t-shot"><img src="assets/anna-texts.png" alt="Text messages from Husky Roofing's receptionist about the system"></div>
+      <div class="t-shot"><img src="assets/anna-texts.png" alt="Texts from Anna, Husky Roofing's receptionist, about the inspection reminders and follow-up"></div>
     </div>
   </div>
 </section>
@@ -776,13 +903,13 @@
   <div class="wrap">
     <div class="section-head center">
       <span class="eyebrow">Getting started</span>
-      <h2>From signed to live in about a week</h2>
-      <p>We build it, tune it to your business, and hand you a system that runs on its own — then keep managing it.</p>
+      <h2>Start recovering leads in about two weeks</h2>
+      <p>We connect your calls and booking calendar, test the follow-up, and keep improving it as you win more work.</p>
     </div>
     <div class="steps">
-      <div class="step reveal"><div class="k">Week 1 — Setup</div><h3>We build it around you</h3><p>We map your lead flow, write the messages in your voice, and wire up calls, texts, calendar, estimates, and pipeline.</p></div>
-      <div class="step reveal"><div class="k">Week 2 — Go live</div><h3>Switch it on</h3><p>Your number is connected, everything is tested end-to-end, and the automations start catching every lead from day one.</p></div>
-      <div class="step reveal"><div class="k">Ongoing — Manage</div><h3>We run it for you</h3><p>Monitoring, monthly reporting, reactivation campaigns, and continuous optimization. You never log into the backend.</p></div>
+      <div class="step reveal"><div class="step-ic"><svg class="ic-node" viewBox="0 0 24 24"><line class="edge" x1="5" y1="6" x2="12" y2="12"/><line class="edge" x1="19" y1="5.5" x2="12" y2="12"/><line class="edge" x1="6" y1="19" x2="12" y2="12"/><line class="edge" x1="19" y1="18" x2="12" y2="12"/><circle class="n n1" cx="5" cy="6" r="2.1" fill="currentColor"/><circle class="n n2" cx="19" cy="5.5" r="2.1" fill="currentColor"/><circle class="n n3" cx="6" cy="19" r="2.1" fill="currentColor"/><circle class="n n4" cx="19" cy="18" r="2.1" fill="currentColor"/><circle class="n" cx="12" cy="12" r="2.8" fill="currentColor"/></svg></div><div class="k">Week 1 · Setup</div><h3>Connect your lead sources</h3><p>We connect your calls and calendar, write messages in your voice, and set up follow-up for the leads and estimates you want to recover.</p></div>
+      <div class="step reveal"><div class="step-ic"><svg class="ic-toggle" viewBox="0 0 24 24"><rect class="track" x="3" y="8" width="18" height="8" rx="4" fill="#E2D9C9"/><circle class="knob" cx="8" cy="12" r="5" fill="#fff" stroke="currentColor" stroke-width="1.4"/></svg></div><div class="k">Week 2 · Go live</div><h3>Switch it on</h3><p>We test the full path from missed call to booked visit before going live. Your crew gets appointment details and homeowners get reminders.</p></div>
+      <div class="step reveal"><div class="step-ic"><svg class="ic-loop" viewBox="0 0 24 24" fill="none"><circle class="ring ring1" cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4"/><circle class="ring ring2" cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4"/><circle class="ring ring3" cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4"/><g class="arrow" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16.5 8.5a6 6 0 1 0 1.4 4" fill="none"/><path d="M17.8 6v3.4h-3.4" fill="none" stroke-linejoin="round"/></g></svg></div><div class="k">Ongoing · Improve</div><h3>Improve what brings in work</h3><p>We review booked visits and won jobs, reconnect with older leads, and adjust the follow-up. Your team spends its time on customers.</p></div>
     </div>
   </div>
 </section>
@@ -792,14 +919,14 @@
   <div class="wrap">
     <div class="section-head center">
       <span class="eyebrow">Packages</span>
-      <h2>Pick the package that fits how you run</h2>
-      <p>Three ways to work with us — from just stopping missed calls to a fully managed pipeline. Each one is a flat monthly plus a one-time build, scoped to your business on a short call.</p>
+      <h2>Choose where you want to recover more revenue</h2>
+      <p>Start with missed calls, add estimate follow-up, or have us manage revenue recovery each month. We scope a flat monthly fee and one-time setup on a short call.</p>
     </div>
     <div class="pkg-grid">
       <div class="pkg reveal">
-        <div class="pkg-name">Starter</div>
-        <div class="pkg-tag">Stop missing calls</div>
-        <p class="pkg-for">For shops that just need every call answered and every lead on the calendar.</p>
+        <div class="step-ic pkg-icon" aria-hidden="true"><img src="assets/icons/settings.svg" width="26" height="26" alt=""></div><div class="pkg-name">Starter</div>
+        <div class="pkg-tag">Recover missed-call revenue</div>
+        <p class="pkg-for">For contractors losing bookable work while the crew is busy or the office is closed.</p>
         <ul>
           <li>Missed-call text-back, business &amp; after hours</li>
           <li>Two-way texting in one inbox</li>
@@ -807,36 +934,36 @@
           <li>Confirmations plus 24-hour &amp; 2-hour reminders</li>
           <li>Instant office notifications</li>
         </ul>
-        <a href="#resource" class="btn btn-ghost btn-block">Get started</a>
+        <a href="mailto:sid@summitsolutionscrm.com?subject=Starter%20revenue%20recovery" class="btn btn-ghost btn-block">Discuss Starter</a>
       </div>
       <div class="pkg featured reveal">
         <div class="pkg-badge">Most popular</div>
-        <div class="pkg-name">Growth</div>
-        <div class="pkg-tag">The full pipeline</div>
-        <p class="pkg-for">For teams that want every lead worked from first call to signed estimate.</p>
+        <div class="step-ic pkg-icon" aria-hidden="true"><img src="assets/icons/trending-up.svg" width="26" height="26" alt=""></div><div class="pkg-name">Growth</div>
+        <div class="pkg-tag">Win more of your quotes</div>
+        <p class="pkg-for">For teams paying for leads and writing estimates that need a follow-up to close.</p>
         <ul>
           <li>Everything in Starter</li>
-          <li>Multi-touch follow-up sequences</li>
-          <li>Custom pipeline built around how you sell</li>
+          <li>Follow-up that brings quiet leads back to book</li>
+          <li>Track each lead from booked visit to won job</li>
           <li>Post-visit form → branded estimate auto-sent</li>
-          <li>Estimate nurture plus won/lost tracking</li>
-          <li>Review &amp; referral automation</li>
+          <li>Chase unsigned estimates and record won job value</li>
+          <li>Request reviews and referrals after the job</li>
         </ul>
-        <a href="#resource" class="btn btn-primary btn-block">Get started</a>
+        <a href="mailto:sid@summitsolutionscrm.com?subject=Growth%20revenue%20recovery" class="btn btn-primary btn-block">Discuss Growth</a>
       </div>
       <div class="pkg reveal">
-        <div class="pkg-name">Partner</div>
-        <div class="pkg-tag">Fully managed</div>
-        <p class="pkg-for">For owners who want the whole thing run and improved for them every month.</p>
+        <div class="step-ic pkg-icon" aria-hidden="true"><img src="assets/icons/heart-handshake.svg" width="26" height="26" alt=""></div><div class="pkg-name">Partner</div>
+        <div class="pkg-tag">More work, less office time</div>
+        <p class="pkg-for">For owners who want us to manage follow-up, recover older opportunities, and track which leads bring in money.</p>
         <ul>
           <li>Everything in Growth</li>
-          <li>Monthly performance reporting</li>
-          <li>Quarterly database reactivation</li>
-          <li>Win/loss &amp; lead-source analysis</li>
+          <li>Monthly report on bookings and won contract value</li>
+          <li>Reconnect with old leads and quotes each quarter</li>
+          <li>Identify lead sources and follow-up that win jobs</li>
           <li>SMS &amp; email deliverability monitoring</li>
-          <li>Ongoing optimization</li>
+          <li>Keep improving responses and booking rates</li>
         </ul>
-        <a href="#resource" class="btn btn-ghost btn-block">Get started</a>
+        <a href="mailto:sid@summitsolutionscrm.com?subject=Partner%20revenue%20recovery" class="btn btn-ghost btn-block">Discuss Partner</a>
       </div>
     </div>
     <p class="price-note">Every package is a flat monthly plus a one-time build. We take on a limited number of clients, and monthly service carries a 30-day money-back guarantee.</p>
@@ -853,23 +980,23 @@
     <div class="faq-list reveal">
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false"><span><span class="num">01</span>How long does setup take?</span><span class="toggle"><svg><use href="#i-plus"/></svg></span></button>
-        <div class="faq-a-wrap"><p class="faq-a">About a week from signing to go-live. We build everything, test every workflow end-to-end, customize it to your business, and train whoever answers your leads.</p></div>
+        <div class="faq-a-wrap"><p class="faq-a">About two weeks from signing to go-live. We build everything, test every workflow end-to-end, customize it to your business, and train whoever answers your leads.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false"><span><span class="num">02</span>Do I need a website?</span><span class="toggle"><svg><use href="#i-plus"/></svg></span></button>
-        <div class="faq-a-wrap"><p class="faq-a">No. The system works with phone calls, referrals, and any lead source. We can build you a simple booking page if needed.</p></div>
+        <button class="faq-q" aria-expanded="false"><span><span class="num">02</span>Can you work with my existing website?</span><span class="toggle"><svg><use href="#i-plus"/></svg></span></button>
+        <div class="faq-a-wrap"><p class="faq-a">Most contractors we work with have a website. We connect your existing site to booking and follow-up. If needed, we can build a simple landing page where homeowners can request or book a visit.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false"><span><span class="num">03</span>Do I have to manage any of this?</span><span class="toggle"><svg><use href="#i-plus"/></svg></span></button>
-        <div class="faq-a-wrap"><p class="faq-a">No — that's the point. We own the backend and run it for you: monitoring, monthly reporting, reactivation campaigns, and ongoing optimization. You just take the booked jobs.</p></div>
+        <div class="faq-a-wrap"><p class="faq-a">We handle setup and checks. Partner adds monthly reporting, older-lead follow-up, and ongoing improvements. Your team handles the visits and the work.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false"><span><span class="num">04</span>How do the packages work?</span><span class="toggle"><svg><use href="#i-plus"/></svg></span></button>
-        <div class="faq-a-wrap"><p class="faq-a">Three tiers — Starter, Growth, and Partner — each a flat monthly plus a one-time build. Which one fits depends on how much of the pipeline you want us running. We scope it with you on a short call so you know the number before you commit.</p></div>
+        <div class="faq-a-wrap"><p class="faq-a">Starter recovers missed calls. Growth adds lead and estimate follow-up. Partner adds monthly management and older-lead recovery. Each has a flat monthly fee plus a one-time setup fee. We scope it with you on a short call so you know the number before you commit.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false"><span><span class="num">05</span>Can I customize the messages?</span><span class="toggle"><svg><use href="#i-plus"/></svg></span></button>
-        <div class="faq-a-wrap"><p class="faq-a">Absolutely. We dial in the exact wording during setup so it's your voice, and we adjust it anytime your hours, team, or offers change.</p></div>
+        <div class="faq-a-wrap"><p class="faq-a">Yes. We write the messages in your voice during setup and update them as your hours, team, or offers change.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false"><span><span class="num">06</span>What if it doesn't work for my business?</span><span class="toggle"><svg><use href="#i-plus"/></svg></span></button>
@@ -885,16 +1012,17 @@
     <div>
       <span class="eyebrow" style="color:var(--gold-soft)">Free guide</span>
       <h2 style="margin-top:16px;">The Speed-to-Lead Playbook</h2>
-      <p class="lede">A short, practical guide to catching leads the moment they come in — the same setup behind the Husky Roofing numbers. Tell us where to send it.</p>
+      <p class="lede">Recover the call, book the visit, and follow up on the quote. Get message templates you can use to win more work from leads you already have.</p>
       <ul class="assure">
-        <li><svg class="ic"><use href="#i-check"/></svg> High-converting missed-call text-back copy you can paste in</li>
-        <li><svg class="ic"><use href="#i-check"/></svg> How to wire up a booking page leads fill out themselves</li>
-        <li><svg class="ic"><use href="#i-check"/></svg> How to turn on appointment confirmations &amp; reminders</li>
+        <li><svg class="ic"><use href="#i-check"/></svg> Missed-call text templates with a clear path to booking</li>
+        <li><svg class="ic"><use href="#i-check"/></svg> Booking links that save your office another callback</li>
+        <li><svg class="ic"><use href="#i-check"/></svg> Confirmations and reminders that protect your crew's time</li>
+        <li><svg class="ic"><use href="#i-check"/></svg> Text-and-email follow-up to get unsigned estimates approved</li>
       </ul>
     </div>
 
     <div class="intake reveal">
-      <div class="intake-head"><span>Get the free guide</span><span>PDF</span></div>
+      <div class="intake-head"><span>Get the free guide</span><span>Free playbook</span></div>
       <form id="demoForm" novalidate>
         <input type="hidden" name="_subject" value="Speed-to-Lead guide request">
         <div class="field" data-field="name">
@@ -909,7 +1037,7 @@
         </div>
         <button type="submit" class="btn btn-primary btn-block btn-lg">Send me the guide</button>
       </form>
-      <p class="form-note">We'll email it right away — and you can read it online the moment you submit.</p>
+      <p class="form-note">Open the full playbook after submitting, or <a href="/speed-to-lead-guide.html">read it now</a>.</p>
     </div>
   </div>
 </section>
@@ -919,7 +1047,7 @@
     <div class="footer-grid">
       <div class="footer-col">
         <h4>Summit Solutions</h4>
-        <p>A done-for-you lead system for home service businesses.</p>
+        <p>Recover missed leads, win more jobs, and save office time.</p>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
@@ -944,6 +1072,10 @@
 </footer>
 
 <script>
+  var motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function motionPaused(){
+    return motionPreference.matches || document.hidden || document.documentElement.classList.contains('animations-paused');
+  }
   // ---- animated phone: missed call → text-back → booking → inbox brief → confirm ----
   (function(){
     var body = document.getElementById('smsBody');
@@ -957,12 +1089,12 @@
     var script = [
       {t:'miss', wait:1200},
       {t:'vm', wait:2200},
-      {t:'out', text:'Hi, this is Husky Roofing — sorry we missed your call! Book your free inspection here: <span class="lnk">husky-roofing.com/book</span>', meta:'11:54 AM', wait:1800},
+      {t:'out', text:'Hi, this is Husky Roofing. Sorry we missed your call! Book your free inspection here: <span class="lnk">husky-roofing.com/book</span>', meta:'11:54 AM', wait:1800},
       {t:'book', wait:1900},
       {t:'switch', wait:900},
       {t:'mail', wait:2600},
       {t:'switchback', wait:900},
-      {t:'out', text:'You’re all set, Jane ✅ Thursday at 2:00 PM. We’ll send a reminder the day before — just reply here if anything changes.', meta:'11:55 AM', wait:1600},
+      {t:'out', text:'You’re all set, Alex ✅ Thursday at 2:00 PM. We’ll send a reminder the day before. Reply here if anything changes.', meta:'11:55 AM', wait:1600},
       {t:'type', wait:1100},
       {t:'in', text:'Thank you! 🙌', meta:'11:56 AM', wait:2800}
     ];
@@ -977,17 +1109,17 @@
       clearTyping();
       switch(step.t){
         case 'miss':
-          add('sms miss', '<svg><use href="#i-phone"/></svg><div><span class="mc-h">Missed call</span><span class="mc-sub">Jane Doe · (650) •••-4513</span></div>');
+          add('sms miss', '<svg><use href="#i-phone"/></svg><div><span class="mc-h">Missed call</span><span class="mc-sub">Alex R. · (650) •••-4513</span></div>');
           break;
         case 'vm':
-          add('sms vm', '<div class="vm-top"><span class="vm-play"><svg viewBox="0 0 20 20"><path d="M6 4l10 6-10 6z" fill="currentColor"/></svg></span><div class="vm-wave">'+vmBars+'</div><span class="vm-dur">0:14</span></div><div class="vm-tx"><b>Transcript:</b> “Hi, it’s Jane — I’ve got a leak over my garage after last night’s storm. Could someone come take a look this week? Thanks!”</div>');
+          add('sms vm', '<div class="vm-top"><span class="vm-play"><svg viewBox="0 0 20 20"><path d="M6 4l10 6-10 6z" fill="currentColor"/></svg></span><div class="vm-wave">'+vmBars+'</div><span class="vm-dur">0:14</span></div><div class="vm-tx"><b>Transcript:</b> “Hi, it’s Alex. I’ve got a leak over my garage after last night’s storm. Could someone come take a look this week? Thanks!”</div>');
           break;
         case 'out':
         case 'in':
           add('sms '+step.t, step.text+(step.meta?'<span class="meta">'+step.meta+'</span>':''));
           break;
         case 'book':
-          add('sms book', '<div class="book-h"><svg><use href="#i-check"/></svg> Inspection booked</div><div class="book-rows"><div class="book-row"><b>When</b> Thu, 2:00 PM</div><div class="book-row"><b>Service</b> Free roof inspection</div><div class="book-row"><b>Where</b> 1420 Maple Ave</div><div class="book-row"><b>Lead</b> Jane Doe</div></div>');
+          add('sms book', '<div class="book-h"><svg><use href="#i-check"/></svg> Inspection booked</div><div class="book-rows"><div class="book-row"><b>When</b> Thu, 2:00 PM</div><div class="book-row"><b>Service</b> Free roof inspection</div><div class="book-row"><b>Where</b> 1420 Maple Ave</div><div class="book-row"><b>Lead</b> Alex R.</div></div>');
           break;
         case 'type':
           addTyping();
@@ -999,22 +1131,33 @@
           views.classList.remove('show-inbox');
           break;
         case 'mail':
-          inbox.innerHTML = '<div class="mail"><div class="m-top"><span class="m-ava">S</span><div class="m-from">Summit Automations<span>bookings@summithq.com</span></div><span class="m-time">now</span></div><div class="m-subj">New inspection booked — Jane Doe</div><div class="m-rows"><div class="m-row"><b>Name</b> Jane Doe</div><div class="m-row"><b>Phone</b> (650) •••-4513</div><div class="m-row"><b>When</b> Thu, 2:00 PM</div><div class="m-row"><b>Service</b> Free roof inspection</div><div class="m-row"><b>Address</b> 1420 Maple Ave</div><div class="m-row"><b>Source</b> Missed call → text-back</div></div></div>';
+          inbox.innerHTML = '<div class="mail"><div class="m-top"><span class="m-ava">S</span><div class="m-from">Husky Roofing bookings<span>Office notification</span></div><span class="m-time">now</span></div><div class="m-subj">New inspection booked. Alex R.</div><div class="m-rows"><div class="m-row"><b>Name</b> Alex R.</div><div class="m-row"><b>Phone</b> (650) •••-4513</div><div class="m-row"><b>When</b> Thu, 2:00 PM</div><div class="m-row"><b>Service</b> Free roof inspection</div><div class="m-row"><b>Address</b> 1420 Maple Ave</div><div class="m-row"><b>Source</b> Missed call → text-back</div></div></div>';
           break;
       }
     }
 
-    var i=0;
+    var i=0, phoneTimer=null;
     function run(){
       if(i>=script.length){
-        setTimeout(function(){ clearTyping(); body.innerHTML=''; inbox.innerHTML=''; views.classList.remove('show-inbox'); i=0; run(); }, 3200);
+        phoneTimer = setTimeout(function(){ clearTyping(); body.innerHTML=''; inbox.innerHTML=''; views.classList.remove('show-inbox'); i=0; run(); }, 3200);
         return;
       }
       var step=script[i++];
       render(step);
-      setTimeout(run, step.wait);
+      phoneTimer = setTimeout(run, step.wait);
     }
-    run();
+    function refresh(){
+      clearTimeout(phoneTimer);
+      clearTyping();
+      body.innerHTML=''; inbox.innerHTML=''; views.classList.remove('show-inbox'); i=0;
+      if(motionPaused()){
+        render(script[2]); render(script[3]); render(script[7]);
+      } else { run(); }
+    }
+    window.addEventListener('summit-motion-change', refresh);
+    motionPreference.addEventListener('change', refresh);
+    document.addEventListener('visibilitychange', refresh);
+    refresh();
   })();
 
   // ---- hero slot machine ----
@@ -1023,25 +1166,86 @@
     if(!slot) return;
     var reel = slot.querySelector('.reel');
     reel.appendChild(reel.firstElementChild.cloneNode(true)); // seamless clone of first word
-    var items = reel.children, n = items.length - 1, timer = null;
-    function size(){ // (re)measure — widest word sets the window; fractional height avoids sub-pixel peek
-      var h = items[0].getBoundingClientRect().height, w = 0;
-      for(var k=0;k<items.length;k++){ w = Math.max(w, Math.ceil(items[k].getBoundingClientRect().width)); }
+    var items = reel.children, n = items.length - 1, idx = 0;
+    function size(){
+      var h = items[0].getBoundingClientRect().height;
+      var w = Math.ceil(items[idx].getBoundingClientRect().width);
       slot.style.height = h + 'px';
       slot.style.width = (w + 2) + 'px';
+      reel.style.transform = 'translateY(' + (-idx * h) + 'px)';
       return h;
     }
     var h = size();
-    var idx = 0;
-    timer = setInterval(function(){
+    setInterval(function(){
+      if(motionPaused()) return;
       idx++;
       reel.style.transition = 'transform .55s cubic-bezier(.16,1,.3,1)';
-      reel.style.transform = 'translateY(' + (-idx * h) + 'px)';
+      h = size();
       if(idx === n){ setTimeout(function(){ reel.style.transition='none'; idx=0; reel.style.transform='translateY(0)'; }, 580); }
     }, 2100);
-    // web font loads async and is wider than the fallback — re-measure so long words fit
+    // web font loads async and is wider than the fallback. re-measure so long words fit
     if(document.fonts && document.fonts.ready){ document.fonts.ready.then(function(){ h = size(); }); }
     window.addEventListener('resize', function(){ h = size(); });
+  })();
+
+  // ---- how-it-works timeline player ----
+  (function(){
+    var motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var button = document.getElementById('demoToggle');
+    var paused = false;
+    var players = [];
+    function player(fx){
+      var steps = [].slice.call(fx.querySelectorAll('[data-step]'));
+      var hold = +fx.dataset.hold || 2600;
+      var timer = null, index = 0, visible = false;
+      function reset(){
+        steps.forEach(function(s){ s.classList.remove('show'); });
+        fx.classList.remove('done');
+        index = 0;
+      }
+      function next(){
+        timer = setTimeout(function(){
+          steps[index++].classList.add('show');
+          if(index < steps.length){ next(); }
+          else {
+            fx.classList.add('done');
+            timer = setTimeout(function(){ reset(); next(); }, hold);
+          }
+        }, +steps[index].dataset.step || 600);
+      }
+      function update(){
+        clearTimeout(timer);
+        fx.classList.remove('playing');
+        if(motion.matches || paused || document.hidden){
+          steps.forEach(function(s){ s.classList.add('show'); });
+          fx.classList.add('done');
+          return;
+        }
+        if(visible){ fx.classList.add('playing'); reset(); next(); }
+      }
+      var observer = new IntersectionObserver(function(entries){
+        visible = entries[0].isIntersecting;
+        update();
+      }, {threshold:.15});
+      observer.observe(fx);
+      return update;
+    }
+    document.querySelectorAll('[data-fx]').forEach(function(fx){ players.push(player(fx)); });
+    function update(){
+      button.hidden = motion.matches;
+      players.forEach(function(refresh){ refresh(); });
+      window.dispatchEvent(new Event('summit-motion-change'));
+    }
+    button.addEventListener('click', function(){
+      paused = !paused;
+      document.documentElement.classList.toggle('animations-paused', paused);
+      button.setAttribute('aria-pressed', String(paused));
+      button.textContent = paused ? 'Play animations' : 'Pause animations';
+      update();
+    });
+    motion.addEventListener('change', update);
+    document.addEventListener('visibilitychange', update);
+    update();
   })();
 
   // ---- reveal on scroll ----
@@ -1092,11 +1296,11 @@
         container.querySelector('.form-note').style.display = 'none';
         var success = document.createElement('div');
         success.className = 'form-success';
-        success.innerHTML = '<svg><use href="#i-check"/></svg><h3>Check your inbox</h3><p>The guide is on its way. Want to start now? <a href="/speed-to-lead-guide.html" style="color:var(--accent-2);font-weight:600;text-decoration:underline;">Read it online →</a></p>';
+        success.innerHTML = '<svg><use href="#i-check"/></svg><h3>Your playbook is ready</h3><p>Start with the templates and booking checklist. <a href="/speed-to-lead-guide.html" style="color:var(--accent-2);font-weight:600;text-decoration:underline;">Read it online →</a></p>';
         container.appendChild(success);
       } else { throw new Error('Form submission failed'); }
     } catch(err){
-      button.disabled = false; button.textContent = 'Error — try again'; button.style.opacity = '1';
+      button.disabled = false; button.textContent = 'Error: try again'; button.style.opacity = '1';
       var errorMsg = document.createElement('p');
       errorMsg.className = 'form-error-msg';
       errorMsg.textContent = 'Something went wrong. Please try again or call us at (424) 387-7320.';

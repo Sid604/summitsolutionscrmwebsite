@@ -1,4 +1,4 @@
-/* Summit Solutions — shared styles for guide + blog pages */
+/* Summit Solutions. shared styles for guide + blog pages */
 :root{
   --paper:#faf8f3;
   --paper-2:#f2ede3;
@@ -65,7 +65,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 .page-head .sub{font-size:1.12rem;color:var(--muted);max-width:620px;}
 .post-meta{font-size:13.5px;color:var(--muted-2);font-family:var(--f-display);font-weight:600;letter-spacing:.02em;margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
 .post-meta .dot{width:4px;height:4px;border-radius:50%;background:var(--muted-2);display:inline-block;}
-.back-link{display:inline-flex;align-items:center;gap:7px;font-family:var(--f-display);font-weight:700;font-size:14px;color:var(--accent-2);margin-bottom:6px;}
+.back-link{display:flex;width:fit-content;align-items:center;gap:7px;font-family:var(--f-display);font-weight:700;font-size:14px;color:var(--accent-2);margin-bottom:6px;}
 
 /* article prose */
 .prose{padding:26px 0 72px;}
@@ -113,3 +113,6 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:56px 0
 .footer-col a:hover{color:var(--accent-2);}
 .footer-bottom{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-family:var(--f-display);font-weight:600;font-size:12px;letter-spacing:.12em;color:var(--muted-2);}
 @media (max-width:720px){.footer-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:380px){nav .btn{font-size:12px;padding:11px 12px;}nav .brand-name{font-size:16px;}nav .wrap{padding:0 16px;}}
+:focus-visible{outline:3px solid var(--gold);outline-offset:4px;}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*,*::before,*::after{transition:none!important;animation:none!important;}}

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SMTP & email deliverability for home services — Summit Solutions</title>
+<title>SMTP & email deliverability for home services | Summit Solutions</title>
 <meta name="description" content="Why appointment confirmations and estimates land in spam, how SMTP sending works, and the SPF, DKIM, and DMARC setup that gets your email into the inbox.">
 <link rel="canonical" href="https://summitsolutionscrm.com/blog/smtp-email-deliverability-home-services.html">
 <meta name="robots" content="index, follow">
@@ -35,7 +35,7 @@
   <div class="wrap">
     <a href="/" class="brand">
       <span class="brand-mark"><svg viewBox="0 0 24 24"><path d="M3 18L12 5l9 13z" fill="none" stroke="#f5f1e8" stroke-width="2" stroke-linejoin="round"/><path d="M8 18l4-6 4 6" fill="none" stroke="#f5f1e8" stroke-width="2" stroke-linejoin="round"/></svg></span>
-      <span class="brand-txt"><span class="brand-name">Summit Solutions</span><span class="brand-sub">Lead Automation</span></span>
+      <span class="brand-txt"><span class="brand-name">Summit Solutions</span><span class="brand-sub">Revenue Recovery</span></span>
     </a>
     <div class="nav-links">
       <a href="/#how" class="navlink">How it works</a>
@@ -51,7 +51,7 @@
     <a href="/blog/" class="back-link">← All posts</a>
     <span class="eyebrow">Deliverability</span>
     <h1>SMTP &amp; email deliverability for home services</h1>
-    <p class="sub">An estimate that lands in spam is an estimate that doesn't get signed. Here's what SMTP is, why your automated emails get filtered, and the domain setup that puts them back in the inbox.</p>
+    <p class="sub">An estimate that lands in spam is an estimate that doesn't get signed. Check your sending domain so homeowners receive your quotes, confirmations, and reminders.</p>
     <div class="post-meta"><span>Deliverability</span><span class="dot"></span><span>8-minute read</span></div>
   </div>
 </header>
@@ -61,17 +61,17 @@
     <p>Texts handle the fast, short stuff. Email still carries the things that close jobs: the confirmation with the full appointment details, the branded estimate, the "just following up on your quote" nudge. If those land in spam, you lose deals and never know it. Deliverability is the fix, and most of it comes down to a few DNS records.</p>
 
     <h2>SMTP in one minute</h2>
-    <p><strong>SMTP</strong> (Simple Mail Transfer Protocol) is the standard for sending email — the engine behind every "send." When your CRM sends an estimate, it hands the message to an SMTP server, which relays it to the recipient's mail provider. The question that provider asks before showing it to your customer is simple: <em>can this sender prove it's really allowed to send as this domain?</em> Three records answer that.</p>
+    <p><strong>SMTP</strong> (Simple Mail Transfer Protocol) is the standard for sending email, the engine behind every "send." When your CRM sends an estimate, it hands the message to an SMTP server, which relays it to the recipient's mail provider. The question that provider asks before showing it to your customer is simple: <em>can this sender prove it's really allowed to send as this domain?</em> Three records answer that.</p>
 
-    <h2>The three records that decide your fate</h2>
-    <h3>SPF — who's allowed to send</h3>
+    <h2>Authenticate the emails that carry your quotes</h2>
+    <h3>SPF, who's allowed to send</h3>
     <p>SPF (Sender Policy Framework) is a DNS record listing which servers may send email for your domain. When a message arrives claiming to be from <code>you@yourcompany.com</code>, the receiver checks your SPF record to see if the sending server is on the approved list. No SPF, or a server that isn't listed, is a red flag.</p>
     <pre><code>v=spf1 include:_spf.google.com include:sendgrid.net ~all</code></pre>
 
-    <h3>DKIM — proof it wasn't tampered with</h3>
-    <p>DKIM (DomainKeys Identified Mail) adds a cryptographic signature to each message. Your sending service signs with a private key; the receiver checks it against a public key in your DNS. A valid signature proves the email genuinely came from your domain and wasn't altered in transit.</p>
+    <h3>DKIM, proof it wasn't tampered with</h3>
+    <p>DKIM (DomainKeys Identified Mail) adds a cryptographic signature to each message. Your sending service signs with a private key; the receiver checks it against a public key in your DNS. A valid signature lets the recipient verify the signing domain and check whether the signed content changed in transit.</p>
 
-    <h3>DMARC — what to do when checks fail</h3>
+    <h3>DMARC, what to do when checks fail</h3>
     <p>DMARC (Domain-based Message Authentication, Reporting &amp; Conformance) ties SPF and DKIM together and tells receivers how to handle mail that fails: do nothing, quarantine (spam folder), or reject. It also emails you reports on who's sending as your domain.</p>
     <pre><code>v=DMARC1; p=quarantine; rua=mailto:dmarc@yourcompany.com</code></pre>
     <p>As of 2024, Gmail and Yahoo <strong>require</strong> SPF, DKIM, and DMARC for anyone sending at volume. This isn't best-practice-nice-to-have anymore; it's the entry ticket.</p>
@@ -87,21 +87,21 @@
 
     <div class="callout">
       <div class="k">Content still matters</div>
-      <p>Authentication gets you to the inbox; content keeps you there. Avoid spammy subject lines in ALL CAPS, don't attach giant files, include a real physical address and an unsubscribe link, and keep a healthy text-to-link ratio. One sloppy blast can undo months of good sender reputation.</p>
+      <p>Authentication helps recipients verify the sender. It does not guarantee inbox placement. Avoid spammy subject lines in ALL CAPS, don't attach giant files, include a real physical address and an unsubscribe link, and keep a healthy text-to-link ratio. One sloppy blast can undo months of good sender reputation.</p>
     </div>
 
     <h2>How to tell if it's working</h2>
     <ul>
-      <li>Send a test to a Gmail address, open it, and check "Show original" — SPF, DKIM, and DMARC should all read <strong>PASS</strong>.</li>
+      <li>Send a test to a Gmail address, open it, and check "Show original", SPF, DKIM, and DMARC should all read <strong>PASS</strong>.</li>
       <li>Run your domain through a free authentication checker (MXToolbox, Google's tools) and fix anything flagged.</li>
-      <li>Watch your DMARC reports for unexpected senders — that's either a misconfiguration or someone spoofing you.</li>
+      <li>Watch your DMARC reports for unexpected senders, that's either a misconfiguration or someone spoofing you.</li>
     </ul>
 
-    <p>Get this right alongside your <a href="/blog/twilio-a2p-10dlc-registration.html">A2P 10DLC setup</a> and both halves of your follow-up — text and email — actually reach the customer. That's the quiet infrastructure behind a system that books jobs.</p>
+    <p>Get this right alongside your <a href="/blog/twilio-a2p-10dlc-registration.html">A2P 10DLC setup</a> and both halves of your follow-up, text and email, actually reach the customer. That's the quiet infrastructure behind a system that books jobs.</p>
 
     <div class="post-cta">
       <h3>We monitor deliverability for our clients</h3>
-      <p>SPF, DKIM, DMARC, sender reputation, and the texting side — set up and watched so your confirmations and estimates keep landing.</p>
+      <p>SPF, DKIM, DMARC, sender reputation, and the texting side, set up and watched so you can spot delivery problems with confirmations and estimates.</p>
       <a href="/#packages" class="btn btn-primary btn-lg">See the packages</a>
     </div>
   </div>
@@ -110,7 +110,7 @@
 <footer>
   <div class="wrap">
     <div class="footer-grid">
-      <div class="footer-col"><h4>Summit Solutions</h4><p>A done-for-you lead system for home service businesses.</p></div>
+      <div class="footer-col"><h4>Summit Solutions</h4><p>Recover missed leads, win more jobs, and save office time.</p></div>
       <div class="footer-col"><h4>Explore</h4><a href="/#packages">Packages</a><a href="/blog/">Blog</a><a href="/speed-to-lead-guide.html">Free guide</a></div>
       <div class="footer-col"><h4>Contact</h4><a href="mailto:sid@summitsolutionscrm.com">sid@summitsolutionscrm.com</a><a href="tel:+14243877320">(424) 387-7320</a><p>Los Angeles, CA</p></div>
       <div class="footer-col"><h4>Legal</h4><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a></div>

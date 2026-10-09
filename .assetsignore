@@ -1,4 +1,7 @@
 .git
 .gitignore
+.agents
+tests
+docs
 wrangler.jsonc
 .assetsignore

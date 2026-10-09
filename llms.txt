@@ -1,30 +1,34 @@
 # Summit Solutions
 
-> Done-for-you lead management for home service businesses (roofing, plumbing, HVAC, electrical, landscaping, remodeling, and similar trades). Summit builds and fully manages a system that texts back missed calls in 30 seconds, follows up automatically, lets leads self-book, and nurtures estimates until they close — so the leads a business already pays for turn into jobs.
+> Revenue recovery for home service contractors. Summit helps clients respond to missed calls, book inspections, follow up on unsigned estimates, and spend less time chasing leads.
 
 ## About
 
 - Company: Summit Solutions
-- What it does: Builds and runs lead-capture and follow-up automation for home service businesses. Clients never log into the backend; Summit owns and manages it.
-- Core features: missed-call text-back (business + after hours), two-way texting in one inbox, self-booking calendar with confirmations and reminders, multi-touch follow-up, custom sales pipeline, auto-sent branded estimates with nurture sequences, won/lost tracking, review and referral automation, monthly reporting, and database reactivation.
-- Case study: Husky Roofing — in their first 6 weeks live, the system texted back 37 missed calls, booked 32 inspections, and produced $43,000 in won jobs (two deals: $26,000 and $17,000), all originating from missed calls.
-- Location: Los Angeles, CA (serves the US).
+- Audience: roofing, plumbing, HVAC, electrical, landscaping, remodeling, and other home service trades.
+- Services: missed-call text-back, two-way texting, booking pages, appointment confirmations and reminders, lead follow-up, branded estimates, SMS and email estimate follow-up, won/lost tracking, review and referral requests, and ongoing management.
+- Case study: Husky Roofing. First-four-week activity: 37 missed calls texted back within a minute, 32 inspections booked across the lead pipeline, 15 inspections from missed calls. Two self-booked missed callers later won $43,000 in contract value: Tiep D. $26,000 and James B. $17,000. Won value is distinct from cash collected and profit.
+- Tiep journey: September 9, 2026, missed call at 8:15 AM, text-back at 8:16 AM, self-booking at 8:29 AM. Confirmation and reminders preceded the visit; the opportunity later shows Won at $26,000. The published journey uses only Tiep's screenshots.
+- Animated examples illustrate offered booking and follow-up sequences; they are not transcripts of Tiep's case study.
+- Customer feedback: texts from Anna, Husky Roofing's receptionist.
+- Location: Los Angeles, CA; serves US businesses.
 - Contact: sid@summitsolutionscrm.com, (424) 387-7320.
 
 ## Packages
 
-- Starter — Stop missing calls: missed-call text-back, two-way texting, self-booking calendar, confirmations and reminders, office notifications.
-- Growth — The full pipeline: everything in Starter plus multi-touch follow-up, custom pipeline, auto-sent estimates with nurture, won/lost tracking, review and referral automation.
-- Partner — Fully managed: everything in Growth plus monthly reporting, quarterly database reactivation, win/loss and lead-source analysis, deliverability monitoring, and ongoing optimization.
-- Pricing model: each package is a flat monthly fee plus a one-time build fee, scoped on a call. Monthly service has a 30-day money-back guarantee.
+- Starter: recover missed-call revenue with text-back, two-way texting, self-booking, confirmations, reminders, and office notifications.
+- Growth: Starter plus lead and estimate follow-up, sales-stage tracking, branded estimates, won/lost tracking, and review/referral requests.
+- Partner: Growth plus monthly reporting, quarterly older-lead recovery, win/loss and lead-source analysis, delivery checks, and ongoing improvements.
+- Fees: flat monthly plus one-time setup, scoped on a call. Monthly service has a 30-day money-back guarantee; setup fees are non-refundable.
 
 ## Key pages
 
-- [Home](https://summitsolutionscrm.com/): Overview of the system, the Husky Roofing case study, packages, and FAQ.
-- [Speed-to-Lead Playbook (free guide)](https://summitsolutionscrm.com/speed-to-lead-guide.html): Missed-call text-back copy templates, how to wire up a self-booking page, and how to set up appointment confirmations and reminders.
-- [Blog](https://summitsolutionscrm.com/blog/): Practical guides for home service owners.
-- [Missed-call text-back on Jobber, JobNimbus & more](https://summitsolutionscrm.com/blog/missed-call-text-back-jobber-jobnimbus.html): How to enable missed-call text-back across common field-service platforms.
-- [A2P 10DLC registration](https://summitsolutionscrm.com/blog/twilio-a2p-10dlc-registration.html): Why business texts get filtered and how to register a brand and campaign (via Twilio / The Campaign Registry).
-- [SMTP & email deliverability](https://summitsolutionscrm.com/blog/smtp-email-deliverability-home-services.html): SPF, DKIM, and DMARC setup so confirmations and estimates reach the inbox.
+- [Home](https://summitsolutionscrm.com/): Revenue recovery services, Husky case study, packages, and FAQ.
+- [Speed-to-Lead Playbook](https://summitsolutionscrm.com/speed-to-lead-guide.html): Missed-call SMS templates, self-booking, appointment reminders, three-touch SMS and email estimate follow-up, and measurement.
+- [Blog](https://summitsolutionscrm.com/blog/): Guides for home service owners.
+- [Estimate follow-up with SMS and email](https://summitsolutionscrm.com/blog/estimate-follow-up-sms-email.html): Day 1 SMS, day 4 email, day 10 SMS, stop rules, approval tracking, and won-value measurement.
+- [Missed-call text-back by platform](https://summitsolutionscrm.com/blog/missed-call-text-back-jobber-jobnimbus.html)
+- [A2P 10DLC registration](https://summitsolutionscrm.com/blog/twilio-a2p-10dlc-registration.html)
+- [Email deliverability](https://summitsolutionscrm.com/blog/smtp-email-deliverability-home-services.html)
 - [Privacy Policy](https://summitsolutionscrm.com/privacy.html)
 - [Terms of Service](https://summitsolutionscrm.com/terms.html)
