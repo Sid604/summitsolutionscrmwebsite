@@ -52,7 +52,7 @@ const demos = Array.from({ length: 4 }, () => {
 const document = { hidden: false, documentElement: { classList: classes() }, getElementById: () => button,
   querySelectorAll: () => demos, addEventListener: (name, fn) => { documentEvents[name] = fn; } };
 const start = home.indexOf('  // ---- how-it-works timeline player ----');
-const end = home.indexOf('  // ---- lazy playbook preview ----', start);
+const end = home.indexOf('  // ---- reveal on scroll ----', start);
 vm.runInNewContext(home.slice(start, end), {
   window: { matchMedia: () => motion, dispatchEvent() {} }, document,
   Event: function Event() {},
@@ -91,54 +91,4 @@ assert.equal(timers.size, 0, 'Background tabs must not loop');
 document.hidden = false; documentEvents.visibilitychange();
 assert.equal(timers.size, 1);
 
-// The decorative video must not download for reduced motion or play offscreen.
-const videoEvents = {}, previewEvents = {}, preferenceEvents = {};
-const source = { src: '', dataset: { src: 'assets/playbook-preview.mp4' } };
-let loads = 0, plays = 0, pauses = 0, previewObserver, rejectPlay;
-const stage = { classList: classes() };
-const video = { querySelector: () => source, closest: () => stage, load() { loads++; },
-  play() { plays++; return { catch(fn) { rejectPlay = fn; } }; }, pause() { pauses++; } };
-const previewButton = { hidden: true, setAttribute(name, value) { this[name] = value; },
-  addEventListener(name, fn) { previewEvents[name] = fn; } };
-const preference = { matches: true, addEventListener(name, fn) { preferenceEvents[name] = fn; } };
-let background = false, globallyPaused = false;
-const previewStart = home.indexOf('  // ---- lazy playbook preview ----');
-const previewEnd = home.indexOf('  // ---- reveal on scroll ----', previewStart);
-vm.runInNewContext(home.slice(previewStart, previewEnd), {
-  document: { getElementById: id => id === 'playbookPreview' ? video : previewButton },
-  window: { addEventListener(name, fn) { videoEvents[name] = fn; } },
-  motionPreference: preference,
-  motionPaused: () => preference.matches || background || globallyPaused,
-  IntersectionObserver: function(callback) { previewObserver = callback; this.observe = () => {}; }
-});
-previewObserver([{ isIntersecting: true }]);
-assert.equal(loads, 0, 'Reduced motion must leave the poster without downloading video');
-assert(previewButton.hidden);
-preference.matches = false; preferenceEvents.change();
-assert.equal(loads, 1);
-assert.equal(plays, 1);
-previewEvents.click();
-assert.equal(previewButton['aria-pressed'], 'true');
-const pausedPlays = plays;
-previewObserver([{ isIntersecting: false }]);
-previewObserver([{ isIntersecting: true }]);
-assert.equal(plays, pausedPlays, 'User pause must persist across viewport changes');
-previewEvents.click();
-assert.equal(loads, 1, 'Resume must reuse the downloaded video');
-globallyPaused = true; videoEvents['summit-motion-change']();
-const globalPlays = plays;
-background = true; globallyPaused = false; videoEvents['summit-motion-change']();
-assert.equal(plays, globalPlays, 'Global pause and background tabs must stop video');
-background = false; videoEvents['summit-motion-change']();
-assert.equal(plays, globalPlays + 1);
-rejectPlay();
-assert.equal(previewButton.textContent, 'Play preview', 'Playback failure must allow a manual retry');
-assert.equal(previewButton['aria-pressed'], 'true');
-previewEvents.click();
-assert.equal(previewButton['aria-pressed'], 'false');
-previewObserver([{ isIntersecting: false }]);
-assert(pauses > 0);
-assert(fs.existsSync(path.join(root, source.dataset.src)));
-assert(fs.existsSync(path.join(root, 'assets/playbook-poster.png')));
-assert(fs.statSync(path.join(root, source.dataset.src)).size < 600000, 'Preview must stay lightweight');
-console.log(`Passed: ${pages.length} pages, internal links, JSON-LD, evidence journey, and demo/video lifecycle`);
+console.log(`Passed: ${pages.length} pages, internal links, JSON-LD, evidence journey, and demo lifecycle`);
