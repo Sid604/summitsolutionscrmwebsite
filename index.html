@@ -429,7 +429,13 @@
   .final ul.assure{list-style:none;margin-top:26px;display:flex;flex-direction:column;gap:12px;}
   .final ul.assure li{display:flex;gap:11px;align-items:center;color:rgba(245,241,232,.9);font-size:15px;}
   .final ul.assure .ic{color:var(--gold-soft);width:19px;height:19px;flex:none;}
-  .playbook-preview{display:block;width:100%;height:auto;aspect-ratio:20/13;background:var(--ink);mix-blend-mode:lighten;}
+  .playbook-stage{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border:1px solid rgba(220,176,87,.32);border-radius:var(--r-lg);background:var(--ink);box-shadow:0 22px 56px rgba(0,0,0,.26);margin-bottom:18px;}
+  .playbook-preview{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;background:var(--ink);}
+  .playbook-kicker{position:absolute;z-index:1;top:7%;left:6%;width:auto;color:var(--gold-soft);font-family:var(--f-display);font-size:clamp(9px,1vw,11px);font-weight:700;letter-spacing:.13em;text-shadow:0 1px 8px rgba(11,18,33,.65);}
+  .playbook-highlight{position:absolute;z-index:1;left:52%;top:60%;width:24%;height:8px;border-radius:2px;background:rgba(235,192,82,.65);box-shadow:0 0 14px rgba(235,192,82,.28);mix-blend-mode:multiply;transform:scaleX(0);transform-origin:left center;animation:playbook-highlight 5s ease-in-out infinite;pointer-events:none;}
+  .playbook-stage.is-paused .playbook-highlight{animation-play-state:paused;}
+  @keyframes playbook-highlight{0%,10%{opacity:0;transform:scaleX(0);}16%{opacity:.8;}46%{opacity:.8;transform:scaleX(1);}60%,100%{opacity:0;transform:scaleX(1);}}
+  @media(prefers-reduced-motion:reduce){.playbook-highlight{animation:none;opacity:.65;transform:scaleX(1);}}
   .preview-toggle{display:block;margin:0 0 18px auto;padding:5px 0;background:none;border:0;color:var(--gold-soft);font:inherit;font-size:13px;text-decoration:underline;text-underline-offset:4px;cursor:pointer;}
   .preview-toggle:focus-visible{outline:2px solid var(--gold-soft);outline-offset:5px;}
   .preview-toggle[hidden]{display:none;}
@@ -491,6 +497,13 @@
   .trade-card img,.trade-card video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.2,.7,.3,1);}
   .trade-card:hover img,.trade-card:hover video{transform:scale(1.04);}
   .trade-card figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 14px;background:linear-gradient(transparent,rgba(22,35,61,.88));color:#fff;font-family:var(--f-display);font-weight:700;font-size:15px;letter-spacing:-.01em;}
+
+  /* cinematic CTA band */
+  .cta-band{position:relative;overflow:hidden;min-height:clamp(340px,44vw,520px);display:grid;place-items:center;text-align:center;}
+  .cta-band-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
+  .cta-band::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(11,18,33,.5),rgba(11,18,33,.8));}
+  .cta-band-inner{position:relative;z-index:2;padding:48px 26px;display:flex;flex-direction:column;align-items:center;gap:26px;}
+  .cta-band-line{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,4.4vw,3.2rem);letter-spacing:-.02em;color:#fff;max-width:16ch;line-height:1.08;}
 </style>
 <script type="application/ld+json">
 {
@@ -1036,6 +1049,17 @@
   </div>
 </section>
 
+<!-- CINEMATIC CTA BAND -->
+<section class="cta-band" aria-label="Your next job is already calling">
+  <video class="trade-vid cta-band-vid" muted loop playsinline preload="none" poster="assets/hf-cta-band-poster.jpg" aria-hidden="true">
+    <source src="assets/hf-cta-band.mp4" type="video/mp4">
+  </video>
+  <div class="cta-band-inner">
+    <p class="cta-band-line">Your next job is already calling.</p>
+    <a href="#resource" class="btn btn-primary btn-lg">Get the free guide <svg><use href="#i-arrow"/></svg></a>
+  </div>
+</section>
+
 <!-- FREE GUIDE / LEAD MAGNET -->
 <section id="resource" class="final">
   <div class="wrap">
@@ -1052,9 +1076,13 @@
     </div>
 
     <div class="guide-signup">
-      <video class="playbook-preview" id="playbookPreview" width="800" height="520" loop muted playsinline preload="none" poster="assets/playbook-poster.png" aria-hidden="true">
-        <source data-src="assets/playbook-preview.mp4" type="video/mp4">
-      </video>
+      <div class="playbook-stage">
+        <video class="playbook-preview" id="playbookPreview" width="800" height="450" loop muted playsinline preload="none" poster="assets/hf-playbook-poster.png" aria-hidden="true">
+          <source data-src="assets/hf-playbook-teaser.mp4" type="video/mp4">
+        </video>
+        <span class="playbook-kicker" aria-hidden="true">THE SPEED-TO-LEAD PLAYBOOK</span>
+        <span class="playbook-highlight" aria-hidden="true"></span>
+      </div>
       <button type="button" class="preview-toggle" id="previewToggle" aria-controls="playbookPreview" aria-pressed="false" hidden>Pause preview</button>
       <div class="intake reveal">
       <div class="intake-head"><span>Get the free guide</span><span>Free playbook</span></div>
@@ -1288,12 +1316,14 @@
   (function(){
     var video = document.getElementById('playbookPreview');
     var button = document.getElementById('previewToggle');
+    var stage = video.closest('.playbook-stage');
     var source = video.querySelector('source');
     var visible = false, paused = false;
     function update(){
       button.hidden = motionPreference.matches;
       button.setAttribute('aria-pressed', String(paused));
       button.textContent = paused ? 'Play preview' : 'Pause preview';
+      stage.classList.toggle('is-paused', !visible || paused || motionPaused());
       if(!visible || paused || motionPaused()) { video.pause(); return; }
       if(!source.src) { source.src = source.dataset.src; video.load(); }
       video.play().catch(function(){
