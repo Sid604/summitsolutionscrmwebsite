@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A2P 10DLC registration, explained for contractors — Summit Solutions</title>
+<meta name="description" content="Why your business texts get filtered or blocked, what A2P 10DLC and Twilio have to do with it, and a step-by-step on registering your brand and campaign the right way.">
+<link rel="canonical" href="https://summitsolutionscrm.com/blog/twilio-a2p-10dlc-registration.html">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="A2P 10DLC registration, explained for contractors">
+<meta property="og:description" content="Why business texts get filtered, what A2P 10DLC and Twilio have to do with it, and how to register the right way.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://summitsolutionscrm.com/blog/twilio-a2p-10dlc-registration.html">
+<meta property="og:image" content="https://summitsolutionscrm.com/assets/hero-texture.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f3358'/%3E%3Cpath d='M6 22L16 8l10 14z' fill='none' stroke='%23f5f1e8' stroke-width='2.4' stroke-linejoin='round'/%3E%3Cpath d='M12 22l4-6 4 6' fill='none' stroke='%23f5f1e8' stroke-width='2.4' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "A2P 10DLC registration, explained for contractors",
+  "description": "Why your business texts get filtered, what A2P 10DLC and Twilio have to do with it, and how to register your brand and campaign.",
+  "author": { "@type": "Organization", "name": "Summit Solutions" },
+  "publisher": { "@type": "Organization", "name": "Summit Solutions" },
+  "mainEntityOfPage": "https://summitsolutionscrm.com/blog/twilio-a2p-10dlc-registration.html"
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="/" class="brand">
+      <span class="brand-mark"><svg viewBox="0 0 24 24"><path d="M3 18L12 5l9 13z" fill="none" stroke="#f5f1e8" stroke-width="2" stroke-linejoin="round"/><path d="M8 18l4-6 4 6" fill="none" stroke="#f5f1e8" stroke-width="2" stroke-linejoin="round"/></svg></span>
+      <span class="brand-txt"><span class="brand-name">Summit Solutions</span><span class="brand-sub">Lead Automation</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="/#how" class="navlink">How it works</a>
+      <a href="/#packages" class="navlink">Packages</a>
+      <a href="/blog/" class="navlink">Blog</a>
+      <a href="/#resource" class="btn btn-primary">Get the free guide</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="narrow">
+    <a href="/blog/" class="back-link">← All posts</a>
+    <span class="eyebrow">Compliance</span>
+    <h1>A2P 10DLC registration, explained for contractors</h1>
+    <p class="sub">If your business texts quietly stop landing, this is almost always why. Here's what A2P 10DLC is, why carriers require it, and how to register without losing a weekend to it.</p>
+    <div class="post-meta"><span>Compliance</span><span class="dot"></span><span>8-minute read</span></div>
+  </div>
+</header>
+
+<article class="prose">
+  <div class="narrow">
+    <p>You set up missed-call text-back, send a few tests, and they work. Then a week later customers say they never got your text. Nothing errored. The messages just… vanished. Nine times out of ten, the cause is the same: you're texting from a business without being registered for A2P 10DLC, and US carriers are filtering you.</p>
+
+    <h2>What A2P 10DLC actually means</h2>
+    <p><strong>A2P</strong> stands for Application-to-Person — any text sent by software rather than a human thumbing a phone. <strong>10DLC</strong> means a 10-Digit Long Code, i.e. a standard local phone number (as opposed to a short code or toll-free number). Put together, A2P 10DLC is the US carrier framework for sending automated business texts from a normal local number.</p>
+    <p>The mobile carriers (AT&amp;T, Verizon, T-Mobile) built this system to cut down on spam and fraud. The trade: legitimate businesses register who they are and what they'll send, and in return their messages deliver reliably. Skip registration and your throughput is throttled or your messages are blocked outright — usually without any error you'd notice.</p>
+
+    <div class="callout">
+      <div class="k">Where Twilio fits</div>
+      <p>Twilio is the messaging infrastructure a huge share of texting tools run on under the hood — including many CRMs. "Registering with Twilio" really means submitting your A2P details through Twilio to <strong>The Campaign Registry (TCR)</strong>, the central body carriers check against. If your CRM uses a different provider, the same concepts apply; only the dashboard changes.</p>
+    </div>
+
+    <h2>The two things you register</h2>
+    <ol>
+      <li><strong>Your Brand.</strong> This is your business identity: legal name, EIN, address, website, and contact. Carriers verify it against public records, so the details must match your EIN registration exactly.</li>
+      <li><strong>Your Campaign.</strong> This is the use case for your texts — for home services, usually "Customer Care" or "Mixed." You describe what you send (appointment confirmations, reminders, follow-ups), provide sample messages, and show how customers opt in and opt out.</li>
+    </ol>
+
+    <h2>Step by step</h2>
+    <ol>
+      <li><strong>Gather your business details.</strong> Exact legal name, EIN, registered address, and website URL. Mismatches are the #1 cause of rejection.</li>
+      <li><strong>Register the Brand</strong> in your messaging provider's console (Twilio, or your CRM's A2P section). A one-time vetting fee applies.</li>
+      <li><strong>Create the Campaign.</strong> Pick the use case, write 2–3 sample messages, and describe your opt-in. Include your business name in messages and a "Reply STOP to opt out" line.</li>
+      <li><strong>Publish your consent language.</strong> Carriers want to see where customers agree to be texted — a line on your booking form and a note in your <a href="/privacy.html">privacy policy</a>. Ours spells out SMS consent and STOP/HELP handling as an example.</li>
+      <li><strong>Wait for approval.</strong> Brand vetting is often quick; campaign approval can take a few business days. Once approved, link your phone number(s) to the campaign.</li>
+      <li><strong>Send a real test</strong> to a phone on each major carrier and confirm delivery before you rely on it.</li>
+    </ol>
+
+    <h2>Getting approved on the first try</h2>
+    <ul>
+      <li><strong>Match your EIN records exactly</strong> — legal name and address, character for character.</li>
+      <li><strong>Make opt-in obvious.</strong> "By submitting this form you agree to receive texts about your appointment. Msg &amp; data rates may apply. Reply STOP to opt out."</li>
+      <li><strong>Honor STOP and HELP automatically.</strong> Most platforms do this natively; confirm it's on.</li>
+      <li><strong>Don't send before approval.</strong> Early unregistered traffic can get your number flagged.</li>
+    </ul>
+
+    <div class="callout">
+      <div class="k">Short version</div>
+      <p>A2P 10DLC isn't optional and it isn't a scam fee — it's the toll for your business texts to actually arrive. Register the brand, register the campaign, publish clear consent language, and your missed-call text-back and reminders deliver like they should.</p>
+    </div>
+
+    <p>Once you're registered, the next question is email: your confirmations and estimates need to land too. That's a different set of rules — see <a href="/blog/smtp-email-deliverability-home-services.html">the email deliverability guide</a>.</p>
+
+    <div class="post-cta">
+      <h3>We handle registration for our clients</h3>
+      <p>Brand, campaign, consent language, deliverability monitoring — part of the build. You don't touch The Campaign Registry.</p>
+      <a href="/#packages" class="btn btn-primary btn-lg">See the packages</a>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Summit Solutions</h4><p>A done-for-you lead system for home service businesses.</p></div>
+      <div class="footer-col"><h4>Explore</h4><a href="/#packages">Packages</a><a href="/blog/">Blog</a><a href="/speed-to-lead-guide.html">Free guide</a></div>
+      <div class="footer-col"><h4>Contact</h4><a href="mailto:sid@summitsolutionscrm.com">sid@summitsolutionscrm.com</a><a href="tel:+14243877320">(424) 387-7320</a><p>Los Angeles, CA</p></div>
+      <div class="footer-col"><h4>Legal</h4><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a></div>
+    </div>
+    <div class="footer-bottom">© 2026 SUMMIT SOLUTIONS</div>
+  </div>
+</footer>
+
+</body>
+</html>

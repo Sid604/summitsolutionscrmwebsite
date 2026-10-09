@@ -4,11 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Summit Solutions — Never lose another service lead</title>
-<meta name="description" content="A done-for-you lead system for home service businesses. Missed calls texted back in 30 seconds, relentless follow-up, estimate nurturing, and booking that runs while you're on the job. Built and managed for you.">
+<meta name="description" content="A done-for-you lead system for home service businesses. Missed calls texted back in 30 seconds, automated follow-up, estimate nurturing, and booking that runs while you're on the job. Built and managed for you.">
+<link rel="canonical" href="https://summitsolutionscrm.com/">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Summit Solutions">
 <meta property="og:title" content="Summit Solutions — Never lose another service lead">
-<meta property="og:description" content="Missed calls texted back in 30 seconds. Follow-up, estimate nurturing, and booking on autopilot — built and run for you. See how Husky Roofing closed $43K in jobs from missed calls.">
+<meta property="og:description" content="Missed calls texted back in 30 seconds. Follow-up, estimate nurturing, and booking on autopilot — built and run for you. See how Husky Roofing booked $43K in jobs from missed calls.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/hero-texture.jpg">
+<meta property="og:url" content="https://summitsolutionscrm.com/">
+<meta property="og:site_name" content="Summit Solutions">
+<meta property="og:image" content="https://summitsolutionscrm.com/assets/hero-texture.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Summit Solutions — Never lose another service lead">
+<meta name="twitter:description" content="Missed-call text-back, follow-up, and booking for home service businesses — built and managed for you. See how Husky Roofing booked $43K from missed calls.">
+<meta name="twitter:image" content="https://summitsolutionscrm.com/assets/hero-texture.jpg">
+<link rel="alternate" type="text/plain" href="/llms.txt">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f3358'/%3E%3Cpath d='M6 22L16 8l10 14z' fill='none' stroke='%23f5f1e8' stroke-width='2.4' stroke-linejoin='round'/%3E%3Cpath d='M12 22l4-6 4 6' fill='none' stroke='%23f5f1e8' stroke-width='2.4' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -178,9 +188,6 @@
   .phone-tag{position:absolute;left:50%;transform:translateX(-50%);bottom:-26px;background:#fff;border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow-md);padding:11px 18px;z-index:6;display:flex;align-items:baseline;gap:8px;white-space:nowrap;}
   .phone-tag .big{font-family:var(--f-display);font-weight:800;font-size:19px;color:var(--ok);letter-spacing:-.02em;}
   .phone-tag .sm{font-size:11.5px;color:var(--muted);margin-top:1px;}
-  .phone-live{position:absolute;top:-12px;right:16px;background:var(--ok);color:#fff;font-family:var(--f-display);font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:20px;box-shadow:var(--shadow-sm);display:flex;align-items:center;gap:6px;z-index:6;}
-  .phone-live .dot{width:7px;height:7px;border-radius:50%;background:#fff;animation:pulse 1.6s infinite;}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.7);}70%{box-shadow:0 0 0 7px rgba(255,255,255,0);}100%{box-shadow:0 0 0 0 rgba(255,255,255,0);}}
 
   /* trust strip — scrolling marquee */
   .trust{background:var(--ink);color:var(--paper);padding:20px 0;overflow:hidden;}
@@ -232,9 +239,6 @@
   .shot-bar{display:flex;align-items:center;gap:7px;padding:12px 15px;border-bottom:1px solid var(--line-2);background:var(--paper);}
   .shot-bar i{width:10px;height:10px;border-radius:50%;background:#dcd6c8;display:block;}
   .shot-bar .t{margin-left:10px;font-size:12px;color:var(--muted-2);font-family:var(--f-body);}
-  .shot-live{margin-left:auto;display:flex;align-items:center;gap:6px;font-family:var(--f-display);font-weight:700;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ok);}
-  .shot-live .dot{width:7px;height:7px;border-radius:50%;background:var(--ok);animation:pulse2 1.8s infinite;}
-  @keyframes pulse2{0%{box-shadow:0 0 0 0 rgba(47,125,91,.5);}70%{box-shadow:0 0 0 6px rgba(47,125,91,0);}100%{box-shadow:0 0 0 0 rgba(47,125,91,0);}}
   .shot-body{position:relative;background:#f7f8fc;}
   .shot-body img{width:100%;height:auto;}
   .shot-clip{max-height:440px;overflow:hidden;position:relative;}
@@ -304,15 +308,19 @@
   .step h3{margin:14px 0 10px;}
   .step p{font-size:15px;}
 
-  /* pricing (single tier) */
-  .pricing .tier{max-width:560px;margin:0 auto;background:var(--card);border:1px solid var(--accent);border-radius:var(--r-lg);padding:clamp(34px,4vw,48px);box-shadow:var(--shadow-md);position:relative;text-align:center;}
-  .tier-badge{display:inline-block;background:var(--accent);color:#fff;font-family:var(--f-display);font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:18px;}
-  .tier h3{font-size:1.9rem;}
-  .tier .price{font-family:var(--f-display);font-weight:800;font-size:2.6rem;letter-spacing:-.03em;margin:14px 0 4px;color:var(--accent);}
-  .tier .price-sub{font-size:14.5px;color:var(--muted-2);}
-  .tier .t-desc{font-size:16px;color:var(--muted);margin:20px auto 26px;max-width:440px;}
-  .tier .cta-row{display:flex;justify-content:center;}
-  .price-note{text-align:center;margin-top:24px;font-size:14px;color:var(--muted-2);max-width:620px;margin-left:auto;margin-right:auto;}
+  /* packages */
+  .pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch;}
+  .pkg{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:34px 28px;box-shadow:var(--shadow-sm);position:relative;}
+  .pkg.featured{border-color:var(--accent);box-shadow:var(--shadow-md);}
+  .pkg-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-family:var(--f-display);font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:5px 13px;border-radius:20px;white-space:nowrap;}
+  .pkg-name{font-family:var(--f-display);font-weight:800;font-size:1.5rem;letter-spacing:-.02em;color:var(--ink);}
+  .pkg-tag{font-family:var(--f-display);font-weight:700;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent-2);margin-top:6px;}
+  .pkg-for{font-size:14.5px;color:var(--muted);margin:16px 0 20px;}
+  .pkg ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:26px;}
+  .pkg li{position:relative;padding-left:26px;font-size:14.5px;color:var(--ink);line-height:1.4;}
+  .pkg li::before{content:'';position:absolute;left:1px;top:4px;width:13px;height:7px;border-left:2.2px solid var(--ok);border-bottom:2.2px solid var(--ok);transform:rotate(-45deg);}
+  .pkg .btn{margin-top:auto;}
+  .price-note{text-align:center;margin-top:28px;font-size:14px;color:var(--muted-2);max-width:620px;margin-left:auto;margin-right:auto;}
 
   /* faq */
   .faq-list{max-width:820px;margin:0 auto;border-top:1px solid var(--line);}
@@ -354,7 +362,8 @@
 
   /* footer */
   footer{background:var(--paper-2);border-top:1px solid var(--line);padding:60px 0 34px;}
-  .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px;}
+  .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;}
+  @media (max-width:720px){.footer-grid{grid-template-columns:1fr 1fr;}}
   .footer-col h4{font-family:var(--f-display);font-weight:800;font-size:16px;margin-bottom:14px;}
   .footer-col p{font-size:14.5px;color:var(--muted);max-width:320px;}
   .footer-col a{display:block;font-size:14.5px;color:var(--muted);margin-bottom:9px;transition:color .2s ease;}
@@ -369,6 +378,7 @@
     .proof-gallery{grid-template-columns:1fr 1fr;}
     .cycle-track{grid-template-columns:repeat(3,1fr);}
     .inc-grid{grid-template-columns:1fr;}
+    .pkg-grid{grid-template-columns:1fr;max-width:460px;margin:0 auto;}
   }
   @media (max-width:720px){
     body{font-size:16px;}
@@ -384,6 +394,44 @@
     .phone-tag{font-size:.9em;}
   }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://summitsolutionscrm.com/#business",
+      "name": "Summit Solutions",
+      "description": "Done-for-you lead management for home service businesses: missed-call text-back, automated follow-up, self-booking, and estimate nurturing, built and managed for you.",
+      "url": "https://summitsolutionscrm.com/",
+      "email": "sid@summitsolutionscrm.com",
+      "telephone": "+1-424-387-7320",
+      "areaServed": "US",
+      "address": { "@type": "PostalAddress", "addressLocality": "Los Angeles", "addressRegion": "CA", "addressCountry": "US" },
+      "serviceType": "Lead management automation for home service businesses",
+      "slogan": "Never lose another service lead."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://summitsolutionscrm.com/#website",
+      "url": "https://summitsolutionscrm.com/",
+      "name": "Summit Solutions",
+      "publisher": { "@id": "https://summitsolutionscrm.com/#business" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How long does setup take?", "acceptedAnswer": { "@type": "Answer", "text": "About a week from signing to go-live. We build everything, test every workflow end to end, customize it to your business, and train whoever answers your leads." } },
+        { "@type": "Question", "name": "Do I need a website?", "acceptedAnswer": { "@type": "Answer", "text": "No. The system works with phone calls, referrals, and any lead source. We can build you a simple booking page if needed." } },
+        { "@type": "Question", "name": "Do I have to manage any of this?", "acceptedAnswer": { "@type": "Answer", "text": "No. We own the backend and run it for you: monitoring, monthly reporting, reactivation campaigns, and ongoing optimization. You just take the booked jobs." } },
+        { "@type": "Question", "name": "How do the packages work?", "acceptedAnswer": { "@type": "Answer", "text": "Three tiers — Starter, Growth, and Partner — each a flat monthly plus a one-time build. Which one fits depends on how much of the pipeline you want us running. We scope it with you on a short call." } },
+        { "@type": "Question", "name": "Can I customize the messages?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We dial in the exact wording during setup so it is your voice, and we adjust it anytime your hours, team, or offers change." } },
+        { "@type": "Question", "name": "What if it doesn't work for my business?", "acceptedAnswer": { "@type": "Answer", "text": "Monthly management comes with a 30-day money-back guarantee. If it is not working in the first month, that month is refunded. The setup fee covers real build work and is non-refundable." } }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -407,9 +455,9 @@
     <div class="nav-links">
       <a href="#how" class="navlink">How it works</a>
       <a href="#included" class="navlink">What's included</a>
-      <a href="#proof" class="navlink">Proof</a>
-      <a href="#pricing" class="navlink">Pricing</a>
-      <a href="#demo" class="btn btn-primary">Get your free audit</a>
+      <a href="#packages" class="navlink">Packages</a>
+      <a href="/blog/" class="navlink">Blog</a>
+      <a href="#resource" class="btn btn-primary">Get the free guide</a>
     </div>
   </div>
 </nav>
@@ -424,17 +472,16 @@
         <h1>Never lose another <span class="slot" id="slot"><span class="reel"><span>roofing</span><span>plumbing</span><span>HVAC</span><span>electrical</span><span>landscaping</span><span>remodeling</span><span>garage door</span><span>painting</span><span>flooring</span><span>solar</span></span></span> lead.</h1>
         <p class="hero-lede">Missed calls texted back in 30 seconds. Follow-up, estimate nurturing, and booking that run while you're out on the job — a complete system we build and manage, so the leads you already paid for actually turn into jobs.</p>
         <div class="hero-cta">
-          <a href="#demo" class="btn btn-primary btn-lg">Get your free audit <svg><use href="#i-arrow"/></svg></a>
+          <a href="#resource" class="btn btn-primary btn-lg">Get the free guide <svg><use href="#i-arrow"/></svg></a>
           <a href="#how" class="textlink">See it in action <svg><use href="#i-arrow"/></svg></a>
         </div>
         <div class="hero-trust">
           <img src="assets/husky-logo.webp" alt="Husky Roofing logo">
-          <span class="t-txt"><b>Trusted by Husky Roofing</b><br>$43K in jobs closed from missed calls — first 6 weeks live.</span>
+          <span class="t-txt"><b>Case study: Husky Roofing</b><br>$43K in new jobs from missed calls in their first 6 weeks.</span>
         </div>
       </div>
       <div class="hero-visual reveal is-visible">
         <div class="phone">
-          <span class="phone-live"><span class="dot"></span>Live</span>
           <div class="phone-notch"></div>
           <div class="phone-screen">
             <div class="phone-views" id="phoneViews">
@@ -469,7 +516,7 @@
 <section class="trust">
   <div class="marquee">
     <div class="marquee-track">
-      <span class="m-item">Proven with Husky Roofing</span>
+      <span class="m-item">Case study: Husky Roofing</span>
       <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
       <span class="m-item"><b>37</b> missed calls saved</span>
       <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
@@ -481,7 +528,7 @@
       <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
     </div>
     <div class="marquee-track" aria-hidden="true">
-      <span class="m-item">Proven with Husky Roofing</span>
+      <span class="m-item">Case study: Husky Roofing</span>
       <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
       <span class="m-item"><b>37</b> missed calls saved</span>
       <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
@@ -499,9 +546,9 @@
 <section class="stats" id="results">
   <div class="wrap">
     <div class="section-head center">
-      <span class="eyebrow">The problem — and the receipts</span>
+      <span class="eyebrow">Case study — Husky Roofing</span>
       <h2>Every missed call is a job walking to your competitor</h2>
-      <p>When a homeowner hits voicemail, they call the next business on the list. Here's what stopped happening in Husky Roofing's first 6 weeks on the system.</p>
+      <p>When a homeowner hits voicemail, they call the next business on the list. Here's what changed in Husky Roofing's first 6 weeks on the system.</p>
     </div>
     <div class="stats-grid">
       <div class="stat-card reveal"><div class="n">37</div><div class="l">Missed calls automatically texted back within 30 seconds</div></div>
@@ -538,8 +585,8 @@
   <div class="wrap">
     <div class="section-head center">
       <span class="eyebrow">How it works</span>
-      <h2>A system that answers, follows up, and closes — for you</h2>
-      <p>The automations that catch every lead the moment it comes in. Every screenshot below is the real thing, running in Husky Roofing's account.</p>
+      <h2>A system that answers, follows up, and closes for you</h2>
+      <p>The automations that catch every lead the moment it comes in. Every screenshot below is from Husky Roofing's live account.</p>
     </div>
 
     <div class="feature">
@@ -554,15 +601,15 @@
         </ul>
       </div>
       <div class="f-visual">
-        <div class="shot"><div class="shot-bar"><i></i><i></i><i></i><span class="t">Conversations · missed call auto-text</span><span class="shot-live"><span class="dot"></span>Live</span></div><div class="shot-body"><div class="shot-clip"><img src="assets/cycle-1-missedcall.png" alt="CRM showing an automatic missed-call text-back"></div></div></div>
+        <div class="shot"><div class="shot-bar"><i></i><i></i><i></i><span class="t">Conversations · missed call auto-text</span></div><div class="shot-body"><div class="shot-clip"><img src="assets/cycle-1-missedcall.png" alt="CRM showing an automatic missed-call text-back"></div></div></div>
       </div>
     </div>
 
     <div class="feature flip">
       <div class="f-text">
-        <span class="eyebrow">Relentless follow-up</span>
-        <h3>Follow-up that never forgets</h3>
-        <p class="f-desc">A multi-touch sequence of texts and calls keeps working the lead for days — the follow-up your team never has time to do by hand.</p>
+        <span class="eyebrow">Automated follow-up</span>
+        <h3>Follow-up that actually happens</h3>
+        <p class="f-desc">A sequence of texts and calls keeps working the lead for days — the follow-up your team rarely has time to do by hand.</p>
         <ul>
           <li><svg class="ic"><use href="#i-check"/></svg> Multi-touch sequence over a 14-day window</li>
           <li><svg class="ic"><use href="#i-check"/></svg> Stops the moment they reply or book</li>
@@ -570,7 +617,7 @@
         </ul>
       </div>
       <div class="f-visual">
-        <div class="shot"><div class="shot-bar"><i></i><i></i><i></i><span class="t">Conversations · automated follow-up</span><span class="shot-live"><span class="dot"></span>Live</span></div><div class="shot-body"><div class="shot-clip"><img src="assets/feat-followup.png" alt="CRM showing an automated follow-up message"></div></div></div>
+        <div class="shot"><div class="shot-bar"><i></i><i></i><i></i><span class="t">Conversations · automated follow-up</span></div><div class="shot-body"><div class="shot-clip"><img src="assets/feat-followup.png" alt="CRM showing an automated follow-up message"></div></div></div>
       </div>
     </div>
 
@@ -586,7 +633,7 @@
         </ul>
       </div>
       <div class="f-visual">
-        <div class="shot shot-wide"><div class="shot-bar"><i></i><i></i><i></i><span class="t">Calendar · Free Roof Inspection</span><span class="shot-live"><span class="dot"></span>Live</span></div><div class="shot-body"><div class="shot-clip"><img src="assets/feat-calendar.png" alt="A week of booked roof inspections in the calendar"></div></div></div>
+        <div class="shot shot-wide"><div class="shot-bar"><i></i><i></i><i></i><span class="t">Calendar · Free Roof Inspection</span></div><div class="shot-body"><div class="shot-clip"><img src="assets/feat-calendar.png" alt="A week of booked roof inspections in the calendar"></div></div></div>
       </div>
     </div>
 
@@ -602,7 +649,7 @@
         </ul>
       </div>
       <div class="f-visual">
-        <div class="shot"><div class="shot-bar"><i></i><i></i><i></i><span class="t">Conversations · estimate follow-up</span><span class="shot-live"><span class="dot"></span>Live</span></div><div class="shot-body"><div class="shot-clip"><img src="assets/cycle-estimate.png" alt="CRM showing an automated estimate follow-up email"></div></div></div>
+        <div class="shot"><div class="shot-bar"><i></i><i></i><i></i><span class="t">Conversations · estimate follow-up</span></div><div class="shot-body"><div class="shot-clip"><img src="assets/cycle-estimate.png" alt="CRM showing an automated estimate follow-up email"></div></div></div>
       </div>
     </div>
   </div>
@@ -648,7 +695,7 @@
 <section class="included" id="included">
   <div class="wrap">
     <div class="section-head center">
-      <span class="eyebrow">White-glove &amp; done for you</span>
+      <span class="eyebrow">Done for you</span>
       <h2>We build it. We run it. You never touch the backend.</h2>
       <p>Summit takes on a limited number of home service clients so every system gets built and managed properly. You get a partner, not a login.</p>
     </div>
@@ -692,8 +739,8 @@
   <div class="wrap">
     <div class="section-head center">
       <span class="eyebrow">Straight from the CRM</span>
-      <h2>The proof, not the pitch</h2>
-      <p>Real opportunities, real bookings, real feedback from the people using it every day.</p>
+      <h2>What it looks like in the account</h2>
+      <p>Real opportunities, real bookings, and a note from the person who answers their phones.</p>
     </div>
 
     <div class="proof-gallery">
@@ -740,23 +787,59 @@
   </div>
 </section>
 
-<!-- PRICING -->
-<section class="pricing" id="pricing">
+<!-- PACKAGES -->
+<section class="pricing" id="packages">
   <div class="wrap">
     <div class="section-head center">
-      <span class="eyebrow">Pricing</span>
-      <h2>Custom, because your business is</h2>
-      <p>We don't do off-the-shelf packages or a race to the bottom. We take on a handful of clients, build the whole system around how you sell, and manage it for you. Pricing is quoted after a free audit — based on your call volume and how you close.</p>
+      <span class="eyebrow">Packages</span>
+      <h2>Pick the package that fits how you run</h2>
+      <p>Three ways to work with us — from just stopping missed calls to a fully managed pipeline. Each one is a flat monthly plus a one-time build, scoped to your business on a short call.</p>
     </div>
-    <div class="tier reveal">
-      <span class="tier-badge">The Summit System</span>
-      <h3>Done for you, end to end</h3>
-      <div class="price">Custom</div>
-      <div class="price-sub">One-time build + monthly management · quoted on your audit</div>
-      <p class="t-desc">The complete lead-to-revenue system — built around your business and fully managed. Everything on this page, run for you every month.</p>
-      <div class="cta-row"><a href="#demo" class="btn btn-primary btn-lg">Get your free audit <svg><use href="#i-arrow"/></svg></a></div>
+    <div class="pkg-grid">
+      <div class="pkg reveal">
+        <div class="pkg-name">Starter</div>
+        <div class="pkg-tag">Stop missing calls</div>
+        <p class="pkg-for">For shops that just need every call answered and every lead on the calendar.</p>
+        <ul>
+          <li>Missed-call text-back, business &amp; after hours</li>
+          <li>Two-way texting in one inbox</li>
+          <li>Self-booking calendar</li>
+          <li>Confirmations plus 24-hour &amp; 2-hour reminders</li>
+          <li>Instant office notifications</li>
+        </ul>
+        <a href="#resource" class="btn btn-ghost btn-block">Get started</a>
+      </div>
+      <div class="pkg featured reveal">
+        <div class="pkg-badge">Most popular</div>
+        <div class="pkg-name">Growth</div>
+        <div class="pkg-tag">The full pipeline</div>
+        <p class="pkg-for">For teams that want every lead worked from first call to signed estimate.</p>
+        <ul>
+          <li>Everything in Starter</li>
+          <li>Multi-touch follow-up sequences</li>
+          <li>Custom pipeline built around how you sell</li>
+          <li>Post-visit form → branded estimate auto-sent</li>
+          <li>Estimate nurture plus won/lost tracking</li>
+          <li>Review &amp; referral automation</li>
+        </ul>
+        <a href="#resource" class="btn btn-primary btn-block">Get started</a>
+      </div>
+      <div class="pkg reveal">
+        <div class="pkg-name">Partner</div>
+        <div class="pkg-tag">Fully managed</div>
+        <p class="pkg-for">For owners who want the whole thing run and improved for them every month.</p>
+        <ul>
+          <li>Everything in Growth</li>
+          <li>Monthly performance reporting</li>
+          <li>Quarterly database reactivation</li>
+          <li>Win/loss &amp; lead-source analysis</li>
+          <li>SMS &amp; email deliverability monitoring</li>
+          <li>Ongoing optimization</li>
+        </ul>
+        <a href="#resource" class="btn btn-ghost btn-block">Get started</a>
+      </div>
     </div>
-    <p class="price-note">A one-time setup fee covers the full build; a monthly fee covers ongoing management and optimization. Exact numbers on your audit call, with a 30-day money-back guarantee on monthly service.</p>
+    <p class="price-note">Every package is a flat monthly plus a one-time build. We take on a limited number of clients, and monthly service carries a 30-day money-back guarantee.</p>
   </div>
 </section>
 
@@ -781,8 +864,8 @@
         <div class="faq-a-wrap"><p class="faq-a">No — that's the point. We own the backend and run it for you: monitoring, monthly reporting, reactivation campaigns, and ongoing optimization. You just take the booked jobs.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false"><span><span class="num">04</span>Why is pricing custom?</span><span class="toggle"><svg><use href="#i-plus"/></svg></span></button>
-        <div class="faq-a-wrap"><p class="faq-a">Because we build around how you actually sell and take on only a limited number of clients. Your call volume, sales process, and lead sources all shape the system — so we quote after a free audit rather than selling a one-size box.</p></div>
+        <button class="faq-q" aria-expanded="false"><span><span class="num">04</span>How do the packages work?</span><span class="toggle"><svg><use href="#i-plus"/></svg></span></button>
+        <div class="faq-a-wrap"><p class="faq-a">Three tiers — Starter, Growth, and Partner — each a flat monthly plus a one-time build. Which one fits depends on how much of the pipeline you want us running. We scope it with you on a short call so you know the number before you commit.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false"><span><span class="num">05</span>Can I customize the messages?</span><span class="toggle"><svg><use href="#i-plus"/></svg></span></button>
@@ -796,23 +879,24 @@
   </div>
 </section>
 
-<!-- FINAL CTA + FORM -->
-<section id="demo" class="final">
+<!-- FREE GUIDE / LEAD MAGNET -->
+<section id="resource" class="final">
   <div class="wrap">
     <div>
-      <span class="eyebrow" style="color:var(--gold-soft)">Free Speed-to-Lead Audit</span>
-      <h2 style="margin-top:16px;">Ready to stop losing leads?</h2>
-      <p class="lede">Book a free 15-minute audit. We'll show you exactly where your leads are leaking and what it'd take to plug it — no pressure, no obligation.</p>
+      <span class="eyebrow" style="color:var(--gold-soft)">Free guide</span>
+      <h2 style="margin-top:16px;">The Speed-to-Lead Playbook</h2>
+      <p class="lede">A short, practical guide to catching leads the moment they come in — the same setup behind the Husky Roofing numbers. Tell us where to send it.</p>
       <ul class="assure">
-        <li><svg class="ic"><use href="#i-check"/></svg> See where your missed calls are actually going</li>
-        <li><svg class="ic"><use href="#i-check"/></svg> A custom quote before you commit to anything</li>
-        <li><svg class="ic"><use href="#i-check"/></svg> We reply within 2 hours to schedule</li>
+        <li><svg class="ic"><use href="#i-check"/></svg> High-converting missed-call text-back copy you can paste in</li>
+        <li><svg class="ic"><use href="#i-check"/></svg> How to wire up a booking page leads fill out themselves</li>
+        <li><svg class="ic"><use href="#i-check"/></svg> How to turn on appointment confirmations &amp; reminders</li>
       </ul>
     </div>
 
     <div class="intake reveal">
-      <div class="intake-head"><span>Free Audit Request</span><span>001</span></div>
+      <div class="intake-head"><span>Get the free guide</span><span>PDF</span></div>
       <form id="demoForm" novalidate>
+        <input type="hidden" name="_subject" value="Speed-to-Lead guide request">
         <div class="field" data-field="name">
           <label for="f-name">Your name</label>
           <input type="text" id="f-name" name="name" required>
@@ -823,9 +907,9 @@
           <input type="email" id="f-email" name="email" required>
           <div class="field-err">Enter a valid email address.</div>
         </div>
-        <button type="submit" class="btn btn-primary btn-block btn-lg">Get my free audit</button>
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Send me the guide</button>
       </form>
-      <p class="form-note">We'll reach out within 2 hours to schedule your audit.</p>
+      <p class="form-note">We'll email it right away — and you can read it online the moment you submit.</p>
     </div>
   </div>
 </section>
@@ -836,6 +920,12 @@
       <div class="footer-col">
         <h4>Summit Solutions</h4>
         <p>A done-for-you lead system for home service businesses.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="/#packages">Packages</a>
+        <a href="/blog/">Blog</a>
+        <a href="/speed-to-lead-guide.html">Free guide</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
@@ -933,18 +1023,25 @@
     if(!slot) return;
     var reel = slot.querySelector('.reel');
     reel.appendChild(reel.firstElementChild.cloneNode(true)); // seamless clone of first word
-    var items = reel.children, n = items.length - 1;
-    var h = items[0].offsetHeight, w = 0;
-    for(var k=0;k<items.length;k++){ w = Math.max(w, items[k].offsetWidth); }
-    slot.style.height = h + 'px';
-    slot.style.width = w + 'px';
+    var items = reel.children, n = items.length - 1, timer = null;
+    function size(){ // (re)measure — widest word sets the window; fractional height avoids sub-pixel peek
+      var h = items[0].getBoundingClientRect().height, w = 0;
+      for(var k=0;k<items.length;k++){ w = Math.max(w, Math.ceil(items[k].getBoundingClientRect().width)); }
+      slot.style.height = h + 'px';
+      slot.style.width = (w + 2) + 'px';
+      return h;
+    }
+    var h = size();
     var idx = 0;
-    setInterval(function(){
+    timer = setInterval(function(){
       idx++;
       reel.style.transition = 'transform .55s cubic-bezier(.16,1,.3,1)';
       reel.style.transform = 'translateY(' + (-idx * h) + 'px)';
       if(idx === n){ setTimeout(function(){ reel.style.transition='none'; idx=0; reel.style.transform='translateY(0)'; }, 580); }
     }, 2100);
+    // web font loads async and is wider than the fallback — re-measure so long words fit
+    if(document.fonts && document.fonts.ready){ document.fonts.ready.then(function(){ h = size(); }); }
+    window.addEventListener('resize', function(){ h = size(); });
   })();
 
   // ---- reveal on scroll ----
@@ -995,7 +1092,7 @@
         container.querySelector('.form-note').style.display = 'none';
         var success = document.createElement('div');
         success.className = 'form-success';
-        success.innerHTML = '<svg><use href="#i-check"/></svg><h3>Thank you</h3><p>We\'ll reach out within 2 hours to schedule your free audit.</p>';
+        success.innerHTML = '<svg><use href="#i-check"/></svg><h3>Check your inbox</h3><p>The guide is on its way. Want to start now? <a href="/speed-to-lead-guide.html" style="color:var(--accent-2);font-weight:600;text-decoration:underline;">Read it online →</a></p>';
         container.appendChild(success);
       } else { throw new Error('Form submission failed'); }
     } catch(err){
