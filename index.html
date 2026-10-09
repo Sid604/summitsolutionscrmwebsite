@@ -504,6 +504,40 @@
   .cta-band::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(11,18,33,.5),rgba(11,18,33,.8));}
   .cta-band-inner{position:relative;z-index:2;padding:48px 26px;display:flex;flex-direction:column;align-items:center;gap:26px;}
   .cta-band-line{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,4.4vw,3.2rem);letter-spacing:-.02em;color:#fff;max-width:16ch;line-height:1.08;}
+
+  /* hero micro-trust line */
+  .hero-micro{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:13.5px;color:var(--muted-2);}
+  .hero-micro span{display:inline-flex;align-items:center;gap:8px;}
+  .hero-micro span::before{content:'';flex:none;width:5px;height:5px;border-radius:50%;background:var(--accent-2);}
+
+  /* repeated post-proof CTA */
+  .proof-cta{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;margin-top:clamp(38px,5vw,56px);}
+  .proof-cta .pc-q{font-family:var(--f-display);font-weight:700;font-size:clamp(1.2rem,2.4vw,1.6rem);letter-spacing:-.01em;color:var(--ink);max-width:24ch;line-height:1.2;}
+  .proof-cta.on-dark .pc-q{color:#fff;}
+
+  /* included footer line */
+  .inc-foot{margin-top:28px;text-align:center;font-family:var(--f-display);font-weight:700;font-size:clamp(1.05rem,1.8vw,1.3rem);letter-spacing:-.01em;color:var(--accent-ink);}
+
+  /* ambient receptionist / front-desk band */
+  .deskband{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);margin-bottom:clamp(34px,4.5vw,52px);aspect-ratio:2.4/1;background:var(--accent-ink);}
+  .deskband video,.deskband img{width:100%;height:100%;object-fit:cover;display:block;}
+  .deskband::after{content:'';position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 1px var(--line);border-radius:var(--r-lg);}
+  @media(max-width:720px){.deskband{aspect-ratio:16/11;}}
+
+  /* revenue audit */
+  .audit{background:var(--ink);color:var(--paper);}
+  .audit .wrap{max-width:860px;}
+  .audit .section-head h2{color:#fff;}
+  .audit .section-head p{color:rgba(245,241,232,.75);}
+  .audit .eyebrow{color:var(--gold-soft);}
+  .audit .eyebrow::before{background:var(--gold-soft);}
+  .audit-micro{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;margin:-18px 0 28px;font-size:14px;color:rgba(245,241,232,.82);}
+  .audit-micro span{display:inline-flex;align-items:center;gap:8px;}
+  .audit-micro span::before{content:'';flex:none;width:6px;height:6px;border-radius:50%;background:var(--gold-soft);}
+  .audit-embed{background:#fff;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg);}
+  .audit-embed iframe{display:block;width:100%;min-height:900px;border:0;}
+  .audit-alt{text-align:center;margin-top:18px;font-size:14px;color:rgba(245,241,232,.75);}
+  .audit-alt a{color:var(--gold-soft);text-decoration:underline;text-underline-offset:3px;font-weight:600;}
 </style>
 <script type="application/ld+json">
 {
@@ -537,6 +571,8 @@
         { "@type": "Question", "name": "Do I have to manage any of this?", "acceptedAnswer": { "@type": "Answer", "text": "We handle setup and checks. Partner adds monthly reporting, older-lead follow-up, and ongoing improvements. Your team handles the visits and the work." } },
         { "@type": "Question", "name": "How do the packages work?", "acceptedAnswer": { "@type": "Answer", "text": "Starter recovers missed calls. Growth adds lead and estimate follow-up. Partner adds monthly management and older-lead recovery. Each has a flat monthly fee plus a one-time setup fee. We scope it with you on a short call." } },
         { "@type": "Question", "name": "Can I customize the messages?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We dial in the exact wording during setup so it is your voice, and we adjust it anytime your hours, team, or offers change." } },
+        { "@type": "Question", "name": "Do I need to replace my current CRM?", "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. We first look at your existing call, calendar, and lead workflow and decide what needs to connect or change. Summit is built to recover opportunities, not to force software changes for their own sake." } },
+        { "@type": "Question", "name": "Does this replace my receptionist?", "acceptedAnswer": { "@type": "Answer", "text": "No. Summit handles the repetitive parts around your office team: instant text-back, follow-up, booking, reminders, and pipeline updates. Your staff handles the conversations and customers that need a person." } },
         { "@type": "Question", "name": "What if it doesn't work for my business?", "acceptedAnswer": { "@type": "Answer", "text": "Monthly management comes with a 30-day money-back guarantee. If it is not working in the first month, that month is refunded. The setup fee covers real build work and is non-refundable." } }
       ]
     }
@@ -567,10 +603,10 @@
     </a>
     <div class="nav-links">
       <a href="#how" class="navlink">How it works</a>
+      <a href="#results" class="navlink">Results</a>
       <a href="#included" class="navlink">What's included</a>
       <a href="#packages" class="navlink">Packages</a>
-      <a href="/blog/" class="navlink">Blog</a>
-      <a href="#resource" class="btn btn-primary">Get the free guide</a>
+      <a href="#audit" class="btn btn-primary">Book a Free Revenue Audit</a>
     </div>
   </div>
 </nav>
@@ -583,10 +619,15 @@
       <div class="reveal is-visible">
         <span class="eyebrow">Revenue recovery for contractors</span>
         <h1 aria-label="Win more home service jobs.">Win more<br><span class="slot" id="slot" aria-hidden="true"><span class="reel"><span>roofing</span><span>plumbing</span><span>HVAC</span><span>electrical</span><span>landscaping</span><span>remodeling</span><span>garage door</span><span>painting</span><span>flooring</span><span>solar</span></span></span> jobs.</h1>
-        <p class="hero-lede">Recover missed calls and unsigned estimates. Book more work from the leads you already paid for, while you finish the job.</p>
+        <p class="hero-lede">Summit texts missed callers in under a minute, lets homeowners book their own inspection, and follows up on leads and unsigned estimates until they respond.</p>
         <div class="hero-cta">
-          <a href="#resource" class="btn btn-primary btn-lg">Get the free guide <svg><use href="#i-arrow"/></svg></a>
-          <a href="#how" class="textlink">See it in action <svg><use href="#i-arrow"/></svg></a>
+          <a href="#audit" class="btn btn-primary btn-lg">Book a Free Revenue Audit <svg><use href="#i-arrow"/></svg></a>
+          <a href="#results" class="textlink">See the $43K case study <svg><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="hero-micro">
+          <span>15 minutes</span>
+          <span>No pitch deck</span>
+          <span>We'll show you where leads are slipping through</span>
         </div>
         <div class="hero-trust">
           <img src="assets/husky-logo.webp" alt="Husky Roofing logo">
@@ -631,11 +672,11 @@
     <div class="marquee-track">
       <span class="m-item">Case study: Husky Roofing</span>
       <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
-      <span class="m-item"><b>37</b> missed calls saved</span>
+      <span class="m-item"><b>37</b> missed callers contacted</span>
       <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
-      <span class="m-item"><b>32</b> inspections booked</span>
+      <span class="m-item"><b>15</b> inspections booked from missed calls</span>
       <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
-      <span class="m-item"><b>15</b> recovered from missed calls</span>
+      <span class="m-item"><b>2</b> roof jobs won</span>
       <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
       <span class="m-item"><b>$43K</b> in jobs won</span>
       <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
@@ -643,11 +684,11 @@
     <div class="marquee-track" aria-hidden="true">
       <span class="m-item">Case study: Husky Roofing</span>
       <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
-      <span class="m-item"><b>37</b> missed calls saved</span>
+      <span class="m-item"><b>37</b> missed callers contacted</span>
       <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
-      <span class="m-item"><b>32</b> inspections booked</span>
+      <span class="m-item"><b>15</b> inspections booked from missed calls</span>
       <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
-      <span class="m-item"><b>15</b> recovered from missed calls</span>
+      <span class="m-item"><b>2</b> roof jobs won</span>
       <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
       <span class="m-item"><b>$43K</b> in jobs won</span>
       <span class="m-dot"><svg viewBox="0 0 24 24"><path d="M3 20L12 6l9 14z" fill="currentColor"/></svg></span>
@@ -660,14 +701,14 @@
   <div class="wrap">
     <div class="section-head center">
       <span class="eyebrow">Case study · Husky Roofing</span>
-      <h2>Recover the work hiding in your missed calls</h2>
-      <p>Husky Roofing brought missed callers back into the conversation. Two homeowners booked their own inspections and later signed $43,000 in roof jobs.</p>
+      <h2>$43,000 recovered from two missed callers</h2>
+      <p>Both homeowners booked their own inspections from Summit's missed-call text-back, then signed roof jobs. No one at the office had to chase them down.</p>
     </div>
     <div class="stats-grid">
       <div class="stat-card reveal"><div class="n">37</div><div class="l">Missed callers texted back within a minute</div></div>
-      <div class="stat-card reveal"><div class="n">32</div><div class="l">Inspections booked across the tracked lead pipeline</div></div>
-      <div class="stat-card reveal"><div class="n">15</div><div class="l">Inspections booked from missed calls</div></div>
-      <div class="stat-card reveal"><div class="n">$43K</div><div class="l">Won contract value: Tiep D. $26K + James B. $17K</div></div>
+      <div class="stat-card reveal"><div class="n">15</div><div class="l">Inspections booked from those missed calls</div></div>
+      <div class="stat-card reveal"><div class="n">2</div><div class="l">Roof jobs won from self-booked inspections</div></div>
+      <div class="stat-card reveal"><div class="n">$43K</div><div class="l">Recorded contract value: Tiep D. $26K + James B. $17K</div></div>
     </div>
     <div class="ba-grid reveal">
       <div class="ba-card before">
@@ -690,6 +731,10 @@
       </div>
     </div>
     <p class="stats-note">Husky Roofing case study, August–September 2026. Activity counts cover the first four weeks; $43K is the recorded contract value of Tiep D. and James B. Contact details are omitted from screenshot crops.</p>
+    <div class="proof-cta reveal">
+      <p class="pc-q">Wonder how many jobs are slipping through your office?</p>
+      <a href="#audit" class="btn btn-primary btn-lg">Book a free 15-minute Revenue Audit <svg><use href="#i-arrow"/></svg></a>
+    </div>
   </div>
 </section>
 
@@ -707,7 +752,7 @@
       <div class="f-text">
         <span class="eyebrow">Recover missed callers</span>
         <h3>Keep the job when you miss the call</h3>
-        <p class="f-desc">A missed caller gets a text with a booking link. They can schedule an inspection while you stay on the job, including after hours.</p>
+        <p class="f-desc">Homeowners don't leave one voicemail and wait. Summit responds immediately and gives them a path to book before they call the next roofer.</p>
         <ul>
           <li><svg class="ic"><use href="#i-check"/></svg> Separate business-hours &amp; after-hours workflows</li>
           <li><svg class="ic"><use href="#i-check"/></svg> Opens a two-way text thread in one inbox</li>
@@ -731,7 +776,7 @@
       <div class="f-text">
         <span class="eyebrow">Recover quiet leads</span>
         <h3>Book the leads you already paid for</h3>
-        <p class="f-desc">Reach homeowners who were busy when you first replied. Follow-up texts and calls give them another chance to book, without adding a callback list to your day.</p>
+        <p class="f-desc">Summit handles the repetitive chasing automatically, so your office only has to step in when the homeowner responds. The follow-up runs alongside your team, not instead of it.</p>
         <ul>
           <li><svg class="ic"><use href="#i-check"/></svg> Multi-touch sequence over a 14-day window</li>
           <li><svg class="ic"><use href="#i-check"/></svg> Stops the moment they reply or book</li>
@@ -756,9 +801,8 @@
       <div class="f-text">
         <span class="eyebrow">Protect your crew's time</span>
         <h3>Spend less time booking and chasing visits</h3>
-        <p class="f-desc">Homeowners choose an open slot, get confirmations and reminders, and can reschedule. Your crew gets the job details before the visit, saving office calls and wasted trips.</p>
+        <p class="f-desc">Booked visits confirm, remind, and reschedule themselves, and your crew gets the details before they roll out, so the recovery above actually lands on the calendar.</p>
         <ul>
-          <li><svg class="ic"><use href="#i-check"/></svg> Real-time calendar the lead books directly</li>
           <li><svg class="ic"><use href="#i-check"/></svg> Confirmations, reminders &amp; self-reschedule</li>
           <li><svg class="ic"><use href="#i-check"/></svg> Your office gets a text &amp; email on every booking</li>
         </ul>
@@ -786,8 +830,8 @@
     <div class="feature flip">
       <div class="f-text">
         <span class="eyebrow">Recover unsigned quotes</span>
-        <h3>Get a decision on the estimate you sent</h3>
-        <p class="f-desc">You already spent time on the visit and quote. A three-touch text-and-email sequence over 10 days brings the estimate back to the homeowner and makes approval easy.</p>
+        <h3>Don't let a $15,000 estimate die because nobody followed up</h3>
+        <p class="f-desc">You already paid for the lead, drove to the property, inspected the job, and wrote the quote. Summit keeps the conversation alive until the homeowner gives you a yes or no.</p>
         <ul>
           <li><svg class="ic"><use href="#i-check"/></svg> Estimate auto-sends from the post-inspection form</li>
           <li><svg class="ic"><use href="#i-check"/></svg> 3 follow-ups over 10 days by text &amp; email</li>
@@ -816,8 +860,8 @@
   <div class="wrap">
     <div class="section-head center">
       <span class="eyebrow">One homeowner, start to finish</span>
-      <h2>One missed call. One $26,000 job won.</h2>
-      <p>Tiep D. called Husky Roofing before the office opened on September 9. He booked his own inspection through the text-back link 14 minutes later. Husky later recorded his roof job as Won for $26,000.</p>
+      <h2>Tiep missed Husky at 8:15 AM. 14 minutes later, he booked himself.</h2>
+      <p>He called before the office opened on September 9. Summit's text-back reached him at 8:16 AM, and at 8:29 he'd scheduled his own inspection, with no callback from Anna. That lead became a <b style="color:#fff">$26,000 roof job</b>.</p>
     </div>
     <div class="cycle-track">
       <div class="cy-step reveal">
@@ -840,6 +884,10 @@
     <div class="cycle-outcome">
       <span class="tagpill"><svg aria-hidden="true" style="width:18px;height:18px"><use href="#i-check"/></svg> A missed caller booked himself. Husky won a $26,000 roof job.</span>
       <p class="cycle-evidence">All four crops come from Tiep's records in the Husky Roofing case study. Select a screenshot to read it at full size. Won value is contract value, not a payment receipt.</p>
+      <div class="proof-cta on-dark reveal">
+        <p class="pc-q">See what Summit could recover for your office.</p>
+        <a href="#audit" class="btn btn-primary btn-lg">Book a Free Revenue Audit <svg><use href="#i-arrow"/></svg></a>
+      </div>
     </div>
   </div>
 </section>
@@ -849,41 +897,39 @@
   <div class="wrap">
     <div class="section-head center">
       <span class="eyebrow">Done for you</span>
-      <h2>Win more work without adding office hours</h2>
-      <p>We handle the follow-up and booking setup. You get scheduled visits, a clear view of won jobs, and fewer leads to chase between projects.</p>
+      <h2>Summit doesn't replace your office. It gives them leverage.</h2>
+      <p>Your receptionist still handles the conversations that need a human. Summit takes care of the instant responses, repetitive follow-up, booking links, reminders, and pipeline movement around them.</p>
     </div>
+    <figure class="deskband reveal">
+      <video class="trade-vid" muted loop playsinline preload="metadata" poster="assets/receptionist.jpg" aria-label="A front-desk receptionist working calmly at her computer">
+        <source src="assets/receptionist.mp4" type="video/mp4">
+      </video>
+    </figure>
     <div class="inc-grid">
       <div class="inc-card reveal">
-        <div class="k">The build</div>
+        <div class="k">We build it</div>
         <h3>Recover calls and turn quotes into jobs</h3>
         <ul>
-          <li><svg class="ic"><use href="#i-check"/></svg> Your business number and lead conversations in one place</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> Missed-call text-back during and after business hours</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> Self-booking calendar, confirmations &amp; reminder sequence</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> Self-service reschedule &amp; instant office notifications</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> See which leads need a visit, quote, or decision</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> Post-inspection form → branded estimate auto-sent</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> Estimate nurture, won/lost automation &amp; revenue logging</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> Ask completed-job customers for reviews and referrals</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> End-to-end testing &amp; training before go-live</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Missed-call recovery, business and after hours</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Lead follow-up that runs until they book or reply</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Self-booking, confirmations, reminders &amp; reschedule</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Estimate follow-up with won/lost tracking</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Revenue tracking on every recovered lead</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Review and referral requests after the job</li>
         </ul>
       </div>
       <div class="inc-card reveal">
-        <div class="k">The partnership</div>
+        <div class="k">We keep it running</div>
         <h3>Keep recovering revenue each month</h3>
         <ul>
-          <li><svg class="ic"><use href="#i-check"/></svg> We manage the follow-up so your team can focus on jobs</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> We check that texts, reminders, and booking links work</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> Monthly performance report on the 1st: leads, bookings, estimates, revenue</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> Reconnect with old leads and unsigned estimates each quarter</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> Review lost jobs to find where you can win more work</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> See which lead sources produce won contract value</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> SMS &amp; email deliverability monitoring</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> Adjust follow-up as your hours, crew, and offers change</li>
-          <li><svg class="ic"><use href="#i-check"/></svg> Request reviews and referrals after completed jobs</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Monitor every automation and message deliverability</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Review what converts and adjust the follow-up</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Reconnect with older leads and unsigned estimates</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Send a monthly revenue report: leads, bookings, won value</li>
         </ul>
       </div>
     </div>
+    <p class="inc-foot reveal">You handle the customer. We keep the front end from leaking opportunities.</p>
   </div>
 </section>
 
@@ -892,8 +938,8 @@
   <div class="wrap">
     <div class="section-head center">
       <span class="eyebrow">Who it's for</span>
-      <h2>Built for every home-service trade</h2>
-      <p>If you sell high-ticket work and lose jobs to missed calls, the system fits — roofing, plumbing, HVAC, electrical, and beyond.</p>
+      <h2>Built for high-ticket home-service teams</h2>
+      <p>Proven first in roofing. The same recovery system can be configured for HVAC, plumbing, electrical, remodeling, and other appointment-driven trades.</p>
     </div>
     <div class="trade-grid">
       <figure class="trade-card reveal"><video class="trade-vid" autoplay muted loop playsinline preload="metadata" poster="assets/hf-trade-roofer.jpg" aria-label="Roofing contractor"><source src="assets/hf-trade-roofer.mp4" type="video/mp4"></video><figcaption>Roofing</figcaption></figure>
@@ -947,7 +993,7 @@
     <div class="section-head center">
       <span class="eyebrow">Getting started</span>
       <h2>Start recovering leads in about two weeks</h2>
-      <p>We connect your calls and booking calendar, test the follow-up, and keep improving it as you win more work.</p>
+      <p>We connect your calls and booking calendar, test the follow-up, and keep improving it as you win more work. No CRM migration required to get the first conversation live.</p>
     </div>
     <div class="steps">
       <div class="step reveal"><div class="step-ic"><svg class="ic-node" viewBox="0 0 24 24"><line class="edge" x1="5" y1="6" x2="12" y2="12"/><line class="edge" x1="19" y1="5.5" x2="12" y2="12"/><line class="edge" x1="6" y1="19" x2="12" y2="12"/><line class="edge" x1="19" y1="18" x2="12" y2="12"/><circle class="n n1" cx="5" cy="6" r="2.1" fill="currentColor"/><circle class="n n2" cx="19" cy="5.5" r="2.1" fill="currentColor"/><circle class="n n3" cx="6" cy="19" r="2.1" fill="currentColor"/><circle class="n n4" cx="19" cy="18" r="2.1" fill="currentColor"/><circle class="n" cx="12" cy="12" r="2.8" fill="currentColor"/></svg></div><div class="k">Week 1 · Setup</div><h3>Connect your lead sources</h3><p>We connect your calls and calendar, write messages in your voice, and set up follow-up for the leads and estimates you want to recover.</p></div>
@@ -963,7 +1009,7 @@
     <div class="section-head center">
       <span class="eyebrow">Packages</span>
       <h2>Choose where you want to recover more revenue</h2>
-      <p>Start with missed calls, add estimate follow-up, or have us manage revenue recovery each month. We scope a flat monthly fee and one-time setup on a short call.</p>
+      <p>Start with missed calls, add estimate follow-up, or have us manage revenue recovery each month. Not sure which fits? Book the audit and we'll recommend the scope based on your lead volume, office workflow, and existing stack.</p>
     </div>
     <div class="pkg-grid">
       <div class="pkg reveal">
@@ -977,7 +1023,7 @@
           <li>Confirmations plus 24-hour &amp; 2-hour reminders</li>
           <li>Instant office notifications</li>
         </ul>
-        <a href="mailto:sid@summitsolutionscrm.com?subject=Starter%20revenue%20recovery" class="btn btn-ghost btn-block">Discuss Starter</a>
+        <a href="#audit" class="btn btn-ghost btn-block">See if Starter fits</a>
       </div>
       <div class="pkg featured reveal">
         <div class="pkg-badge">Most popular</div>
@@ -992,7 +1038,7 @@
           <li>Chase unsigned estimates and record won job value</li>
           <li>Request reviews and referrals after the job</li>
         </ul>
-        <a href="mailto:sid@summitsolutionscrm.com?subject=Growth%20revenue%20recovery" class="btn btn-primary btn-block">Discuss Growth</a>
+        <a href="#audit" class="btn btn-primary btn-block">See if Growth fits</a>
       </div>
       <div class="pkg reveal">
         <div class="step-ic pkg-icon" aria-hidden="true"><img src="assets/icons/heart-handshake.svg" width="26" height="26" alt=""></div><div class="pkg-name">Partner</div>
@@ -1006,12 +1052,49 @@
           <li>SMS &amp; email deliverability monitoring</li>
           <li>Keep improving responses and booking rates</li>
         </ul>
-        <a href="mailto:sid@summitsolutionscrm.com?subject=Partner%20revenue%20recovery" class="btn btn-ghost btn-block">Discuss Partner</a>
+        <a href="#audit" class="btn btn-ghost btn-block">Apply for Partner</a>
       </div>
     </div>
     <p class="price-note">Every package is a flat monthly plus a one-time build. We take on a limited number of clients, and monthly service carries a 30-day money-back guarantee.</p>
   </div>
 </section>
+
+<!-- REVENUE AUDIT -->
+<section class="audit" id="audit">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Book a free revenue audit</span>
+      <h2>Find out where your leads are slipping through</h2>
+      <p>Tell us a little about your business and we'll walk your call, calendar, and estimate flow to show you exactly where opportunities are leaking, then where the fastest recovery is.</p>
+    </div>
+    <div class="audit-micro reveal">
+      <span>15 minutes</span>
+      <span>No pitch deck</span>
+      <span>Built for established contractors with steady inbound leads</span>
+    </div>
+    <div class="audit-embed reveal">
+      <iframe
+        src="https://app.summitsolutionscrm.com/widget/form/MkIJlsObzuhTmu6LBPUQ"
+        id="inline-MkIJlsObzuhTmu6LBPUQ"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Internal Manual Lead Entry"
+        data-height="894"
+        data-layout-iframe-id="inline-MkIJlsObzuhTmu6LBPUQ"
+        data-form-id="MkIJlsObzuhTmu6LBPUQ"
+        data-cookie-consent="true"
+        data-cookie-consent-provider="auto"
+        title="Book a free revenue audit"></iframe>
+    </div>
+    <p class="audit-alt reveal">Prefer to grab a time directly? <a href="https://app.summitsolutionscrm.com/widget/booking/UczsWKllFskIHxNZhy23" target="_blank" rel="noopener">Open the scheduler →</a></p>
+  </div>
+</section>
+<script src="https://app.summitsolutionscrm.com/js/form_embed.js"></script>
 
 <!-- FAQ -->
 <section id="faq" style="background:var(--paper-2);">
@@ -1042,7 +1125,15 @@
         <div class="faq-a-wrap"><p class="faq-a">Yes. We write the messages in your voice during setup and update them as your hours, team, or offers change.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false"><span><span class="num">06</span>What if it doesn't work for my business?</span><span class="toggle"><svg><use href="#i-plus"/></svg></span></button>
+        <button class="faq-q" aria-expanded="false"><span><span class="num">06</span>Do I need to replace my current CRM?</span><span class="toggle"><svg><use href="#i-plus"/></svg></span></button>
+        <div class="faq-a-wrap"><p class="faq-a">Not necessarily. We first look at your existing call, calendar, and lead workflow and decide what needs to connect or change. Summit is built to recover opportunities, not to force software changes for their own sake.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span><span class="num">07</span>Does this replace my receptionist?</span><span class="toggle"><svg><use href="#i-plus"/></svg></span></button>
+        <div class="faq-a-wrap"><p class="faq-a">No. Summit handles the repetitive parts around your office team: instant text-back, follow-up, booking, reminders, and pipeline updates. Your staff handles the conversations and customers that need a person.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span><span class="num">08</span>What if it doesn't work for my business?</span><span class="toggle"><svg><use href="#i-plus"/></svg></span></button>
         <div class="faq-a-wrap"><p class="faq-a">Monthly management comes with a 30-day money-back guarantee. If it's not working in the first month, that month is refunded. The setup fee covers real build work and is non-refundable.</p></div>
       </div>
     </div>
@@ -1056,7 +1147,7 @@
   </video>
   <div class="cta-band-inner">
     <p class="cta-band-line">Your next job is already calling.</p>
-    <a href="#resource" class="btn btn-primary btn-lg">Get the free guide <svg><use href="#i-arrow"/></svg></a>
+    <a href="#audit" class="btn btn-primary btn-lg">Book a Free Revenue Audit <svg><use href="#i-arrow"/></svg></a>
   </div>
 </section>
 
@@ -1064,9 +1155,9 @@
 <section id="resource" class="final">
   <div class="wrap">
     <div>
-      <span class="eyebrow" style="color:var(--gold-soft)">Free guide</span>
-      <h2 style="margin-top:16px;">The Speed-to-Lead Playbook</h2>
-      <p class="lede">Recover the call, book the visit, and follow up on the quote. Get message templates you can use to win more work from leads you already have.</p>
+      <span class="eyebrow" style="color:var(--gold-soft)">Not ready for an audit?</span>
+      <h2 style="margin-top:16px;">Steal our Speed-to-Lead Playbook</h2>
+      <p class="lede">Not ready to talk yet? Take the system to go. Recover the call, book the visit, and follow up on the quote with message templates you can use on the leads you already have.</p>
       <ul class="assure">
         <li><svg class="ic"><use href="#i-check"/></svg> Missed-call text templates with a clear path to booking</li>
         <li><svg class="ic"><use href="#i-check"/></svg> Booking links that save your office another callback</li>

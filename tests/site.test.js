@@ -95,7 +95,8 @@ assert.equal(timers.size, 1);
 const videoEvents = {}, previewEvents = {}, preferenceEvents = {};
 const source = { src: '', dataset: { src: 'assets/playbook-preview.mp4' } };
 let loads = 0, plays = 0, pauses = 0, previewObserver, rejectPlay;
-const video = { querySelector: () => source, load() { loads++; },
+const stage = { classList: classes() };
+const video = { querySelector: () => source, closest: () => stage, load() { loads++; },
   play() { plays++; return { catch(fn) { rejectPlay = fn; } }; }, pause() { pauses++; } };
 const previewButton = { hidden: true, setAttribute(name, value) { this[name] = value; },
   addEventListener(name, fn) { previewEvents[name] = fn; } };
